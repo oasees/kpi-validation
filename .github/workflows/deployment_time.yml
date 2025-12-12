@@ -1,0 +1,38 @@
+name: Deployment time
+
+on:
+  workflow_dispatch:
+
+jobs:
+  execute-script:
+    runs-on: tests-runner
+    defaults:
+      run:
+        working-directory: ./deployment_time
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Check model existence
+        run: |
+          kubectl get pods -A
+
+      - name: Run App & Print Evidence
+        env:
+          NODE_IP: ${{ secrets.NODE_IP }}
+          MODEL_PORT: ${{ secrets.MODEL_PORT }}
+        run: |
+          START=$(date +%s.%N); ./deploy.sh && printf "\nTOTAL DEPLOYMENT TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"
+
+      - name: Clean up
+        if: always()
+        run: |
+          kubectl delete pod example1-2025-12-12-15-37-45 --force

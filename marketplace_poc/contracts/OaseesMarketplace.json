@@ -1,0 +1,685 @@
+[
+    {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "member_address",
+                "type": "address"
+            }
+        ],
+        "name": "ClusterJoined",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "member_address",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "DaoJoined",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [],
+        "name": "DeviceListed",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+            }
+        ],
+        "name": "DeviceSold",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "nftContract",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "seller",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "price",
+                "type": "uint256"
+            }
+        ],
+        "name": "NFTListed",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "nftContract",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "seller",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "price",
+                "type": "uint256"
+            }
+        ],
+        "name": "NFTSold",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [],
+        "name": "NewDAO",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "Received",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "LISTING_FEE",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_nftContract",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_tokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "buyDevice",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_nftContract",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_tokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "buyNft",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_marketplaceId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getDaoMembers",
+        "outputs": [
+            {
+                "internalType": "address[]",
+                "name": "",
+                "type": "address[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getJoinedDaos",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "marketPlaceId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "governance",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "timelock",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "token",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "box",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "desc_uri",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "contract DaoMembers",
+                        "name": "members",
+                        "type": "address"
+                    }
+                ],
+                "internalType": "struct OaseesMarketplace.DAO[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getListedDevices",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "nftContract",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "tokenId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "seller",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "owner",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "price",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "desc_uri",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "listed",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "marketPlaceId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "isCluster",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct OaseesMarketplace.DEVICE[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getListedNfts",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "nftContract",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "tokenId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "seller",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "owner",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "price",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "desc_uri",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "listed",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "marketPlaceId",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct OaseesMarketplace.NFT[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getMyDevices",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "nftContract",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "tokenId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "seller",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "owner",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "price",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "desc_uri",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "listed",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "marketPlaceId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "isCluster",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct OaseesMarketplace.DEVICE[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getMyNfts",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "nftContract",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "tokenId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "seller",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "owner",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "price",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "desc_uri",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "listed",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "marketPlaceId",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct OaseesMarketplace.NFT[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getlistedDaos",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "marketPlaceId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "governance",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "timelock",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "token",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "box",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "desc_uri",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "contract DaoMembers",
+                        "name": "members",
+                        "type": "address"
+                    }
+                ],
+                "internalType": "struct OaseesMarketplace.DAO[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_marketplaceId",
+                "type": "uint256"
+            }
+        ],
+        "name": "joinDao",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_governance",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_timelock",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_token",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_box",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "_desc_uri",
+                "type": "string"
+            }
+        ],
+        "name": "makeDao",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_nftContract",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_price",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_desc_uri",
+                "type": "string"
+            },
+            {
+                "internalType": "bool",
+                "name": "listed",
+                "type": "bool"
+            },
+            {
+                "internalType": "bool",
+                "name": "isCluster",
+                "type": "bool"
+            }
+        ],
+        "name": "makeDevice",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_nftContract",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_price",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_desc_uri",
+                "type": "string"
+            }
+        ],
+        "name": "makeItem",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "deviceAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_marketplaceId",
+                "type": "uint256"
+            }
+        ],
+        "name": "registerDeviceToDao",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

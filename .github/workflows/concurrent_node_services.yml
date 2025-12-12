@@ -1,0 +1,36 @@
+name: Concurrent nodes and services
+
+on:
+  workflow_dispatch:
+
+jobs:
+  execute-script:
+    runs-on: tests-runner
+    defaults:
+      run:
+        working-directory: ./concurrent_nodes_services
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Deploy simulated nodes
+        run: |
+          kubectl apply -f nodes/
+          kubectl wait --for=condition=ready node --all --timeout=60s
+
+      - name: Print out simulated nodes
+        run: |
+          START=$(date +%s.%N); kubectl get nodes && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"
+
+      - name: Deploy simulated services
+        run: |
+          START=$(date +%s.%N); kubectl apply -f deployments/ && kubectl wait --for=condition=ready pod --all --timeout=60s && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"
+
+      - name: Print out simulated services
+        run: |
+          START=$(date +%s.%N); kubectl get pods -owide && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"
+
+      - name: Clean up
+        if: always()
+        run: |
+          kubectl delete -f nodes/
+          kubectl delete -f deployments/

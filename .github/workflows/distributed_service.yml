@@ -1,0 +1,36 @@
+name: Distributed service
+
+on:
+  workflow_dispatch:
+
+jobs:
+  execute-script:
+    runs-on: tests-runner
+    defaults:
+      run:
+        working-directory: ./distributed_service
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Create whoami namespace
+        run: |
+          kubectl create namespace whoami
+
+      - name: Deploy whoami service
+        run: |
+          kubectl apply -f manifests/
+
+      - name: Print out pods
+        run: |
+          kubectl wait --for=condition=ready pod --all -n whoami --timeout=60s
+          kubectl get pods -n whoami -owide
+
+      - name: Query whoami service
+        run: |
+          sleep 5
+          for i in $(seq 1 5); do curl http://whoami.localhost; done
+
+      - name: Clean up
+        if: always()
+        run: |
+          kubectl delete namespace whoami
