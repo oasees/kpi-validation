@@ -35,4 +35,4 @@ jobs:
       - name: Clean up
         if: always()
         run: |
-          kubectl delete pod example1-2025-12-12-15-37-45 --force
+          kubectl delete pod example1-2025-12-11-12-02-22 --force
