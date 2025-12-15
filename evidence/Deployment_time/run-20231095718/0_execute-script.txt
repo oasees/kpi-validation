@@ -1,267 +1,267 @@
-﻿2025-12-15T14:01:57.7769597Z Current runner version: '2.329.0'
-2025-12-15T14:01:57.7773258Z Runner name: 'accelerated-runner'
-2025-12-15T14:01:57.7773806Z Runner group name: 'Default'
-2025-12-15T14:01:57.7774308Z Machine name: 'santosPC'
-2025-12-15T14:01:57.7775893Z ##[group]GITHUB_TOKEN Permissions
-2025-12-15T14:01:57.7777225Z Contents: read
-2025-12-15T14:01:57.7777591Z Metadata: read
-2025-12-15T14:01:57.7777917Z Packages: read
-2025-12-15T14:01:57.7778223Z ##[endgroup]
-2025-12-15T14:01:57.7779496Z Secret source: Actions
-2025-12-15T14:01:57.7779912Z Prepare workflow directory
-2025-12-15T14:01:57.8087190Z Prepare all required actions
-2025-12-15T14:01:57.8111257Z Getting action download info
-2025-12-15T14:01:58.5179381Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
-2025-12-15T14:01:59.6292925Z Download action repository 'actions/setup-python@v4' (SHA:7f4fc3e22c37d6ff65e88745f38bd3157c663f7c)
-2025-12-15T14:02:00.6525489Z Complete job name: execute-script
-2025-12-15T14:02:00.7650229Z ##[group]Run actions/checkout@v3
-2025-12-15T14:02:00.7651122Z with:
-2025-12-15T14:02:00.7651640Z   repository: oasees/kpi-validation
-2025-12-15T14:02:00.7652518Z   token: ***
-2025-12-15T14:02:00.7652997Z   ssh-strict: true
-2025-12-15T14:02:00.7653525Z   persist-credentials: true
-2025-12-15T14:02:00.7654090Z   clean: true
-2025-12-15T14:02:00.7654605Z   sparse-checkout-cone-mode: true
-2025-12-15T14:02:00.7655215Z   fetch-depth: 1
-2025-12-15T14:02:00.7655704Z   fetch-tags: false
-2025-12-15T14:02:00.7656200Z   lfs: false
-2025-12-15T14:02:00.7656667Z   submodules: false
-2025-12-15T14:02:00.7657197Z   set-safe-directory: true
-2025-12-15T14:02:00.7657902Z ##[endgroup]
-2025-12-15T14:02:00.8193870Z Syncing repository: oasees/kpi-validation
-2025-12-15T14:02:00.8195592Z ##[group]Getting Git version info
-2025-12-15T14:02:00.8196665Z Working directory is '/home/runner/actions-runner/_work/kpi-validation/kpi-validation'
-2025-12-15T14:02:00.8198739Z Unexpected error attempting to determine if executable file exists '/home/achilleas/.local/bin/git': Error: EACCES: permission denied, stat '/home/achilleas/.local/bin/git'
-2025-12-15T14:02:00.8201253Z [command]/usr/bin/git version
-2025-12-15T14:02:00.8201870Z git version 2.34.1
-2025-12-15T14:02:00.8203807Z ##[endgroup]
-2025-12-15T14:02:00.8212078Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/65b7aa70-957b-4717-a193-163b86c7b36f' before making global git config changes
-2025-12-15T14:02:00.8213958Z Adding repository directory to the temporary git global config as a safe directory
-2025-12-15T14:02:00.8215748Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
-2025-12-15T14:02:00.8236776Z [command]/usr/bin/git config --local --get remote.origin.url
-2025-12-15T14:02:00.8249871Z https://github.com/oasees/kpi-validation
-2025-12-15T14:02:00.8264768Z ##[group]Removing previously created refs, to avoid conflicts
-2025-12-15T14:02:00.8267418Z [command]/usr/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
-2025-12-15T14:02:00.8282555Z refs/heads/main
-2025-12-15T14:02:00.8290293Z [command]/usr/bin/git checkout --detach
-2025-12-15T14:02:00.8317012Z HEAD is now at 3271bcb chore: Change model name in deployment time workflow
-2025-12-15T14:02:00.8343580Z [command]/usr/bin/git branch --delete --force main
-2025-12-15T14:02:00.8359060Z Deleted branch main (was 3271bcb).
-2025-12-15T14:02:00.8382907Z ##[endgroup]
-2025-12-15T14:02:00.8383445Z [command]/usr/bin/git submodule status
-2025-12-15T14:02:00.8544656Z ##[group]Cleaning the repository
-2025-12-15T14:02:00.8546156Z [command]/usr/bin/git clean -ffdx
-2025-12-15T14:02:00.8562590Z [command]/usr/bin/git reset --hard HEAD
-2025-12-15T14:02:00.8586510Z HEAD is now at 3271bcb chore: Change model name in deployment time workflow
-2025-12-15T14:02:00.8589128Z ##[endgroup]
-2025-12-15T14:02:00.8590000Z ##[group]Disabling automatic garbage collection
-2025-12-15T14:02:00.8590947Z [command]/usr/bin/git config --local gc.auto 0
-2025-12-15T14:02:00.8606262Z ##[endgroup]
-2025-12-15T14:02:00.8607273Z ##[group]Setting up auth
-2025-12-15T14:02:00.8608998Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2025-12-15T14:02:00.8627767Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2025-12-15T14:02:00.8783355Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2025-12-15T14:02:00.8801155Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2025-12-15T14:02:00.8957234Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-2025-12-15T14:02:00.8979196Z ##[endgroup]
-2025-12-15T14:02:00.8980299Z ##[group]Fetching the repository
-2025-12-15T14:02:00.8983707Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +3271bcb25b97c5cd5a421a914094711f5ee21cb4:refs/remotes/origin/main
-2025-12-15T14:02:01.4433228Z remote: Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)        
-2025-12-15T14:02:01.4476695Z ##[endgroup]
-2025-12-15T14:02:01.4477518Z ##[group]Determining the checkout info
-2025-12-15T14:02:01.4478450Z ##[endgroup]
-2025-12-15T14:02:01.4479221Z ##[group]Checking out the ref
-2025-12-15T14:02:01.4480203Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
-2025-12-15T14:02:01.4507669Z Switched to a new branch 'main'
-2025-12-15T14:02:01.4508895Z Branch 'main' set up to track remote branch 'main' from 'origin'.
-2025-12-15T14:02:01.4512192Z ##[endgroup]
-2025-12-15T14:02:01.4537241Z [command]/usr/bin/git log -1 --format='%H'
-2025-12-15T14:02:01.4553261Z '3271bcb25b97c5cd5a421a914094711f5ee21cb4'
-2025-12-15T14:02:01.4718203Z ##[group]Run actions/setup-python@v4
-2025-12-15T14:02:01.4718810Z with:
-2025-12-15T14:02:01.4719239Z   python-version: 3.10
-2025-12-15T14:02:01.4719730Z   check-latest: false
-2025-12-15T14:02:01.4720444Z   token: ***
-2025-12-15T14:02:01.4720898Z   update-environment: true
-2025-12-15T14:02:01.4721432Z   allow-prereleases: false
-2025-12-15T14:02:01.4721927Z ##[endgroup]
-2025-12-15T14:02:01.5782286Z ##[group]Installed versions
-2025-12-15T14:02:01.5812065Z Successfully set up CPython (3.10.19)
-2025-12-15T14:02:01.5813446Z ##[endgroup]
-2025-12-15T14:02:01.5898816Z ##[group]Run pip install -r requirements.txt
-2025-12-15T14:02:01.5899576Z [36;1mpip install -r requirements.txt[0m
-2025-12-15T14:02:01.5922930Z shell: /usr/bin/bash -e {0}
-2025-12-15T14:02:01.5923459Z env:
-2025-12-15T14:02:01.5924150Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:01.5925344Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
-2025-12-15T14:02:01.5926513Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:01.5927599Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:01.5928666Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:01.5929751Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
-2025-12-15T14:02:01.5930634Z ##[endgroup]
-2025-12-15T14:02:01.8374976Z Requirement already satisfied: numpy==1.26.4 in /home/runner/.local/lib/python3.10/site-packages (from -r requirements.txt (line 1)) (1.26.4)
-2025-12-15T14:02:01.8377167Z Requirement already satisfied: requests in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from -r requirements.txt (line 2)) (2.32.5)
-2025-12-15T14:02:01.8398965Z Requirement already satisfied: charset_normalizer<4,>=2 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (3.4.4)
-2025-12-15T14:02:01.8402177Z Requirement already satisfied: idna<4,>=2.5 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (3.11)
-2025-12-15T14:02:01.8406221Z Requirement already satisfied: urllib3<3,>=1.21.1 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (2.6.2)
-2025-12-15T14:02:01.8409309Z Requirement already satisfied: certifi>=2017.4.17 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (2025.11.12)
-2025-12-15T14:02:01.9306356Z ##[group]Run kubectl get pods -A
-2025-12-15T14:02:01.9306966Z [36;1mkubectl get pods -A[0m
-2025-12-15T14:02:01.9326906Z shell: /usr/bin/bash -e {0}
-2025-12-15T14:02:01.9327408Z env:
-2025-12-15T14:02:01.9328070Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:01.9329579Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
-2025-12-15T14:02:01.9330740Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:01.9331752Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:01.9332756Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:01.9357472Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
-2025-12-15T14:02:01.9358290Z ##[endgroup]
-2025-12-15T14:02:01.9774851Z NAMESPACE                       NAME                                                           READY   STATUS             RESTARTS           AGE
-2025-12-15T14:02:01.9776110Z cert-manager                    cert-manager-5d74b4d6f7-wjr2h                                  1/1     Running            12 (13d ago)       30d
-2025-12-15T14:02:01.9777733Z cert-manager                    cert-manager-cainjector-54cb99f7b7-2hr5m                       1/1     Running            11 (13d ago)       30d
-2025-12-15T14:02:01.9779365Z cert-manager                    cert-manager-webhook-5546ffdb45-ksbl4                          1/1     Running            14 (13d ago)       30d
-2025-12-15T14:02:01.9780842Z default                         cluster-backend-bdbb97cdb-lwpqj                                1/1     Running            0                  38d
-2025-12-15T14:02:01.9782399Z default                         collector-oasees-master-f1e1b5a9-ab16-45ab-8da9-2b40fbff7eb7   1/1     Running            0                  21d
-2025-12-15T14:02:01.9784094Z default                         collector-santospc-d26c7a1d-b783-4361-bbc6-d54e95c4ba23        1/1     Running            0                  21d
-2025-12-15T14:02:01.9785523Z default                         grafana-5b487c8748-xnjqb                                       1/1     Running            0                  30d
-2025-12-15T14:02:01.9786744Z default                         mlops-data-notifier-4g5r9                                      1/1     Running            0                  21d
-2025-12-15T14:02:01.9788001Z default                         mlops-data-notifier-x5ldt                                      1/1     Running            0                  38d
-2025-12-15T14:02:01.9789228Z default                         mlops-data-notifier-x6m7b                                      1/1     Running            0                  32d
-2025-12-15T14:02:01.9790464Z default                         oasees-agent-5k6qf                                             1/1     Running            0                  20d
-2025-12-15T14:02:01.9791583Z default                         oasees-agent-r6kx2                                             1/1     Running            0                  20d
-2025-12-15T14:02:01.9792696Z default                         oasees-agent-wpbqf                                             1/1     Running            0                  20d
-2025-12-15T14:02:01.9793882Z default                         oasees-device-plugin-6rpcg                                     1/1     Running            0                  38d
-2025-12-15T14:02:01.9795525Z default                         oasees-device-plugin-fzc6s                                     1/1     Running            0                  21d
-2025-12-15T14:02:01.9796829Z default                         oasees-device-plugin-s8rsq                                     1/1     Running            0                  32d
-2025-12-15T14:02:01.9798100Z default                         oasees-ipfs-7fdd99dc5d-cpffn                                   1/1     Running            0                  38d
-2025-12-15T14:02:01.9799529Z default                         oasees-notebook-67f97bd8c4-mqgl9                               1/1     Running            0                  38d
-2025-12-15T14:02:01.9800878Z default                         oasees-portal-6d78d45574-8nqct                                 1/1     Running            0                  9d
-2025-12-15T14:02:01.9802188Z default                         oasees-solidity-ide-7894876967-ckd7c                           1/1     Running            0                  38d
-2025-12-15T14:02:01.9803560Z default                         oasees-telemetry-api-786b7cbb78-db4sb                          1/1     Running            0                  30d
-2025-12-15T14:02:01.9804944Z default                         opensearch-query-app-c67db4cb7-bhmx8                           1/1     Running            0                  5d2h
-2025-12-15T14:02:01.9806343Z default                         otel-collector-collector-6bb5c44666-hblf5                      1/1     Running            0                  30d
-2025-12-15T14:02:01.9807693Z default                         thanos-query-74b95cdbf7-v66bp                                  1/1     Running            0                  30d
-2025-12-15T14:02:01.9808863Z default                         thanos-receive-0                                               1/1     Running            0                  30d
-2025-12-15T14:02:01.9810029Z kube-system                     coredns-64fd4b4794-vt88l                                       1/1     Running            13 (13d ago)       38d
-2025-12-15T14:02:01.9811330Z kube-system                     helm-install-traefik-6nfdh                                     0/1     Completed          1                  38d
-2025-12-15T14:02:01.9812638Z kube-system                     helm-install-traefik-crd-dvf6p                                 0/1     Completed          0                  38d
-2025-12-15T14:02:01.9814040Z kube-system                     local-path-provisioner-774c6665dc-bzm2b                        1/1     Running            0                  38d
-2025-12-15T14:02:01.9815454Z kube-system                     metrics-server-7bfffcd44-tsfst                                 1/1     Running            15 (13d ago)       38d
-2025-12-15T14:02:01.9816840Z kube-system                     nvidia-device-plugin-daemonset-c8ggb                           1/1     Running            0                  31d
-2025-12-15T14:02:01.9818286Z kube-system                     nvidia-device-plugin-daemonset-dnzh4                           1/1     Running            0                  31d
-2025-12-15T14:02:01.9819736Z kube-system                     nvidia-device-plugin-daemonset-qqcxm                           0/1     CrashLoopBackOff   6157 (4m24s ago)   21d
-2025-12-15T14:02:01.9821132Z kube-system                     svclb-traefik-cc871d40-78zcc                                   2/2     Running            0                  32d
-2025-12-15T14:02:01.9822426Z kube-system                     svclb-traefik-cc871d40-ffrzm                                   2/2     Running            0                  38d
-2025-12-15T14:02:01.9823722Z kube-system                     svclb-traefik-cc871d40-p5xxl                                   2/2     Running            0                  21d
-2025-12-15T14:02:01.9824989Z kube-system                     traefik-c98fdf6fb-2xhr4                                        1/1     Running            0                  5d1h
-2025-12-15T14:02:01.9826826Z opentelemetry-operator-system   opentelemetry-operator-controller-manager-5c9cddc94f-pfgq9     2/2     Running            15 (13d ago)       30d
-2025-12-15T14:02:01.9862701Z ##[group]Run START=$(date +%s.%N); ./deploy.sh && printf "\nTOTAL DEPLOYMENT TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"
-2025-12-15T14:02:01.9864326Z [36;1mSTART=$(date +%s.%N); ./deploy.sh && printf "\nTOTAL DEPLOYMENT TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"[0m
-2025-12-15T14:02:01.9885180Z shell: /usr/bin/bash -e {0}
-2025-12-15T14:02:01.9885679Z env:
-2025-12-15T14:02:01.9886340Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:01.9887467Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
-2025-12-15T14:02:01.9888562Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:01.9889581Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:01.9890650Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:01.9891761Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
-2025-12-15T14:02:01.9892642Z   NODE_IP: ***
-2025-12-15T14:02:01.9893086Z   MODEL_PORT: ***
-2025-12-15T14:02:01.9893520Z ##[endgroup]
-2025-12-15T14:02:01.9949820Z Deploying model...
-2025-12-15T14:02:02.2739740Z Deploying Kubernetes resources with the following configuration:
-2025-12-15T14:02:02.2740169Z   Project Name: example1
-2025-12-15T14:02:02.2740355Z   IPFS IP: 10.43.168.200
-2025-12-15T14:02:02.2740541Z   Model: example1_2025-12-11_12-02-22.pkl
-2025-12-15T14:02:02.2740749Z   Pod Name: example1-2025-12-11-12-02-22
-2025-12-15T14:02:02.2740964Z   App Label: example1-2025-12-11-12-02-22pkl
-2025-12-15T14:02:02.2741101Z 
-2025-12-15T14:02:02.2741191Z Generated Kubernetes manifest:
-2025-12-15T14:02:02.2741369Z ================================
-2025-12-15T14:02:02.2741571Z apiVersion: v1
-2025-12-15T14:02:02.2741724Z kind: Pod
-2025-12-15T14:02:02.2741862Z metadata:
-2025-12-15T14:02:02.2742016Z   name: example1-2025-12-11-12-02-22
-2025-12-15T14:02:02.2742216Z   labels:
-2025-12-15T14:02:02.2742371Z     app: example1-2025-12-11-12-02-22pkl
-2025-12-15T14:02:02.2742563Z     tag: model
-2025-12-15T14:02:02.2742710Z spec:
-2025-12-15T14:02:02.2742857Z   restartPolicy: Never
-2025-12-15T14:02:02.2743021Z   containers:
-2025-12-15T14:02:02.2743183Z   - name: model-deploy
-2025-12-15T14:02:02.2743377Z     image: oasees/ml-base-image:latest
-2025-12-15T14:02:02.2743581Z     imagePullPolicy: IfNotPresent
-2025-12-15T14:02:02.2743761Z     env:
-2025-12-15T14:02:02.2743907Z       - name: PROJECT_NAME
-2025-12-15T14:02:02.2744081Z         value: "example1"
-2025-12-15T14:02:02.2744251Z       - name: IPFS_IP
-2025-12-15T14:02:02.2744411Z         value: "10.43.168.200"
-2025-12-15T14:02:02.2744582Z       - name: MODEL
-2025-12-15T14:02:02.2744756Z         value: "example1_2025-12-11_12-02-22.pkl"
-2025-12-15T14:02:02.2744960Z     command: ["/bin/bash", "-c"]
-2025-12-15T14:02:02.2745134Z     args:
-2025-12-15T14:02:02.2745289Z     - |
-2025-12-15T14:02:02.2745579Z       HASH=$(ipfs --api=/ip4/${IPFS_IP}/tcp/5001/http files stat --hash /oasees-ml-ops/projects/ml/${PROJECT_NAME}) &&
-2025-12-15T14:02:02.2745946Z       ipfs --api=/ip4/${IPFS_IP}/tcp/5001/http get ${HASH} -o ${PROJECT_NAME} &&
-2025-12-15T14:02:02.2746187Z       cd $PROJECT_NAME &&
-2025-12-15T14:02:02.2746395Z       python  ${PROJECT_NAME}_deploy.py --model-path $MODEL
-2025-12-15T14:02:02.2746607Z     ports:
-2025-12-15T14:02:02.2746764Z     - containerPort: 5005
-2025-12-15T14:02:02.2746870Z 
-2025-12-15T14:02:02.2746934Z ---
-2025-12-15T14:02:02.2747075Z apiVersion: v1
-2025-12-15T14:02:02.2747226Z kind: Service
-2025-12-15T14:02:02.2747372Z metadata:
-2025-12-15T14:02:02.2747526Z   name: example1-2025-12-11-12-02-22-service
-2025-12-15T14:02:02.2747717Z   labels:
-2025-12-15T14:02:02.2747857Z     tag: model
-2025-12-15T14:02:02.2747997Z spec:
-2025-12-15T14:02:02.2748379Z   type: NodePort
-2025-12-15T14:02:02.2748534Z   selector:
-2025-12-15T14:02:02.2748705Z     app: example1-2025-12-11-12-02-22pkl
-2025-12-15T14:02:02.2749014Z     tag: model
-2025-12-15T14:02:02.2749170Z   ports:
-2025-12-15T14:02:02.2749310Z   - port: 30005
-2025-12-15T14:02:02.2749469Z     targetPort: 5005
-2025-12-15T14:02:02.2749569Z 
-2025-12-15T14:02:02.2749643Z ================================
-2025-12-15T14:02:02.2749753Z 
-2025-12-15T14:02:02.2749850Z Applying Kubernetes configuration...
-2025-12-15T14:02:02.4330019Z ✅ Deployment successful!
-2025-12-15T14:02:03.2619056Z pod/example1-2025-12-11-12-02-22 condition met
-2025-12-15T14:02:03.2640525Z 
-2025-12-15T14:02:03.2640898Z Model Deployed!. Sending for inference...
-2025-12-15T14:02:03.2641162Z 
-2025-12-15T14:02:04.0326695Z Accuracy: 0.9600
-2025-12-15T14:02:04.0327490Z [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
-2025-12-15T14:02:04.0514512Z 
-2025-12-15T14:02:04.0514919Z TOTAL DEPLOYMENT TIME: 2.056804075 seconds
-2025-12-15T14:02:04.0515200Z 
-2025-12-15T14:02:04.0550361Z ##[group]Run kubectl delete pod example1-2025-12-11-12-02-22 --force
-2025-12-15T14:02:04.0550785Z [36;1mkubectl delete pod example1-2025-12-11-12-02-22 --force[0m
-2025-12-15T14:02:04.0566852Z shell: /usr/bin/bash -e {0}
-2025-12-15T14:02:04.0567014Z env:
-2025-12-15T14:02:04.0567228Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:04.0567577Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
-2025-12-15T14:02:04.0567892Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:04.0568186Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:04.0568466Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:02:04.0568742Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
-2025-12-15T14:02:04.0568964Z ##[endgroup]
-2025-12-15T14:02:04.0924532Z Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
-2025-12-15T14:02:04.0961816Z pod "example1-2025-12-11-12-02-22" force deleted
-2025-12-15T14:02:04.1034647Z Post job cleanup.
-2025-12-15T14:02:04.2177285Z Post job cleanup.
-2025-12-15T14:02:04.2701006Z Unexpected error attempting to determine if executable file exists '/home/achilleas/.local/bin/git': Error: EACCES: permission denied, stat '/home/achilleas/.local/bin/git'
-2025-12-15T14:02:04.2715293Z [command]/usr/bin/git version
-2025-12-15T14:02:04.2741183Z git version 2.34.1
-2025-12-15T14:02:04.2781060Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/f7122370-5df6-4b3e-ac16-c8b2258e3568' before making global git config changes
-2025-12-15T14:02:04.2781551Z Adding repository directory to the temporary git global config as a safe directory
-2025-12-15T14:02:04.2783127Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
-2025-12-15T14:02:04.2806189Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2025-12-15T14:02:04.2826150Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2025-12-15T14:02:04.2991421Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2025-12-15T14:02:04.3005133Z http.https://github.com/.extraheader
-2025-12-15T14:02:04.3010815Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-2025-12-15T14:02:04.3028449Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2025-12-15T14:02:04.3265154Z Cleaning up orphan processes
+﻿2025-12-15T14:03:35.0834737Z Current runner version: '2.329.0'
+2025-12-15T14:03:35.0838313Z Runner name: 'accelerated-runner'
+2025-12-15T14:03:35.0838846Z Runner group name: 'Default'
+2025-12-15T14:03:35.0839424Z Machine name: 'santosPC'
+2025-12-15T14:03:35.0841084Z ##[group]GITHUB_TOKEN Permissions
+2025-12-15T14:03:35.0842596Z Contents: read
+2025-12-15T14:03:35.0842981Z Metadata: read
+2025-12-15T14:03:35.0843289Z Packages: read
+2025-12-15T14:03:35.0843615Z ##[endgroup]
+2025-12-15T14:03:35.0844944Z Secret source: Actions
+2025-12-15T14:03:35.0845352Z Prepare workflow directory
+2025-12-15T14:03:35.1166216Z Prepare all required actions
+2025-12-15T14:03:35.1191190Z Getting action download info
+2025-12-15T14:03:35.7606339Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2025-12-15T14:03:36.6745909Z Download action repository 'actions/setup-python@v4' (SHA:7f4fc3e22c37d6ff65e88745f38bd3157c663f7c)
+2025-12-15T14:03:37.9024878Z Complete job name: execute-script
+2025-12-15T14:03:38.0073289Z ##[group]Run actions/checkout@v3
+2025-12-15T14:03:38.0074147Z with:
+2025-12-15T14:03:38.0074646Z   repository: oasees/kpi-validation
+2025-12-15T14:03:38.0075528Z   token: ***
+2025-12-15T14:03:38.0075995Z   ssh-strict: true
+2025-12-15T14:03:38.0076518Z   persist-credentials: true
+2025-12-15T14:03:38.0077084Z   clean: true
+2025-12-15T14:03:38.0077590Z   sparse-checkout-cone-mode: true
+2025-12-15T14:03:38.0078212Z   fetch-depth: 1
+2025-12-15T14:03:38.0078699Z   fetch-tags: false
+2025-12-15T14:03:38.0079185Z   lfs: false
+2025-12-15T14:03:38.0079649Z   submodules: false
+2025-12-15T14:03:38.0080236Z   set-safe-directory: true
+2025-12-15T14:03:38.0080936Z ##[endgroup]
+2025-12-15T14:03:38.0662477Z Syncing repository: oasees/kpi-validation
+2025-12-15T14:03:38.0664187Z ##[group]Getting Git version info
+2025-12-15T14:03:38.0665292Z Working directory is '/home/runner/actions-runner/_work/kpi-validation/kpi-validation'
+2025-12-15T14:03:38.0667473Z Unexpected error attempting to determine if executable file exists '/home/achilleas/.local/bin/git': Error: EACCES: permission denied, stat '/home/achilleas/.local/bin/git'
+2025-12-15T14:03:38.0669547Z [command]/usr/bin/git version
+2025-12-15T14:03:38.0670181Z git version 2.34.1
+2025-12-15T14:03:38.0672077Z ##[endgroup]
+2025-12-15T14:03:38.0678185Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/9b3aa733-74f0-4383-b9d3-350587e8bfd1' before making global git config changes
+2025-12-15T14:03:38.0680139Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-15T14:03:38.0681800Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
+2025-12-15T14:03:38.0702665Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-12-15T14:03:38.0716449Z https://github.com/oasees/kpi-validation
+2025-12-15T14:03:38.0732077Z ##[group]Removing previously created refs, to avoid conflicts
+2025-12-15T14:03:38.0735023Z [command]/usr/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
+2025-12-15T14:03:38.0748187Z refs/heads/main
+2025-12-15T14:03:38.0752750Z [command]/usr/bin/git checkout --detach
+2025-12-15T14:03:38.0780249Z HEAD is now at 3271bcb chore: Change model name in deployment time workflow
+2025-12-15T14:03:38.0813566Z [command]/usr/bin/git branch --delete --force main
+2025-12-15T14:03:38.0834550Z Deleted branch main (was 3271bcb).
+2025-12-15T14:03:38.0861156Z ##[endgroup]
+2025-12-15T14:03:38.0862221Z [command]/usr/bin/git submodule status
+2025-12-15T14:03:38.1023342Z ##[group]Cleaning the repository
+2025-12-15T14:03:38.1025539Z [command]/usr/bin/git clean -ffdx
+2025-12-15T14:03:38.1046210Z [command]/usr/bin/git reset --hard HEAD
+2025-12-15T14:03:38.1067941Z HEAD is now at 3271bcb chore: Change model name in deployment time workflow
+2025-12-15T14:03:38.1071506Z ##[endgroup]
+2025-12-15T14:03:38.1073405Z ##[group]Disabling automatic garbage collection
+2025-12-15T14:03:38.1077223Z [command]/usr/bin/git config --local gc.auto 0
+2025-12-15T14:03:38.1096858Z ##[endgroup]
+2025-12-15T14:03:38.1097950Z ##[group]Setting up auth
+2025-12-15T14:03:38.1102113Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-15T14:03:38.1120885Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-15T14:03:38.1280098Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-15T14:03:38.1301931Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-15T14:03:38.1461535Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-12-15T14:03:38.1483063Z ##[endgroup]
+2025-12-15T14:03:38.1484163Z ##[group]Fetching the repository
+2025-12-15T14:03:38.1487712Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +3271bcb25b97c5cd5a421a914094711f5ee21cb4:refs/remotes/origin/main
+2025-12-15T14:03:38.6671555Z remote: Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)        
+2025-12-15T14:03:38.6717986Z ##[endgroup]
+2025-12-15T14:03:38.6718273Z ##[group]Determining the checkout info
+2025-12-15T14:03:38.6720327Z ##[endgroup]
+2025-12-15T14:03:38.6720642Z ##[group]Checking out the ref
+2025-12-15T14:03:38.6723887Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-12-15T14:03:38.6752500Z Switched to a new branch 'main'
+2025-12-15T14:03:38.6752982Z Branch 'main' set up to track remote branch 'main' from 'origin'.
+2025-12-15T14:03:38.6755833Z ##[endgroup]
+2025-12-15T14:03:38.6779554Z [command]/usr/bin/git log -1 --format='%H'
+2025-12-15T14:03:38.6796499Z '3271bcb25b97c5cd5a421a914094711f5ee21cb4'
+2025-12-15T14:03:38.6942476Z ##[group]Run actions/setup-python@v4
+2025-12-15T14:03:38.6942688Z with:
+2025-12-15T14:03:38.6942845Z   python-version: 3.10
+2025-12-15T14:03:38.6943023Z   check-latest: false
+2025-12-15T14:03:38.6943252Z   token: ***
+2025-12-15T14:03:38.6943413Z   update-environment: true
+2025-12-15T14:03:38.6943588Z   allow-prereleases: false
+2025-12-15T14:03:38.6943752Z ##[endgroup]
+2025-12-15T14:03:38.7986189Z ##[group]Installed versions
+2025-12-15T14:03:38.8015810Z Successfully set up CPython (3.10.19)
+2025-12-15T14:03:38.8016272Z ##[endgroup]
+2025-12-15T14:03:38.8081249Z ##[group]Run pip install -r requirements.txt
+2025-12-15T14:03:38.8081570Z [36;1mpip install -r requirements.txt[0m
+2025-12-15T14:03:38.8101204Z shell: /usr/bin/bash -e {0}
+2025-12-15T14:03:38.8101401Z env:
+2025-12-15T14:03:38.8101630Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:38.8101982Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
+2025-12-15T14:03:38.8102309Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:38.8102619Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:38.8102908Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:38.8103205Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
+2025-12-15T14:03:38.8103445Z ##[endgroup]
+2025-12-15T14:03:39.0453711Z Requirement already satisfied: numpy==1.26.4 in /home/runner/.local/lib/python3.10/site-packages (from -r requirements.txt (line 1)) (1.26.4)
+2025-12-15T14:03:39.0455791Z Requirement already satisfied: requests in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from -r requirements.txt (line 2)) (2.32.5)
+2025-12-15T14:03:39.0479341Z Requirement already satisfied: charset_normalizer<4,>=2 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (3.4.4)
+2025-12-15T14:03:39.0484093Z Requirement already satisfied: idna<4,>=2.5 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (3.11)
+2025-12-15T14:03:39.0487825Z Requirement already satisfied: urllib3<3,>=1.21.1 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (2.6.2)
+2025-12-15T14:03:39.0490967Z Requirement already satisfied: certifi>=2017.4.17 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (2025.11.12)
+2025-12-15T14:03:39.1355193Z ##[group]Run kubectl get pods -A
+2025-12-15T14:03:39.1355419Z [36;1mkubectl get pods -A[0m
+2025-12-15T14:03:39.1371415Z shell: /usr/bin/bash -e {0}
+2025-12-15T14:03:39.1371603Z env:
+2025-12-15T14:03:39.1371828Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:39.1372178Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
+2025-12-15T14:03:39.1372526Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:39.1372836Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:39.1373135Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:39.1373443Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
+2025-12-15T14:03:39.1373686Z ##[endgroup]
+2025-12-15T14:03:39.1805242Z NAMESPACE                       NAME                                                           READY   STATUS             RESTARTS         AGE
+2025-12-15T14:03:39.1805679Z cert-manager                    cert-manager-5d74b4d6f7-wjr2h                                  1/1     Running            12 (13d ago)     30d
+2025-12-15T14:03:39.1806151Z cert-manager                    cert-manager-cainjector-54cb99f7b7-2hr5m                       1/1     Running            11 (13d ago)     30d
+2025-12-15T14:03:39.1806786Z cert-manager                    cert-manager-webhook-5546ffdb45-ksbl4                          1/1     Running            14 (13d ago)     30d
+2025-12-15T14:03:39.1807190Z default                         cluster-backend-bdbb97cdb-lwpqj                                1/1     Running            0                38d
+2025-12-15T14:03:39.1807643Z default                         collector-oasees-master-f1e1b5a9-ab16-45ab-8da9-2b40fbff7eb7   1/1     Running            0                21d
+2025-12-15T14:03:39.1808119Z default                         collector-santospc-d26c7a1d-b783-4361-bbc6-d54e95c4ba23        1/1     Running            0                21d
+2025-12-15T14:03:39.1808525Z default                         grafana-5b487c8748-xnjqb                                       1/1     Running            0                30d
+2025-12-15T14:03:39.1808878Z default                         mlops-data-notifier-4g5r9                                      1/1     Running            0                21d
+2025-12-15T14:03:39.1809229Z default                         mlops-data-notifier-x5ldt                                      1/1     Running            0                38d
+2025-12-15T14:03:39.1809572Z default                         mlops-data-notifier-x6m7b                                      1/1     Running            0                32d
+2025-12-15T14:03:39.1809914Z default                         oasees-agent-5k6qf                                             1/1     Running            0                20d
+2025-12-15T14:03:39.1810310Z default                         oasees-agent-r6kx2                                             1/1     Running            0                20d
+2025-12-15T14:03:39.1810628Z default                         oasees-agent-wpbqf                                             1/1     Running            0                20d
+2025-12-15T14:03:39.1810966Z default                         oasees-device-plugin-6rpcg                                     1/1     Running            0                38d
+2025-12-15T14:03:39.1811598Z default                         oasees-device-plugin-fzc6s                                     1/1     Running            0                21d
+2025-12-15T14:03:39.1811960Z default                         oasees-device-plugin-s8rsq                                     1/1     Running            0                32d
+2025-12-15T14:03:39.1812349Z default                         oasees-ipfs-7fdd99dc5d-cpffn                                   1/1     Running            0                38d
+2025-12-15T14:03:39.1812894Z default                         oasees-notebook-67f97bd8c4-mqgl9                               1/1     Running            0                38d
+2025-12-15T14:03:39.1813301Z default                         oasees-portal-6d78d45574-8nqct                                 1/1     Running            0                9d
+2025-12-15T14:03:39.1813700Z default                         oasees-solidity-ide-7894876967-ckd7c                           1/1     Running            0                38d
+2025-12-15T14:03:39.1814096Z default                         oasees-telemetry-api-786b7cbb78-db4sb                          1/1     Running            0                30d
+2025-12-15T14:03:39.1814499Z default                         opensearch-query-app-c67db4cb7-bhmx8                           1/1     Running            0                5d2h
+2025-12-15T14:03:39.1814924Z default                         otel-collector-collector-6bb5c44666-hblf5                      1/1     Running            0                30d
+2025-12-15T14:03:39.1815318Z default                         thanos-query-74b95cdbf7-v66bp                                  1/1     Running            0                30d
+2025-12-15T14:03:39.1815662Z default                         thanos-receive-0                                               1/1     Running            0                30d
+2025-12-15T14:03:39.1816008Z kube-system                     coredns-64fd4b4794-vt88l                                       1/1     Running            13 (13d ago)     38d
+2025-12-15T14:03:39.1816377Z kube-system                     helm-install-traefik-6nfdh                                     0/1     Completed          1                38d
+2025-12-15T14:03:39.1816752Z kube-system                     helm-install-traefik-crd-dvf6p                                 0/1     Completed          0                38d
+2025-12-15T14:03:39.1817155Z kube-system                     local-path-provisioner-774c6665dc-bzm2b                        1/1     Running            0                38d
+2025-12-15T14:03:39.1817583Z kube-system                     metrics-server-7bfffcd44-tsfst                                 1/1     Running            15 (13d ago)     38d
+2025-12-15T14:03:39.1817968Z kube-system                     nvidia-device-plugin-daemonset-c8ggb                           1/1     Running            0                31d
+2025-12-15T14:03:39.1818369Z kube-system                     nvidia-device-plugin-daemonset-dnzh4                           1/1     Running            0                31d
+2025-12-15T14:03:39.1818775Z kube-system                     nvidia-device-plugin-daemonset-qqcxm                           0/1     CrashLoopBackOff   6158 (54s ago)   21d
+2025-12-15T14:03:39.1819164Z kube-system                     svclb-traefik-cc871d40-78zcc                                   2/2     Running            0                32d
+2025-12-15T14:03:39.1819518Z kube-system                     svclb-traefik-cc871d40-ffrzm                                   2/2     Running            0                38d
+2025-12-15T14:03:39.1819883Z kube-system                     svclb-traefik-cc871d40-p5xxl                                   2/2     Running            0                21d
+2025-12-15T14:03:39.1820300Z kube-system                     traefik-c98fdf6fb-2xhr4                                        1/1     Running            0                5d1h
+2025-12-15T14:03:39.1820781Z opentelemetry-operator-system   opentelemetry-operator-controller-manager-5c9cddc94f-pfgq9     2/2     Running            15 (13d ago)     30d
+2025-12-15T14:03:39.1865991Z ##[group]Run START=$(date +%s.%N); ./deploy.sh && printf "\nTOTAL DEPLOYMENT TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"
+2025-12-15T14:03:39.1866475Z [36;1mSTART=$(date +%s.%N); ./deploy.sh && printf "\nTOTAL DEPLOYMENT TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"[0m
+2025-12-15T14:03:39.1882750Z shell: /usr/bin/bash -e {0}
+2025-12-15T14:03:39.1882934Z env:
+2025-12-15T14:03:39.1883184Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:39.1883533Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
+2025-12-15T14:03:39.1883881Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:39.1884186Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:39.1884517Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:39.1884861Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
+2025-12-15T14:03:39.1885228Z   NODE_IP: ***
+2025-12-15T14:03:39.1885393Z   MODEL_PORT: ***
+2025-12-15T14:03:39.1885552Z ##[endgroup]
+2025-12-15T14:03:39.1932270Z Deploying model...
+2025-12-15T14:03:39.4686334Z Deploying Kubernetes resources with the following configuration:
+2025-12-15T14:03:39.4686629Z   Project Name: example1
+2025-12-15T14:03:39.4686806Z   IPFS IP: 10.43.168.200
+2025-12-15T14:03:39.4687016Z   Model: example1_2025-12-11_12-02-22.pkl
+2025-12-15T14:03:39.4687204Z   Pod Name: example1-2025-12-11-12-02-22
+2025-12-15T14:03:39.4687385Z   App Label: example1-2025-12-11-12-02-22pkl
+2025-12-15T14:03:39.4687504Z 
+2025-12-15T14:03:39.4687578Z Generated Kubernetes manifest:
+2025-12-15T14:03:39.4687738Z ================================
+2025-12-15T14:03:39.4687886Z apiVersion: v1
+2025-12-15T14:03:39.4688019Z kind: Pod
+2025-12-15T14:03:39.4688161Z metadata:
+2025-12-15T14:03:39.4688290Z   name: example1-2025-12-11-12-02-22
+2025-12-15T14:03:39.4688452Z   labels:
+2025-12-15T14:03:39.4688587Z     app: example1-2025-12-11-12-02-22pkl
+2025-12-15T14:03:39.4688797Z     tag: model
+2025-12-15T14:03:39.4688919Z spec:
+2025-12-15T14:03:39.4689047Z   restartPolicy: Never
+2025-12-15T14:03:39.4689183Z   containers:
+2025-12-15T14:03:39.4689321Z   - name: model-deploy
+2025-12-15T14:03:39.4689499Z     image: oasees/ml-base-image:latest
+2025-12-15T14:03:39.4689675Z     imagePullPolicy: IfNotPresent
+2025-12-15T14:03:39.4689826Z     env:
+2025-12-15T14:03:39.4689957Z       - name: PROJECT_NAME
+2025-12-15T14:03:39.4690166Z         value: "example1"
+2025-12-15T14:03:39.4690316Z       - name: IPFS_IP
+2025-12-15T14:03:39.4690463Z         value: "10.43.168.200"
+2025-12-15T14:03:39.4690609Z       - name: MODEL
+2025-12-15T14:03:39.4690766Z         value: "example1_2025-12-11_12-02-22.pkl"
+2025-12-15T14:03:39.4690950Z     command: ["/bin/bash", "-c"]
+2025-12-15T14:03:39.4691095Z     args:
+2025-12-15T14:03:39.4691213Z     - |
+2025-12-15T14:03:39.4691491Z       HASH=$(ipfs --api=/ip4/${IPFS_IP}/tcp/5001/http files stat --hash /oasees-ml-ops/projects/ml/${PROJECT_NAME}) &&
+2025-12-15T14:03:39.4691828Z       ipfs --api=/ip4/${IPFS_IP}/tcp/5001/http get ${HASH} -o ${PROJECT_NAME} &&
+2025-12-15T14:03:39.4692043Z       cd $PROJECT_NAME &&
+2025-12-15T14:03:39.4692233Z       python  ${PROJECT_NAME}_deploy.py --model-path $MODEL
+2025-12-15T14:03:39.4692419Z     ports:
+2025-12-15T14:03:39.4692542Z     - containerPort: 5005
+2025-12-15T14:03:39.4692632Z 
+2025-12-15T14:03:39.4692679Z ---
+2025-12-15T14:03:39.4692795Z apiVersion: v1
+2025-12-15T14:03:39.4692915Z kind: Service
+2025-12-15T14:03:39.4693034Z metadata:
+2025-12-15T14:03:39.4693172Z   name: example1-2025-12-11-12-02-22-service
+2025-12-15T14:03:39.4693331Z   labels:
+2025-12-15T14:03:39.4693443Z     tag: model
+2025-12-15T14:03:39.4693557Z spec:
+2025-12-15T14:03:39.4693670Z   type: NodePort
+2025-12-15T14:03:39.4693812Z   selector:
+2025-12-15T14:03:39.4694134Z     app: example1-2025-12-11-12-02-22pkl
+2025-12-15T14:03:39.4694391Z     tag: model
+2025-12-15T14:03:39.4694513Z   ports:
+2025-12-15T14:03:39.4694630Z   - port: 30005
+2025-12-15T14:03:39.4694759Z     targetPort: 5005
+2025-12-15T14:03:39.4694848Z 
+2025-12-15T14:03:39.4694909Z ================================
+2025-12-15T14:03:39.4694999Z 
+2025-12-15T14:03:39.4695092Z Applying Kubernetes configuration...
+2025-12-15T14:03:39.6277069Z ✅ Deployment successful!
+2025-12-15T14:03:40.4072588Z pod/example1-2025-12-11-12-02-22 condition met
+2025-12-15T14:03:40.4089147Z 
+2025-12-15T14:03:40.4089376Z Model Deployed!. Sending for inference...
+2025-12-15T14:03:40.4089541Z 
+2025-12-15T14:03:41.2663804Z Accuracy: 0.9600
+2025-12-15T14:03:41.2664184Z [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+2025-12-15T14:03:41.2831530Z 
+2025-12-15T14:03:41.2831696Z TOTAL DEPLOYMENT TIME: 2.090218610 seconds
+2025-12-15T14:03:41.2831832Z 
+2025-12-15T14:03:41.2851057Z ##[group]Run kubectl delete pod example1-2025-12-11-12-02-22 --force
+2025-12-15T14:03:41.2851341Z [36;1mkubectl delete pod example1-2025-12-11-12-02-22 --force[0m
+2025-12-15T14:03:41.2866588Z shell: /usr/bin/bash -e {0}
+2025-12-15T14:03:41.2866740Z env:
+2025-12-15T14:03:41.2866950Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:41.2867283Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
+2025-12-15T14:03:41.2867583Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:41.2867863Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:41.2868144Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:03:41.2868419Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
+2025-12-15T14:03:41.2868630Z ##[endgroup]
+2025-12-15T14:03:41.3180200Z Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+2025-12-15T14:03:41.3215560Z pod "example1-2025-12-11-12-02-22" force deleted
+2025-12-15T14:03:41.3284258Z Post job cleanup.
+2025-12-15T14:03:41.4346689Z Post job cleanup.
+2025-12-15T14:03:41.4781700Z Unexpected error attempting to determine if executable file exists '/home/achilleas/.local/bin/git': Error: EACCES: permission denied, stat '/home/achilleas/.local/bin/git'
+2025-12-15T14:03:41.4795435Z [command]/usr/bin/git version
+2025-12-15T14:03:41.4819411Z git version 2.34.1
+2025-12-15T14:03:41.4858693Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/301a12d8-7ec4-49b5-99c5-baa7a9a2ff09' before making global git config changes
+2025-12-15T14:03:41.4859197Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-15T14:03:41.4862407Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
+2025-12-15T14:03:41.4888304Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-15T14:03:41.4907963Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-15T14:03:41.5068000Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-15T14:03:41.5083358Z http.https://github.com/.extraheader
+2025-12-15T14:03:41.5092774Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-12-15T14:03:41.5112988Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-15T14:03:41.5332866Z Cleaning up orphan processes
