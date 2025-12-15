@@ -1,13 +1,13 @@
-﻿2025-12-15T13:56:49.7338633Z Post job cleanup.
-2025-12-15T13:56:49.7786491Z Unexpected error attempting to determine if executable file exists '/home/achilleas/.local/bin/git': Error: EACCES: permission denied, stat '/home/achilleas/.local/bin/git'
-2025-12-15T13:56:49.7802528Z [command]/usr/bin/git version
-2025-12-15T13:56:49.7829116Z git version 2.34.1
-2025-12-15T13:56:49.7872558Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/20d462e7-6c0b-45c4-a32e-17ad603323fd' before making global git config changes
-2025-12-15T13:56:49.7873021Z Adding repository directory to the temporary git global config as a safe directory
-2025-12-15T13:56:49.7876319Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
-2025-12-15T13:56:49.7902943Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2025-12-15T13:56:49.7924509Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2025-12-15T13:56:49.8087750Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2025-12-15T13:56:49.8102438Z http.https://github.com/.extraheader
-2025-12-15T13:56:49.8108092Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-2025-12-15T13:56:49.8127321Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+﻿2025-12-15T13:58:39.9100567Z Post job cleanup.
+2025-12-15T13:58:39.9658332Z Unexpected error attempting to determine if executable file exists '/home/achilleas/.local/bin/git': Error: EACCES: permission denied, stat '/home/achilleas/.local/bin/git'
+2025-12-15T13:58:39.9672063Z [command]/usr/bin/git version
+2025-12-15T13:58:39.9695498Z git version 2.34.1
+2025-12-15T13:58:39.9720115Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/5f3b9074-e3c8-4165-ba80-858c8132ab69' before making global git config changes
+2025-12-15T13:58:39.9720645Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-15T13:58:39.9722694Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
+2025-12-15T13:58:39.9742876Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-15T13:58:39.9764214Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-15T13:58:39.9934329Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-15T13:58:39.9949912Z http.https://github.com/.extraheader
+2025-12-15T13:58:39.9960192Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-12-15T13:58:39.9983701Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
