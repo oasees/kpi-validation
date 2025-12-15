@@ -5,7 +5,7 @@ on:
 
 jobs:
   execute-script:
-    runs-on: tests-runner
+    runs-on: accelerated-runner
     defaults:
       run:
         working-directory: ./deployment_time
