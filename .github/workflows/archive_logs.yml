@@ -1,0 +1,54 @@
+name: Archive Workflow Logs
+
+# Trigger this workflow only when the "KPI Validation" workflow completes
+on:
+    workflow_run:
+        workflows: [
+                "Concurrent nodes and services",
+                "Deployment time",
+                "Distributed service",
+                "Marketplace PoC",
+            ] # MUST match the 'name' of your testing workflow
+        types:
+            - completed
+
+permissions:
+    contents: write
+    actions: read
+jobs:
+    archive-logs:
+        runs-on: ubuntu-latest
+        if: ${{ github.event.workflow_run.conclusion == 'success' }}
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
+
+            - name: Download and Extract Logs
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  RUN_ID: ${{ github.event.workflow_run.id }}
+                  REPO: ${{ github.repository }}
+              run: |
+                  # 1. Download the zip (same as before)
+                  gh api -H "Accept: application/vnd.github+json" \
+                    /repos/$REPO/actions/runs/$RUN_ID/logs > logs.zip
+
+                  # 2. Create the destination directory
+                  mkdir -p evidence/run-$RUN_ID
+
+                  # 3. Unzip directly into that folder
+                  # -o: overwrite if exists
+                  # -q: quiet mode
+                  unzip -o -q logs.zip -d evidence/run-$RUN_ID
+
+                  # 4. Remove the zip file (so we only commit text)
+                  rm logs.zip
+
+            - name: Commit Official Logs
+              run: |
+                  git config --global user.name 'github-actions[bot]'
+                  git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+                  git add evidence/
+                  git commit -m "Audit: Archive full platform logs for Run ID ${{ github.event.workflow_run.id }}"
+                  git push
