@@ -1,0 +1,70 @@
+﻿2025-12-15T13:42:22.0707566Z ##[group]Run echo "- Validating Marketplace Listings ..."
+2025-12-15T13:42:22.0708368Z [36;1mecho "- Validating Marketplace Listings ..."[0m
+2025-12-15T13:42:22.0708829Z [36;1mpython main.py[0m
+2025-12-15T13:42:22.0709225Z [36;1mecho "- Marketplace Listings Validated."[0m
+2025-12-15T13:42:22.0728272Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:42:22.0728649Z env:
+2025-12-15T13:42:22.0729134Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:42:22.0729958Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
+2025-12-15T13:42:22.0730758Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:42:22.0731496Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:42:22.0732233Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:42:22.0732963Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
+2025-12-15T13:42:22.0733896Z   RPC_URL: ***
+2025-12-15T13:42:22.0734239Z   IPFS_API_URL: ***
+2025-12-15T13:42:22.0734544Z ##[endgroup]
+2025-12-15T13:42:22.0780294Z - Validating Marketplace Listings ...
+2025-12-15T13:42:24.2412827Z Connected to blockchain
+2025-12-15T13:42:24.2413946Z ID: 1	 IPFS Hash: Qmf5jdHrd9g4fnSix1w13L3QkbF9fbML2ccnLEDU7jKxMs	Title: PyTorch_Spiking.py
+2025-12-15T13:42:24.2414961Z ID: 2	 IPFS Hash: Qmcksc66k6eJxhqNphUny3Lz4oez8EUToLW7wJc9h4F63n	Title: TensorFlow_Extended.py
+2025-12-15T13:42:24.2415932Z ID: 3	 IPFS Hash: QmPnbr4UEpLXd61HJ1pQAtgAiPFnNFE6csYRxwDvXjPtqd	Title: Decision_Trees.py
+2025-12-15T13:42:24.2417032Z ID: 4	 IPFS Hash: QmdWCEoMnUMJ4nwqZKuDNUuLEA6D4UVPzDryaivqGxcfzZ	Title: Principal_Component_Analysis.py
+2025-12-15T13:42:24.2418062Z ID: 5	 IPFS Hash: Qma5yytQFsQR5g9Vy4PDcW21ToCec6rCtA7Tkv9i9vGDJc	Title: Linear_Regression.py
+2025-12-15T13:42:24.2419041Z ID: 6	 IPFS Hash: QmXP7zCTMPPTetqMAdvn1uBsEjtydVvw5g4kcL7KSpmJtJ	Title: Logistic_Regression.py
+2025-12-15T13:42:24.2420093Z ID: 7	 IPFS Hash: QmaDAcrrx5GQJMnyrFwAyXmFHzRotApSKfoQwStHSrEUdE	Title: K-Means_Clustering.py
+2025-12-15T13:42:24.2421070Z ID: 8	 IPFS Hash: Qma8r3LZu9DmsGM95RBfnagCGWeeCDNmoCeHBcADA64ZMv	Title: Spiking_Neural_Networks.py
+2025-12-15T13:42:24.2422107Z ID: 9	 IPFS Hash: QmVYjm3vEDZh3zgRaBfaM6wKTYDapRUNKb1isjhKdmtCkY	Title: Support_Vector_Machines.py
+2025-12-15T13:42:24.2423136Z ID: 10	 IPFS Hash: QmcSjU6kD5JAyNkieD17FYrQhwuaPR9gbEhfh2L9aaYEGb	Title: Neural_Networks.py
+2025-12-15T13:42:24.2424162Z ID: 11	 IPFS Hash: QmfYPMqKJPpUZ4ioHk8Mx4Pqga5853YSbmP9xbYPcZKf8b	Title: Gradient_Boosting_Machines.py
+2025-12-15T13:42:24.2425130Z ID: 12	 IPFS Hash: QmNY5hg9h8TkUTS8sqvWg2rYV3cNKnVnWfSm3XNDWLTJ7k	Title: Random_Forests.py
+2025-12-15T13:42:24.2426099Z ID: 13	 IPFS Hash: QmfAphMNrofn7nRYtLSN46eM9GxMdJWAqYTdmieURfpggu	Title: K-Nearest_Neighbors.py
+2025-12-15T13:42:24.2427050Z ID: 14	 IPFS Hash: QmZ9xBwg9MnbowjKt6WyvLMuRNvBxfQob5RySxuFVkQBjy	Title: SpykeTorch.py
+2025-12-15T13:42:24.2427949Z ID: 15	 IPFS Hash: Qmbs9LrmfFT9ofCQ8wHsKz4wAhyZBRkDfc37Q9St2rNXA7	Title: Creme.py
+2025-12-15T13:42:24.2428968Z ID: 16	 IPFS Hash: QmWmeoADKVTRG4b9FJWiyo8PttWrDtaHJxDaS65ugdp6cq	Title: Acoustic_Blade_Damage_Classifier.py
+2025-12-15T13:42:24.2430144Z ID: 17	 IPFS Hash: QmPxNVJxViTrDXrUdPkgfCBEk4vSEN6DqmxbDUK12bvfoc	Title: EV_Charging_Sessions_with_Surplus_Label.csv
+2025-12-15T13:42:24.2431337Z ID: 18	 IPFS Hash: QmZWfmCZ5jdX85TRizhmtrvVngue2AZaBx1v6n4DNc5S35	Title: Wood_Sanding_Method_Labeled_Samples.csv
+2025-12-15T13:42:24.2432513Z ID: 19	 IPFS Hash: QmaUE2Cf2jrdQJpbcy6dFmX28jVNkrbFHcQeCFVHaJZfhp	Title: Turbine_Baseline_Acoustic_Profiles.csv
+2025-12-15T13:42:24.2433660Z ID: 20	 IPFS Hash: Qma1RcUeriG27opUQPdaNFtPkBfXJ7M4fAWrsGydKGAxVK	Title: EV_Fleet_Availability_Schedules.csv
+2025-12-15T13:42:24.2434782Z ID: 21	 IPFS Hash: QmYFAR85KKbFLFmUAzES1KwMvzFBXvmyKtRgwsEd7JBFjN	Title: Tower_Environmental_Conditions_Log.csv
+2025-12-15T13:42:24.2435955Z ID: 22	 IPFS Hash: QmVG3kPP1MWYaPuHxMm2rTsBjHaCLQfHfGm7mxHfjUpvZW	Title: Microgrid_Day-Ahead_Surplus_Forecasts.csv
+2025-12-15T13:42:24.2438202Z ID: 23	 IPFS Hash: QmXvJW1mqQ4GkCHdp8bAaLwMo23tS6H3xxXgWPJmKD8kXr	Title: Tower_Rust_Image_Patches_Dataset.csv
+2025-12-15T13:42:24.2439361Z ID: 24	 IPFS Hash: Qmc368ty95ET8KHB8YKmfQ4aVdsfZ97EXvcJuer8R4AKa6	Title: EV_Charging_Sessions_with_Surplus_Label.csv
+2025-12-15T13:42:24.2440780Z ID: 25	 IPFS Hash: QmWFYCcAQ3KBePjthF1cMKm8QRG4skPqsGNXkHSS5nwZ1s	Title: Tower_Rust_Thickness_Measurements.csv
+2025-12-15T13:42:24.2441949Z ID: 26	 IPFS Hash: QmYxWamgpKV7J7ZoUHiBpxKowdm17EBPsCf11oKtdeCf6R	Title: Tower_Inspection_Flight_Logs.csv
+2025-12-15T13:42:24.2443067Z ID: 27	 IPFS Hash: QmZuiLiXe8537UMv48vU3o19cSRQknQsjAFPBs2Pje8ksQ	Title: Tower_Rust_Segmentation_Masks_Index.csv
+2025-12-15T13:42:24.2444207Z ID: 28	 IPFS Hash: QmbV2DULvdxtoESmHCV6DFRTQv62fLhtcYT1cgobZ9Eo2V	Title: Seismic_Station_Metadata_Catalog.csv
+2025-12-15T13:42:24.2445570Z ID: 29	 IPFS Hash: QmdRrSeCiwUsExL2EyzUF7GfR7abg8TxaBZoU6FHyfvYxq	Title: Tower_Rust_Visual_Inspection_Annotations.csv
+2025-12-15T13:42:24.2446832Z ID: 30	 IPFS Hash: QmP78ttJJp6FNsGQ6SFJDfP6fzV4NfGGgpdT7vXqnZgyEK	Title: Household_PV_and_Load_Time_Series.csv
+2025-12-15T13:42:24.2448265Z ID: 31	 IPFS Hash: QmZRDRTy4URzDJMcGNFafe7oCPYkbMx5k7cvwdWH4Mz77B	Title: Wood_Species_and_Grain_Characteristics.csv
+2025-12-15T13:42:24.2449414Z ID: 32	 IPFS Hash: QmVEn9gVkxu7wuZEWZwmfJ6a1k2GWQ97xyNWd7V2Ws2ko2	Title: Wood_Sanding_Quality_Ratings.csv
+2025-12-15T13:42:24.2450518Z ID: 33	 IPFS Hash: QmdvhZ9icx4Zx6yeVsVDxwuzZq1t7wScthx8T8Rq94KLh7	Title: Tower_Structural_Component_Inventory.csv
+2025-12-15T13:42:24.2451682Z ID: 34	 IPFS Hash: QmW3uRDjpR4gVvb3K8ZbNzLXKfWRWmg7pgxw4jEzsPaCW2	Title: Regional_Seismic_Waveform_Snippets.csv
+2025-12-15T13:42:24.2452823Z ID: 35	 IPFS Hash: QmW4qnqiZihkAts3hLNebsfdjWeqZj9tT2ZiQ8SMxhf59y	Title: Wood_Surface_Roughness_Profiles.csv
+2025-12-15T13:42:24.2454026Z ID: 36	 IPFS Hash: QmajnExPGV7DDP7idjmkcCp61LoXVxRXE8YNpkwDki6DEq	Title: Turbine_Fault_Condition_Audio_Index.csv
+2025-12-15T13:42:24.2455198Z ID: 37	 IPFS Hash: QmUhebg6QaVy8xvCL5nwYLC7hfq7oA2mxpbPY1xAQqAQrk	Title: Seismic_Event_Catalog_Summary.csv
+2025-12-15T13:42:24.2456323Z ID: 38	 IPFS Hash: QmWRXQziqSUxdfaE7A2DS1TTcpDy8agRXeN1s97W3A5d2R	Title: Turbine_SCADA_Operational_Summary.csv
+2025-12-15T13:42:24.2457549Z ID: 39	 IPFS Hash: QmbNxT3vd7daGgpZAZqMJnQ7k9mCA6uq8q9EcSEMibBcY2	Title: Gearbox_Fault_Acoustic_Anomaly_Detector.py
+2025-12-15T13:42:24.2458703Z ID: 40	 IPFS Hash: QmQ5miW7EMtMyQozJ7yLz8UPt1mF7mR67myHojwo5u2pXv	Title: Real-Time_Seismic_Event_Detection.py
+2025-12-15T13:42:24.2459823Z ID: 41	 IPFS Hash: QmSe8YX9Zezcrn55BiJMgkfQqz4v9jGMjDBfTcMXqc8y2G	Title: Wearable_Health_Anomaly_Detection.py
+2025-12-15T13:42:24.2461041Z ID: 42	 IPFS Hash: QmNu1uhbtuCXwC6axPaK2yykbMnaN347D2dKVyNuyoPFbo	Title: Turbine_Bearing_Health_Monitoring_via_Audio.py
+2025-12-15T13:42:24.2462214Z ID: 43	 IPFS Hash: Qmb2LovG228GfFCHXdAz3gjPuFWCnpvJV3WM5jRCShSPTQ	Title: Pipeline_Leak_Risk_Prediction.py
+2025-12-15T13:42:24.2463372Z ID: 44	 IPFS Hash: QmSb2pUGDLcc9UMDdhFnFL6WpR7yvixfAaztSbAMXyzLP1	Title: Powerline_Defect_Detection_from_Drones.py
+2025-12-15T13:42:24.2464503Z ID: 45	 IPFS Hash: QmezF8Nj43XuHDHDcXnPTTTMZDkAN6wAQpESNrTAtB7Veg	Title: Bridge_Crack_Segmentation.py
+2025-12-15T13:42:24.2465531Z ID: 46	 IPFS Hash: QmXhKc7z14xvdqMsXs5isYFxjBgnvGV4G7MWkXz7fHy7zP	Title: Medical_Imaging_Triage_CNN.py
+2025-12-15T13:42:24.2466635Z ID: 47	 IPFS Hash: QmVAEG69gATQPPD88Ky5876v25F6BEWMpEGaLe2qaat1B3	Title: Earthquake_Early_Warning_Fusion_Model.py
+2025-12-15T13:42:24.2467787Z ID: 48	 IPFS Hash: QmYEVYjM3YE7RuugPf9wP16FMYBJLBh7A7vZvxLqMfXYb2	Title: Aftershock_Probability_Forecasting.py
+2025-12-15T13:42:24.2468946Z ID: 49	 IPFS Hash: QmczwTuVDXr9VeRRmy8nBxU6KvMcoB3sTNZ23EmpDziLVT	Title: Day-Ahead_EV_Charging_Surplus_Forecast.py
+2025-12-15T13:42:24.2470090Z ID: 50	 IPFS Hash: QmWYhwXCbGWQTvv63A9qg4WwKiudjFPQW2MME3D4yhivsh	Title: ICU_Deterioration_Risk_Scoring.py
+2025-12-15T13:42:24.2471198Z ID: 51	 IPFS Hash: QmRcpKQ9jbsPavA1YvTcTZainydSVr1rCTQy5AuJaPFNMH	Title: Real-Time_EV_Charging_Load_Balancer.py
+2025-12-15T13:42:24.2472937Z ID: 52	 IPFS Hash: QmTosZs9rmzKHSLBJZGZhU5xnFJkD1ZtEmnGWaYZPioX6h	Title: Microgrid_Flexibility_Estimator_for_EVs.py
+2025-12-15T13:42:24.4211770Z - Marketplace Listings Validated.
