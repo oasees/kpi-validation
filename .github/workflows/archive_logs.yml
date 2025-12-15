@@ -28,27 +28,37 @@ jobs:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   RUN_ID: ${{ github.event.workflow_run.id }}
                   REPO: ${{ github.repository }}
+                  WORKFLOW_NAME: ${{ github.event.workflow_run.name }}
               run: |
-                  # 1. Download the zip (same as before)
+                  # Sanitize the workflow name to make it folder-safe
+                  # "KPI Validation" becomes "KPI_Validation"
+                  SAFE_NAME=$(echo "$WORKFLOW_NAME" | tr ' ' '_' | tr -cd '[:alnum:]_-')
+
+                  # Define the target path
+                  TARGET_DIR="evidence/$SAFE_NAME/run-$RUN_ID"
+
+                  # 1. Download the log zip via API
                   gh api -H "Accept: application/vnd.github+json" \
                     /repos/$REPO/actions/runs/$RUN_ID/logs > logs.zip
 
-                  # 2. Create the destination directory
-                  mkdir -p evidence/run-$RUN_ID
+                  # 2. Create the specific directory structure
+                  mkdir -p "$TARGET_DIR"
 
                   # 3. Unzip directly into that folder
-                  # -o: overwrite if exists
-                  # -q: quiet mode
-                  unzip -o -q logs.zip -d evidence/run-$RUN_ID
+                  unzip -o -q logs.zip -d "$TARGET_DIR"
 
-                  # 4. Remove the zip file (so we only commit text)
+                  # 4. Cleanup
                   rm logs.zip
 
             - name: Commit Official Logs
+              env:
+                  WORKFLOW_NAME: ${{ github.event.workflow_run.name }}
               run: |
                   git config --global user.name 'github-actions[bot]'
                   git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
+                  # Add the entire evidence folder (git handles new subfolders automatically)
                   git add evidence/
-                  git commit -m "Audit: Archive full platform logs for Run ID ${{ github.event.workflow_run.id }}"
+
+                  git commit -m "Audit: Archive logs for '$WORKFLOW_NAME' (Run ID ${{ github.event.workflow_run.id }})"
                   git push
