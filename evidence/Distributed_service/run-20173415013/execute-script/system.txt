@@ -1,0 +1,4 @@
+2025-12-15T13:50:48.0650000Z Job is about to start running on the runner: oasees-github-tests-runner
+2025-12-15T13:50:48.0570000Z Requested labels: tests-runner
+2025-12-15T13:50:48.0570000Z Job defined at: oasees/kpi-validation/.github/workflows/distributed_service.yml@refs/heads/main
+2025-12-15T13:50:48.0570000Z Waiting for a runner to pick up this job...

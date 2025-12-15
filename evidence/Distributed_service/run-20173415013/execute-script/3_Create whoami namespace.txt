@@ -1,0 +1,5 @@
+﻿2025-12-15T13:50:53.8296197Z ##[group]Run kubectl create namespace whoami
+2025-12-15T13:50:53.8298208Z [36;1mkubectl create namespace whoami[0m
+2025-12-15T13:50:53.8326957Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:50:53.8329072Z ##[endgroup]
+2025-12-15T13:50:53.9072355Z namespace/whoami created

@@ -1,0 +1,5 @@
+﻿2025-12-15T13:51:02.1618433Z ##[group]Run kubectl delete namespace whoami
+2025-12-15T13:51:02.1637106Z [36;1mkubectl delete namespace whoami[0m
+2025-12-15T13:51:02.1656488Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:51:02.1656896Z ##[endgroup]
+2025-12-15T13:51:02.2355898Z namespace "whoami" deleted

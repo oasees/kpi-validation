@@ -1,0 +1,7 @@
+﻿2025-12-15T13:50:53.9185721Z ##[group]Run kubectl apply -f manifests/
+2025-12-15T13:50:53.9187504Z [36;1mkubectl apply -f manifests/[0m
+2025-12-15T13:50:53.9210615Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:50:53.9211910Z ##[endgroup]
+2025-12-15T13:50:54.1403821Z ingressroute.traefik.io/whoami created
+2025-12-15T13:50:54.1558914Z service/whoami created
+2025-12-15T13:50:54.1683655Z deployment.apps/whoami created

@@ -1,0 +1,12 @@
+﻿2025-12-15T13:50:54.1816275Z ##[group]Run kubectl wait --for=condition=ready pod --all -n whoami --timeout=60s
+2025-12-15T13:50:54.1821338Z [36;1mkubectl wait --for=condition=ready pod --all -n whoami --timeout=60s[0m
+2025-12-15T13:50:54.1825181Z [36;1mkubectl get pods -n whoami -owide[0m
+2025-12-15T13:50:54.1862338Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:50:54.1864430Z ##[endgroup]
+2025-12-15T13:50:56.8085228Z pod/whoami-59b797ff4f-kvpgq condition met
+2025-12-15T13:50:56.9105854Z pod/whoami-59b797ff4f-kxwzx condition met
+2025-12-15T13:50:57.0118198Z pod/whoami-59b797ff4f-xp2nl condition met
+2025-12-15T13:50:57.0955346Z NAME                      READY   STATUS    RESTARTS   AGE   IP            NODE                         NOMINATED NODE   READINESS GATES
+2025-12-15T13:50:57.0956854Z whoami-59b797ff4f-kvpgq   1/1     Running   0          3s    10.42.0.138   oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:50:57.0958193Z whoami-59b797ff4f-kxwzx   1/1     Running   0          3s    10.42.0.140   oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:50:57.0959398Z whoami-59b797ff4f-xp2nl   1/1     Running   0          3s    10.42.0.139   oasees-github-tests-runner   <none>           <none>

@@ -1,0 +1,273 @@
+﻿2025-12-15T13:50:50.6295218Z Current runner version: '2.329.0'
+2025-12-15T13:50:50.6305114Z Runner name: 'oasees-github-tests-runner'
+2025-12-15T13:50:50.6306537Z Runner group name: 'Default'
+2025-12-15T13:50:50.6307916Z Machine name: 'oasees-github-tests-runner'
+2025-12-15T13:50:50.6312402Z ##[group]GITHUB_TOKEN Permissions
+2025-12-15T13:50:50.6315821Z Contents: read
+2025-12-15T13:50:50.6316595Z Metadata: read
+2025-12-15T13:50:50.6317394Z Packages: read
+2025-12-15T13:50:50.6318485Z ##[endgroup]
+2025-12-15T13:50:50.6321624Z Secret source: Actions
+2025-12-15T13:50:50.6322655Z Prepare workflow directory
+2025-12-15T13:50:50.7170058Z Prepare all required actions
+2025-12-15T13:50:50.7227518Z Getting action download info
+2025-12-15T13:50:51.4131531Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2025-12-15T13:50:52.6086764Z Complete job name: execute-script
+2025-12-15T13:50:52.7680406Z ##[group]Run actions/checkout@v3
+2025-12-15T13:50:52.7682169Z with:
+2025-12-15T13:50:52.7683016Z   repository: oasees/kpi-validation
+2025-12-15T13:50:52.7684458Z   token: ***
+2025-12-15T13:50:52.7685272Z   ssh-strict: true
+2025-12-15T13:50:52.7686117Z   persist-credentials: true
+2025-12-15T13:50:52.7687011Z   clean: true
+2025-12-15T13:50:52.7688086Z   sparse-checkout-cone-mode: true
+2025-12-15T13:50:52.7689065Z   fetch-depth: 1
+2025-12-15T13:50:52.7689897Z   fetch-tags: false
+2025-12-15T13:50:52.7690721Z   lfs: false
+2025-12-15T13:50:52.7691531Z   submodules: false
+2025-12-15T13:50:52.7692367Z   set-safe-directory: true
+2025-12-15T13:50:52.7693873Z ##[endgroup]
+2025-12-15T13:50:52.9085476Z Syncing repository: oasees/kpi-validation
+2025-12-15T13:50:52.9088882Z ##[group]Getting Git version info
+2025-12-15T13:50:52.9090511Z Working directory is '/home/runner/actions-runner/_work/kpi-validation/kpi-validation'
+2025-12-15T13:50:52.9092744Z [command]/usr/bin/git version
+2025-12-15T13:50:52.9093852Z git version 2.34.1
+2025-12-15T13:50:52.9098466Z ##[endgroup]
+2025-12-15T13:50:52.9118583Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/ce1fe59b-ec5f-40bf-a106-48d92137a60d' before making global git config changes
+2025-12-15T13:50:52.9121331Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-15T13:50:52.9123613Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
+2025-12-15T13:50:52.9166623Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-12-15T13:50:52.9187824Z https://github.com/oasees/kpi-validation
+2025-12-15T13:50:52.9211107Z ##[group]Removing previously created refs, to avoid conflicts
+2025-12-15T13:50:52.9214372Z [command]/usr/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
+2025-12-15T13:50:52.9241758Z refs/heads/main
+2025-12-15T13:50:52.9252731Z [command]/usr/bin/git checkout --detach
+2025-12-15T13:50:52.9296761Z HEAD is now at c8a4570 feat: Add workflow for workflow log retention
+2025-12-15T13:50:52.9343637Z [command]/usr/bin/git branch --delete --force main
+2025-12-15T13:50:52.9375543Z Deleted branch main (was c8a4570).
+2025-12-15T13:50:52.9415685Z ##[endgroup]
+2025-12-15T13:50:52.9416649Z [command]/usr/bin/git submodule status
+2025-12-15T13:50:52.9692745Z ##[group]Cleaning the repository
+2025-12-15T13:50:52.9696181Z [command]/usr/bin/git clean -ffdx
+2025-12-15T13:50:52.9733271Z [command]/usr/bin/git reset --hard HEAD
+2025-12-15T13:50:52.9772211Z HEAD is now at c8a4570 feat: Add workflow for workflow log retention
+2025-12-15T13:50:52.9778708Z ##[endgroup]
+2025-12-15T13:50:52.9780208Z ##[group]Disabling automatic garbage collection
+2025-12-15T13:50:52.9783868Z [command]/usr/bin/git config --local gc.auto 0
+2025-12-15T13:50:52.9812379Z ##[endgroup]
+2025-12-15T13:50:52.9813738Z ##[group]Setting up auth
+2025-12-15T13:50:52.9819516Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-15T13:50:52.9852665Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-15T13:50:53.0122704Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-15T13:50:53.0151022Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-15T13:50:53.0403936Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-12-15T13:50:53.0442605Z ##[endgroup]
+2025-12-15T13:50:53.0444248Z ##[group]Fetching the repository
+2025-12-15T13:50:53.0453668Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +392ed679df85a25fe2e443a0a887fc6c8eb9f7a2:refs/remotes/origin/main
+2025-12-15T13:50:53.7791876Z remote: Enumerating objects: 13, done.        
+2025-12-15T13:50:53.7793550Z remote: Counting objects:   7% (1/13)        
+2025-12-15T13:50:53.7795270Z remote: Counting objects:  15% (2/13)        
+2025-12-15T13:50:53.7796823Z remote: Counting objects:  23% (3/13)        
+2025-12-15T13:50:53.7798546Z remote: Counting objects:  30% (4/13)        
+2025-12-15T13:50:53.7800152Z remote: Counting objects:  38% (5/13)        
+2025-12-15T13:50:53.7801716Z remote: Counting objects:  46% (6/13)        
+2025-12-15T13:50:53.7803291Z remote: Counting objects:  53% (7/13)        
+2025-12-15T13:50:53.7804835Z remote: Counting objects:  61% (8/13)        
+2025-12-15T13:50:53.7806425Z remote: Counting objects:  69% (9/13)        
+2025-12-15T13:50:53.7808262Z remote: Counting objects:  76% (10/13)        
+2025-12-15T13:50:53.7809911Z remote: Counting objects:  84% (11/13)        
+2025-12-15T13:50:53.7811581Z remote: Counting objects:  92% (12/13)        
+2025-12-15T13:50:53.7813315Z remote: Counting objects: 100% (13/13)        
+2025-12-15T13:50:53.7815105Z remote: Counting objects: 100% (13/13), done.        
+2025-12-15T13:50:53.7817031Z remote: Compressing objects:  16% (1/6)        
+2025-12-15T13:50:53.7818780Z remote: Compressing objects:  33% (2/6)        
+2025-12-15T13:50:53.7820503Z remote: Compressing objects:  50% (3/6)        
+2025-12-15T13:50:53.7822254Z remote: Compressing objects:  66% (4/6)        
+2025-12-15T13:50:53.7823982Z remote: Compressing objects:  83% (5/6)        
+2025-12-15T13:50:53.7825747Z remote: Compressing objects: 100% (6/6)        
+2025-12-15T13:50:53.7827572Z remote: Compressing objects: 100% (6/6), done.        
+2025-12-15T13:50:53.7829928Z remote: Total 7 (delta 5), reused 2 (delta 0), pack-reused 0 (from 0)        
+2025-12-15T13:50:53.7855826Z From https://github.com/oasees/kpi-validation
+2025-12-15T13:50:53.7858865Z  + c8a4570...392ed67 392ed679df85a25fe2e443a0a887fc6c8eb9f7a2 -> origin/main  (forced update)
+2025-12-15T13:50:53.7881767Z ##[endgroup]
+2025-12-15T13:50:53.7884011Z ##[group]Determining the checkout info
+2025-12-15T13:50:53.7886647Z ##[endgroup]
+2025-12-15T13:50:53.7888994Z ##[group]Checking out the ref
+2025-12-15T13:50:53.7891653Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-12-15T13:50:53.7927720Z Warning: you are leaving 1 commit behind, not connected to
+2025-12-15T13:50:53.7929925Z any of your branches:
+2025-12-15T13:50:53.7930833Z 
+2025-12-15T13:50:53.7931740Z   c8a4570 feat: Add workflow for workflow log retention
+2025-12-15T13:50:53.7933202Z 
+2025-12-15T13:50:53.7934289Z If you want to keep it by creating a new branch, this may be a good time
+2025-12-15T13:50:53.7936538Z to do so with:
+2025-12-15T13:50:53.7937266Z 
+2025-12-15T13:50:53.7937921Z  git branch <new-branch-name> c8a4570
+2025-12-15T13:50:53.7939105Z 
+2025-12-15T13:50:53.7939697Z Switched to a new branch 'main'
+2025-12-15T13:50:53.7941775Z Branch 'main' set up to track remote branch 'main' from 'origin'.
+2025-12-15T13:50:53.7946504Z ##[endgroup]
+2025-12-15T13:50:53.7991527Z [command]/usr/bin/git log -1 --format='%H'
+2025-12-15T13:50:53.8015837Z '392ed679df85a25fe2e443a0a887fc6c8eb9f7a2'
+2025-12-15T13:50:53.8296236Z ##[group]Run kubectl create namespace whoami
+2025-12-15T13:50:53.8298221Z [36;1mkubectl create namespace whoami[0m
+2025-12-15T13:50:53.8326987Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:50:53.8329098Z ##[endgroup]
+2025-12-15T13:50:53.9072442Z namespace/whoami created
+2025-12-15T13:50:53.9185762Z ##[group]Run kubectl apply -f manifests/
+2025-12-15T13:50:53.9187513Z [36;1mkubectl apply -f manifests/[0m
+2025-12-15T13:50:53.9210636Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:50:53.9211918Z ##[endgroup]
+2025-12-15T13:50:54.1403922Z ingressroute.traefik.io/whoami created
+2025-12-15T13:50:54.1559012Z service/whoami created
+2025-12-15T13:50:54.1683732Z deployment.apps/whoami created
+2025-12-15T13:50:54.1816333Z ##[group]Run kubectl wait --for=condition=ready pod --all -n whoami --timeout=60s
+2025-12-15T13:50:54.1821372Z [36;1mkubectl wait --for=condition=ready pod --all -n whoami --timeout=60s[0m
+2025-12-15T13:50:54.1825202Z [36;1mkubectl get pods -n whoami -owide[0m
+2025-12-15T13:50:54.1862368Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:50:54.1864459Z ##[endgroup]
+2025-12-15T13:50:56.8085308Z pod/whoami-59b797ff4f-kvpgq condition met
+2025-12-15T13:50:56.9105907Z pod/whoami-59b797ff4f-kxwzx condition met
+2025-12-15T13:50:57.0118257Z pod/whoami-59b797ff4f-xp2nl condition met
+2025-12-15T13:50:57.0955393Z NAME                      READY   STATUS    RESTARTS   AGE   IP            NODE                         NOMINATED NODE   READINESS GATES
+2025-12-15T13:50:57.0956870Z whoami-59b797ff4f-kvpgq   1/1     Running   0          3s    10.42.0.138   oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:50:57.0958318Z whoami-59b797ff4f-kxwzx   1/1     Running   0          3s    10.42.0.140   oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:50:57.0959406Z whoami-59b797ff4f-xp2nl   1/1     Running   0          3s    10.42.0.139   oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:50:57.1035010Z ##[group]Run sleep 5
+2025-12-15T13:50:57.1035555Z [36;1msleep 5[0m
+2025-12-15T13:50:57.1036083Z [36;1mfor i in $(seq 1 5); do curl http://whoami.localhost; done[0m
+2025-12-15T13:50:57.1057263Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:50:57.1057711Z ##[endgroup]
+2025-12-15T13:51:02.1205347Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-12-15T13:51:02.1206099Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-12-15T13:51:02.1206446Z 
+2025-12-15T13:51:02.1235959Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-12-15T13:51:02.1236751Z 100   417  100   417    0     0   122k      0 --:--:-- --:--:-- --:--:--  135k
+2025-12-15T13:51:02.1237278Z Hostname: whoami-59b797ff4f-kxwzx
+2025-12-15T13:51:02.1237878Z IP: 127.0.0.1
+2025-12-15T13:51:02.1243169Z IP: ::1
+2025-12-15T13:51:02.1243512Z IP: 10.42.0.140
+2025-12-15T13:51:02.1243977Z IP: fe80::1809:8aff:fe42:904e
+2025-12-15T13:51:02.1244467Z RemoteAddr: 10.42.0.96:52468
+2025-12-15T13:51:02.1244800Z GET / HTTP/1.1
+2025-12-15T13:51:02.1245117Z Host: whoami.localhost
+2025-12-15T13:51:02.1245499Z User-Agent: curl/7.81.0
+2025-12-15T13:51:02.1245813Z Accept: */*
+2025-12-15T13:51:02.1246185Z Accept-Encoding: gzip
+2025-12-15T13:51:02.1246530Z X-Forwarded-For: 10.42.0.107
+2025-12-15T13:51:02.1246919Z X-Forwarded-Host: whoami.localhost
+2025-12-15T13:51:02.1247555Z X-Forwarded-Port: 80
+2025-12-15T13:51:02.1247924Z X-Forwarded-Proto: http
+2025-12-15T13:51:02.1248441Z X-Forwarded-Server: traefik-865bd56545-sn9nd
+2025-12-15T13:51:02.1248879Z X-Real-Ip: 10.42.0.107
+2025-12-15T13:51:02.1249142Z 
+2025-12-15T13:51:02.1301654Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-12-15T13:51:02.1302426Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-12-15T13:51:02.1302791Z 
+2025-12-15T13:51:02.1323753Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-12-15T13:51:02.1324466Z 100   417  100   417    0     0   172k      0 --:--:-- --:--:-- --:--:--  203k
+2025-12-15T13:51:02.1325507Z Hostname: whoami-59b797ff4f-xp2nl
+2025-12-15T13:51:02.1325863Z IP: 127.0.0.1
+2025-12-15T13:51:02.1326178Z IP: ::1
+2025-12-15T13:51:02.1326427Z IP: 10.42.0.139
+2025-12-15T13:51:02.1326745Z IP: fe80::acbe:22ff:fea7:fc41
+2025-12-15T13:51:02.1327291Z RemoteAddr: 10.42.0.96:41080
+2025-12-15T13:51:02.1327676Z GET / HTTP/1.1
+2025-12-15T13:51:02.1327956Z Host: whoami.localhost
+2025-12-15T13:51:02.1328288Z User-Agent: curl/7.81.0
+2025-12-15T13:51:02.1328584Z Accept: */*
+2025-12-15T13:51:02.1328935Z Accept-Encoding: gzip
+2025-12-15T13:51:02.1329331Z X-Forwarded-For: 10.42.0.107
+2025-12-15T13:51:02.1329774Z X-Forwarded-Host: whoami.localhost
+2025-12-15T13:51:02.1330173Z X-Forwarded-Port: 80
+2025-12-15T13:51:02.1330489Z X-Forwarded-Proto: http
+2025-12-15T13:51:02.1330878Z X-Forwarded-Server: traefik-865bd56545-sn9nd
+2025-12-15T13:51:02.1331279Z X-Real-Ip: 10.42.0.107
+2025-12-15T13:51:02.1331497Z 
+2025-12-15T13:51:02.1387268Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-12-15T13:51:02.1387943Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-12-15T13:51:02.1388395Z 
+2025-12-15T13:51:02.1407539Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-12-15T13:51:02.1408035Z Hostname: whoami-59b797ff4f-kvpgq
+2025-12-15T13:51:02.1408552Z 100   417  100   417    0     0   189k      0 --:--:-- --:--:-- --:--:--  203k
+2025-12-15T13:51:02.1409127Z IP: 127.0.0.1
+2025-12-15T13:51:02.1409431Z IP: ::1
+2025-12-15T13:51:02.1409698Z IP: 10.42.0.138
+2025-12-15T13:51:02.1410002Z IP: fe80::d4b7:2cff:fe52:3c24
+2025-12-15T13:51:02.1410398Z RemoteAddr: 10.42.0.96:40226
+2025-12-15T13:51:02.1410730Z GET / HTTP/1.1
+2025-12-15T13:51:02.1411025Z Host: whoami.localhost
+2025-12-15T13:51:02.1411349Z User-Agent: curl/7.81.0
+2025-12-15T13:51:02.1411644Z Accept: */*
+2025-12-15T13:51:02.1411997Z Accept-Encoding: gzip
+2025-12-15T13:51:02.1412858Z X-Forwarded-For: 10.42.0.107
+2025-12-15T13:51:02.1413390Z X-Forwarded-Host: whoami.localhost
+2025-12-15T13:51:02.1413816Z X-Forwarded-Port: 80
+2025-12-15T13:51:02.1414209Z X-Forwarded-Proto: http
+2025-12-15T13:51:02.1414582Z X-Forwarded-Server: traefik-865bd56545-sn9nd
+2025-12-15T13:51:02.1415008Z X-Real-Ip: 10.42.0.107
+2025-12-15T13:51:02.1415200Z 
+2025-12-15T13:51:02.1474465Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-12-15T13:51:02.1475110Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-12-15T13:51:02.1475490Z 
+2025-12-15T13:51:02.1490992Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-12-15T13:51:02.1491484Z Hostname: whoami-59b797ff4f-xp2nl
+2025-12-15T13:51:02.1491856Z IP: 127.0.0.1
+2025-12-15T13:51:02.1492145Z IP: ::1
+2025-12-15T13:51:02.1492412Z IP: 10.42.0.139
+2025-12-15T13:51:02.1492711Z IP: fe80::acbe:22ff:fea7:fc41
+2025-12-15T13:51:02.1493097Z RemoteAddr: 10.42.0.96:41080
+2025-12-15T13:51:02.1493432Z GET / HTTP/1.1
+2025-12-15T13:51:02.1493712Z Host: whoami.localhost
+2025-12-15T13:51:02.1494140Z User-Agent: curl/7.81.0
+2025-12-15T13:51:02.1494448Z Accept: */*
+2025-12-15T13:51:02.1494746Z Accept-Encoding: gzip
+2025-12-15T13:51:02.1495063Z X-Forwarded-For: 10.42.0.107
+2025-12-15T13:51:02.1495436Z X-Forwarded-Host: whoami.localhost
+2025-12-15T13:51:02.1495804Z X-Forwarded-Port: 80
+2025-12-15T13:51:02.1553627Z 100   417  100   417    0     0   221k      0 --:--:-- --:--:-- --:--:--  407k
+2025-12-15T13:51:02.1554324Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-12-15T13:51:02.1554868Z X-Forwarded-Proto: http
+2025-12-15T13:51:02.1555338Z X-Forwarded-Server: traefik-865bd56545-sn9nd
+2025-12-15T13:51:02.1555758Z X-Real-Ip: 10.42.0.107
+2025-12-15T13:51:02.1555953Z 
+2025-12-15T13:51:02.1556199Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-12-15T13:51:02.1556512Z 
+2025-12-15T13:51:02.1572057Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-12-15T13:51:02.1574488Z Hostname: whoami-59b797ff4f-kvpgq
+2025-12-15T13:51:02.1574918Z IP: 127.0.0.1
+2025-12-15T13:51:02.1575223Z IP: ::1
+2025-12-15T13:51:02.1575490Z IP: 10.42.0.138
+2025-12-15T13:51:02.1575817Z IP: fe80::d4b7:2cff:fe52:3c24
+2025-12-15T13:51:02.1576183Z RemoteAddr: 10.42.0.96:40226
+2025-12-15T13:51:02.1576499Z GET / HTTP/1.1
+2025-12-15T13:51:02.1576794Z Host: whoami.localhost
+2025-12-15T13:51:02.1577108Z User-Agent: curl/7.81.0
+2025-12-15T13:51:02.1577503Z Accept: */*
+2025-12-15T13:51:02.1577785Z Accept-Encoding: gzip
+2025-12-15T13:51:02.1578132Z X-Forwarded-For: 10.42.0.107
+2025-12-15T13:51:02.1578552Z X-Forwarded-Host: whoami.localhost
+2025-12-15T13:51:02.1578962Z X-Forwarded-Port: 80
+2025-12-15T13:51:02.1579293Z X-Forwarded-Proto: http
+2025-12-15T13:51:02.1579672Z X-Forwarded-Server: traefik-865bd56545-sn9nd
+2025-12-15T13:51:02.1580281Z 100   417  100   417    0     0   208k      0 --:--:-- --:--:-- --:--:--  407k
+2025-12-15T13:51:02.1580760Z X-Real-Ip: 10.42.0.107
+2025-12-15T13:51:02.1580983Z 
+2025-12-15T13:51:02.1636514Z ##[group]Run kubectl delete namespace whoami
+2025-12-15T13:51:02.1637111Z [36;1mkubectl delete namespace whoami[0m
+2025-12-15T13:51:02.1656498Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:51:02.1656900Z ##[endgroup]
+2025-12-15T13:51:02.2355938Z namespace "whoami" deleted
+2025-12-15T13:51:12.8704456Z Post job cleanup.
+2025-12-15T13:51:12.9854604Z [command]/usr/bin/git version
+2025-12-15T13:51:12.9900477Z git version 2.34.1
+2025-12-15T13:51:12.9964878Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/968bb9be-76be-472d-8939-aea87a507aaf' before making global git config changes
+2025-12-15T13:51:12.9966076Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-15T13:51:12.9969793Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
+2025-12-15T13:51:13.0004773Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-15T13:51:13.0036550Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-15T13:51:13.0290734Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-15T13:51:13.0312579Z http.https://github.com/.extraheader
+2025-12-15T13:51:13.0325949Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-12-15T13:51:13.0357366Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-15T13:51:13.0741396Z Cleaning up orphan processes

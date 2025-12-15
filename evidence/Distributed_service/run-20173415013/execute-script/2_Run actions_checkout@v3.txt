@@ -1,0 +1,96 @@
+﻿2025-12-15T13:50:52.7680344Z ##[group]Run actions/checkout@v3
+2025-12-15T13:50:52.7682134Z with:
+2025-12-15T13:50:52.7683001Z   repository: oasees/kpi-validation
+2025-12-15T13:50:52.7684440Z   token: ***
+2025-12-15T13:50:52.7685257Z   ssh-strict: true
+2025-12-15T13:50:52.7686103Z   persist-credentials: true
+2025-12-15T13:50:52.7686998Z   clean: true
+2025-12-15T13:50:52.7688069Z   sparse-checkout-cone-mode: true
+2025-12-15T13:50:52.7689051Z   fetch-depth: 1
+2025-12-15T13:50:52.7689884Z   fetch-tags: false
+2025-12-15T13:50:52.7690709Z   lfs: false
+2025-12-15T13:50:52.7691517Z   submodules: false
+2025-12-15T13:50:52.7692355Z   set-safe-directory: true
+2025-12-15T13:50:52.7693827Z ##[endgroup]
+2025-12-15T13:50:52.9085389Z Syncing repository: oasees/kpi-validation
+2025-12-15T13:50:52.9088842Z ##[group]Getting Git version info
+2025-12-15T13:50:52.9090480Z Working directory is '/home/runner/actions-runner/_work/kpi-validation/kpi-validation'
+2025-12-15T13:50:52.9092720Z [command]/usr/bin/git version
+2025-12-15T13:50:52.9093694Z git version 2.34.1
+2025-12-15T13:50:52.9098419Z ##[endgroup]
+2025-12-15T13:50:52.9118539Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/ce1fe59b-ec5f-40bf-a106-48d92137a60d' before making global git config changes
+2025-12-15T13:50:52.9121308Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-15T13:50:52.9123594Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
+2025-12-15T13:50:52.9166581Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-12-15T13:50:52.9187775Z https://github.com/oasees/kpi-validation
+2025-12-15T13:50:52.9211064Z ##[group]Removing previously created refs, to avoid conflicts
+2025-12-15T13:50:52.9214345Z [command]/usr/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
+2025-12-15T13:50:52.9241715Z refs/heads/main
+2025-12-15T13:50:52.9252696Z [command]/usr/bin/git checkout --detach
+2025-12-15T13:50:52.9296684Z HEAD is now at c8a4570 feat: Add workflow for workflow log retention
+2025-12-15T13:50:52.9343592Z [command]/usr/bin/git branch --delete --force main
+2025-12-15T13:50:52.9375512Z Deleted branch main (was c8a4570).
+2025-12-15T13:50:52.9415644Z ##[endgroup]
+2025-12-15T13:50:52.9416629Z [command]/usr/bin/git submodule status
+2025-12-15T13:50:52.9692667Z ##[group]Cleaning the repository
+2025-12-15T13:50:52.9696142Z [command]/usr/bin/git clean -ffdx
+2025-12-15T13:50:52.9733233Z [command]/usr/bin/git reset --hard HEAD
+2025-12-15T13:50:52.9772169Z HEAD is now at c8a4570 feat: Add workflow for workflow log retention
+2025-12-15T13:50:52.9778668Z ##[endgroup]
+2025-12-15T13:50:52.9780184Z ##[group]Disabling automatic garbage collection
+2025-12-15T13:50:52.9783835Z [command]/usr/bin/git config --local gc.auto 0
+2025-12-15T13:50:52.9812344Z ##[endgroup]
+2025-12-15T13:50:52.9813721Z ##[group]Setting up auth
+2025-12-15T13:50:52.9819479Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-15T13:50:52.9852548Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-15T13:50:53.0122630Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-15T13:50:53.0150964Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-15T13:50:53.0403863Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-12-15T13:50:53.0442565Z ##[endgroup]
+2025-12-15T13:50:53.0444227Z ##[group]Fetching the repository
+2025-12-15T13:50:53.0453151Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +392ed679df85a25fe2e443a0a887fc6c8eb9f7a2:refs/remotes/origin/main
+2025-12-15T13:50:53.7791809Z remote: Enumerating objects: 13, done.        
+2025-12-15T13:50:53.7793541Z remote: Counting objects:   7% (1/13)        
+2025-12-15T13:50:53.7795260Z remote: Counting objects:  15% (2/13)        
+2025-12-15T13:50:53.7796816Z remote: Counting objects:  23% (3/13)        
+2025-12-15T13:50:53.7798534Z remote: Counting objects:  30% (4/13)        
+2025-12-15T13:50:53.7800143Z remote: Counting objects:  38% (5/13)        
+2025-12-15T13:50:53.7801708Z remote: Counting objects:  46% (6/13)        
+2025-12-15T13:50:53.7803284Z remote: Counting objects:  53% (7/13)        
+2025-12-15T13:50:53.7804827Z remote: Counting objects:  61% (8/13)        
+2025-12-15T13:50:53.7806419Z remote: Counting objects:  69% (9/13)        
+2025-12-15T13:50:53.7808246Z remote: Counting objects:  76% (10/13)        
+2025-12-15T13:50:53.7809903Z remote: Counting objects:  84% (11/13)        
+2025-12-15T13:50:53.7811573Z remote: Counting objects:  92% (12/13)        
+2025-12-15T13:50:53.7813278Z remote: Counting objects: 100% (13/13)        
+2025-12-15T13:50:53.7815079Z remote: Counting objects: 100% (13/13), done.        
+2025-12-15T13:50:53.7817020Z remote: Compressing objects:  16% (1/6)        
+2025-12-15T13:50:53.7818775Z remote: Compressing objects:  33% (2/6)        
+2025-12-15T13:50:53.7820497Z remote: Compressing objects:  50% (3/6)        
+2025-12-15T13:50:53.7822248Z remote: Compressing objects:  66% (4/6)        
+2025-12-15T13:50:53.7823976Z remote: Compressing objects:  83% (5/6)        
+2025-12-15T13:50:53.7825741Z remote: Compressing objects: 100% (6/6)        
+2025-12-15T13:50:53.7827565Z remote: Compressing objects: 100% (6/6), done.        
+2025-12-15T13:50:53.7829922Z remote: Total 7 (delta 5), reused 2 (delta 0), pack-reused 0 (from 0)        
+2025-12-15T13:50:53.7855798Z From https://github.com/oasees/kpi-validation
+2025-12-15T13:50:53.7858857Z  + c8a4570...392ed67 392ed679df85a25fe2e443a0a887fc6c8eb9f7a2 -> origin/main  (forced update)
+2025-12-15T13:50:53.7881747Z ##[endgroup]
+2025-12-15T13:50:53.7883962Z ##[group]Determining the checkout info
+2025-12-15T13:50:53.7886638Z ##[endgroup]
+2025-12-15T13:50:53.7888985Z ##[group]Checking out the ref
+2025-12-15T13:50:53.7891644Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-12-15T13:50:53.7927691Z Warning: you are leaving 1 commit behind, not connected to
+2025-12-15T13:50:53.7929917Z any of your branches:
+2025-12-15T13:50:53.7930825Z 
+2025-12-15T13:50:53.7931733Z   c8a4570 feat: Add workflow for workflow log retention
+2025-12-15T13:50:53.7933197Z 
+2025-12-15T13:50:53.7934283Z If you want to keep it by creating a new branch, this may be a good time
+2025-12-15T13:50:53.7936531Z to do so with:
+2025-12-15T13:50:53.7937260Z 
+2025-12-15T13:50:53.7937914Z  git branch <new-branch-name> c8a4570
+2025-12-15T13:50:53.7939100Z 
+2025-12-15T13:50:53.7939690Z Switched to a new branch 'main'
+2025-12-15T13:50:53.7941768Z Branch 'main' set up to track remote branch 'main' from 'origin'.
+2025-12-15T13:50:53.7946495Z ##[endgroup]
+2025-12-15T13:50:53.7991461Z [command]/usr/bin/git log -1 --format='%H'
+2025-12-15T13:50:53.8015812Z '392ed679df85a25fe2e443a0a887fc6c8eb9f7a2'
