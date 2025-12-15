@@ -1,4 +1,4 @@
-2025-12-15T14:04:17.2410000Z Requested labels: accelerated-runner
-2025-12-15T14:04:17.2410000Z Job defined at: oasees/kpi-validation/.github/workflows/deployment_time.yml@refs/heads/main
-2025-12-15T14:04:17.2410000Z Waiting for a runner to pick up this job...
-2025-12-15T14:04:17.2460000Z Job is about to start running on the runner: accelerated-runner
+2025-12-15T14:04:58.6330000Z Requested labels: accelerated-runner
+2025-12-15T14:04:58.6330000Z Job defined at: oasees/kpi-validation/.github/workflows/deployment_time.yml@refs/heads/main
+2025-12-15T14:04:58.6330000Z Waiting for a runner to pick up this job...
+2025-12-15T14:04:58.6350000Z Job is about to start running on the runner: accelerated-runner

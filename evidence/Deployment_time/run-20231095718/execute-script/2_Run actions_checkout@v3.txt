@@ -1,63 +1,63 @@
-﻿2025-12-15T14:04:22.3089209Z ##[group]Run actions/checkout@v3
-2025-12-15T14:04:22.3089644Z with:
-2025-12-15T14:04:22.3089851Z   repository: oasees/kpi-validation
-2025-12-15T14:04:22.3090265Z   token: ***
-2025-12-15T14:04:22.3090447Z   ssh-strict: true
-2025-12-15T14:04:22.3090648Z   persist-credentials: true
-2025-12-15T14:04:22.3090857Z   clean: true
-2025-12-15T14:04:22.3091050Z   sparse-checkout-cone-mode: true
-2025-12-15T14:04:22.3091273Z   fetch-depth: 1
-2025-12-15T14:04:22.3091457Z   fetch-tags: false
-2025-12-15T14:04:22.3091637Z   lfs: false
-2025-12-15T14:04:22.3091818Z   submodules: false
-2025-12-15T14:04:22.3092019Z   set-safe-directory: true
-2025-12-15T14:04:22.3092338Z ##[endgroup]
-2025-12-15T14:04:22.3608018Z Syncing repository: oasees/kpi-validation
-2025-12-15T14:04:22.3609014Z ##[group]Getting Git version info
-2025-12-15T14:04:22.3609376Z Working directory is '/home/runner/actions-runner/_work/kpi-validation/kpi-validation'
-2025-12-15T14:04:22.3609968Z Unexpected error attempting to determine if executable file exists '/home/achilleas/.local/bin/git': Error: EACCES: permission denied, stat '/home/achilleas/.local/bin/git'
-2025-12-15T14:04:22.3610721Z [command]/usr/bin/git version
-2025-12-15T14:04:22.3610960Z git version 2.34.1
-2025-12-15T14:04:22.3631944Z ##[endgroup]
-2025-12-15T14:04:22.3643865Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/3ad955e6-5dc6-4ec4-b357-13c6f2d4bf4f' before making global git config changes
-2025-12-15T14:04:22.3644502Z Adding repository directory to the temporary git global config as a safe directory
-2025-12-15T14:04:22.3647477Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
-2025-12-15T14:04:22.3675323Z [command]/usr/bin/git config --local --get remote.origin.url
-2025-12-15T14:04:22.3690403Z https://github.com/oasees/kpi-validation
-2025-12-15T14:04:22.3704467Z ##[group]Removing previously created refs, to avoid conflicts
-2025-12-15T14:04:22.3707294Z [command]/usr/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
-2025-12-15T14:04:22.3722543Z refs/heads/main
-2025-12-15T14:04:22.3726686Z [command]/usr/bin/git checkout --detach
-2025-12-15T14:04:22.3748429Z HEAD is now at 3271bcb chore: Change model name in deployment time workflow
-2025-12-15T14:04:22.3770308Z [command]/usr/bin/git branch --delete --force main
-2025-12-15T14:04:22.3787449Z Deleted branch main (was 3271bcb).
-2025-12-15T14:04:22.3809893Z ##[endgroup]
-2025-12-15T14:04:22.3811787Z [command]/usr/bin/git submodule status
-2025-12-15T14:04:22.3969466Z ##[group]Cleaning the repository
-2025-12-15T14:04:22.3973091Z [command]/usr/bin/git clean -ffdx
-2025-12-15T14:04:22.3990554Z [command]/usr/bin/git reset --hard HEAD
-2025-12-15T14:04:22.4014486Z HEAD is now at 3271bcb chore: Change model name in deployment time workflow
-2025-12-15T14:04:22.4018479Z ##[endgroup]
-2025-12-15T14:04:22.4020164Z ##[group]Disabling automatic garbage collection
-2025-12-15T14:04:22.4022844Z [command]/usr/bin/git config --local gc.auto 0
-2025-12-15T14:04:22.4041780Z ##[endgroup]
-2025-12-15T14:04:22.4042434Z ##[group]Setting up auth
-2025-12-15T14:04:22.4047421Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2025-12-15T14:04:22.4068290Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2025-12-15T14:04:22.4224603Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2025-12-15T14:04:22.4247526Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2025-12-15T14:04:22.4393763Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-2025-12-15T14:04:22.4413934Z ##[endgroup]
-2025-12-15T14:04:22.4414299Z ##[group]Fetching the repository
-2025-12-15T14:04:22.4417832Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +3271bcb25b97c5cd5a421a914094711f5ee21cb4:refs/remotes/origin/main
-2025-12-15T14:04:22.9646554Z remote: Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)        
-2025-12-15T14:04:22.9693656Z ##[endgroup]
-2025-12-15T14:04:22.9693964Z ##[group]Determining the checkout info
-2025-12-15T14:04:22.9695686Z ##[endgroup]
-2025-12-15T14:04:22.9696008Z ##[group]Checking out the ref
-2025-12-15T14:04:22.9699043Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
-2025-12-15T14:04:22.9727505Z Switched to a new branch 'main'
-2025-12-15T14:04:22.9728216Z Branch 'main' set up to track remote branch 'main' from 'origin'.
-2025-12-15T14:04:22.9731952Z ##[endgroup]
-2025-12-15T14:04:22.9752176Z [command]/usr/bin/git log -1 --format='%H'
-2025-12-15T14:04:22.9765333Z '3271bcb25b97c5cd5a421a914094711f5ee21cb4'
+﻿2025-12-15T14:05:03.4295797Z ##[group]Run actions/checkout@v3
+2025-12-15T14:05:03.4296636Z with:
+2025-12-15T14:05:03.4297126Z   repository: oasees/kpi-validation
+2025-12-15T14:05:03.4297958Z   token: ***
+2025-12-15T14:05:03.4298421Z   ssh-strict: true
+2025-12-15T14:05:03.4298941Z   persist-credentials: true
+2025-12-15T14:05:03.4299503Z   clean: true
+2025-12-15T14:05:03.4300000Z   sparse-checkout-cone-mode: true
+2025-12-15T14:05:03.4300694Z   fetch-depth: 1
+2025-12-15T14:05:03.4301182Z   fetch-tags: false
+2025-12-15T14:05:03.4301660Z   lfs: false
+2025-12-15T14:05:03.4302118Z   submodules: false
+2025-12-15T14:05:03.4302628Z   set-safe-directory: true
+2025-12-15T14:05:03.4303290Z ##[endgroup]
+2025-12-15T14:05:03.4851735Z Syncing repository: oasees/kpi-validation
+2025-12-15T14:05:03.4853377Z ##[group]Getting Git version info
+2025-12-15T14:05:03.4854380Z Working directory is '/home/runner/actions-runner/_work/kpi-validation/kpi-validation'
+2025-12-15T14:05:03.4856416Z Unexpected error attempting to determine if executable file exists '/home/achilleas/.local/bin/git': Error: EACCES: permission denied, stat '/home/achilleas/.local/bin/git'
+2025-12-15T14:05:03.4858505Z [command]/usr/bin/git version
+2025-12-15T14:05:03.4859094Z git version 2.34.1
+2025-12-15T14:05:03.4884781Z ##[endgroup]
+2025-12-15T14:05:03.4897692Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/47512b7c-af8e-41cc-b5b0-58e4dc95e2a2' before making global git config changes
+2025-12-15T14:05:03.4899794Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-15T14:05:03.4901507Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
+2025-12-15T14:05:03.4926502Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-12-15T14:05:03.4940548Z https://github.com/oasees/kpi-validation
+2025-12-15T14:05:03.4949403Z ##[group]Removing previously created refs, to avoid conflicts
+2025-12-15T14:05:03.4950785Z [command]/usr/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
+2025-12-15T14:05:03.4964258Z refs/heads/main
+2025-12-15T14:05:03.4971836Z [command]/usr/bin/git checkout --detach
+2025-12-15T14:05:03.4995828Z HEAD is now at 3271bcb chore: Change model name in deployment time workflow
+2025-12-15T14:05:03.5021229Z [command]/usr/bin/git branch --delete --force main
+2025-12-15T14:05:03.5039965Z Deleted branch main (was 3271bcb).
+2025-12-15T14:05:03.5066452Z ##[endgroup]
+2025-12-15T14:05:03.5067694Z [command]/usr/bin/git submodule status
+2025-12-15T14:05:03.5223354Z ##[group]Cleaning the repository
+2025-12-15T14:05:03.5226686Z [command]/usr/bin/git clean -ffdx
+2025-12-15T14:05:03.5248153Z [command]/usr/bin/git reset --hard HEAD
+2025-12-15T14:05:03.5265501Z HEAD is now at 3271bcb chore: Change model name in deployment time workflow
+2025-12-15T14:05:03.5268046Z ##[endgroup]
+2025-12-15T14:05:03.5269003Z ##[group]Disabling automatic garbage collection
+2025-12-15T14:05:03.5270436Z [command]/usr/bin/git config --local gc.auto 0
+2025-12-15T14:05:03.5287679Z ##[endgroup]
+2025-12-15T14:05:03.5288717Z ##[group]Setting up auth
+2025-12-15T14:05:03.5290533Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-15T14:05:03.5307493Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-15T14:05:03.5456968Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-15T14:05:03.5476554Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-15T14:05:03.5633163Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-12-15T14:05:03.5654348Z ##[endgroup]
+2025-12-15T14:05:03.5655191Z ##[group]Fetching the repository
+2025-12-15T14:05:03.5659001Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +3271bcb25b97c5cd5a421a914094711f5ee21cb4:refs/remotes/origin/main
+2025-12-15T14:05:04.0828441Z remote: Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)        
+2025-12-15T14:05:04.0874663Z ##[endgroup]
+2025-12-15T14:05:04.0874918Z ##[group]Determining the checkout info
+2025-12-15T14:05:04.0876835Z ##[endgroup]
+2025-12-15T14:05:04.0877056Z ##[group]Checking out the ref
+2025-12-15T14:05:04.0880472Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-12-15T14:05:04.0909085Z Switched to a new branch 'main'
+2025-12-15T14:05:04.0909862Z Branch 'main' set up to track remote branch 'main' from 'origin'.
+2025-12-15T14:05:04.0912933Z ##[endgroup]
+2025-12-15T14:05:04.0937634Z [command]/usr/bin/git log -1 --format='%H'
+2025-12-15T14:05:04.0954512Z '3271bcb25b97c5cd5a421a914094711f5ee21cb4'
