@@ -1,50 +1,50 @@
-﻿2025-12-15T14:00:46.1599574Z ##[group]Run kubectl get pods -A
-2025-12-15T14:00:46.1599800Z [36;1mkubectl get pods -A[0m
-2025-12-15T14:00:46.1616314Z shell: /usr/bin/bash -e {0}
-2025-12-15T14:00:46.1616487Z env:
-2025-12-15T14:00:46.1616695Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:00:46.1641414Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
-2025-12-15T14:00:46.1641965Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:00:46.1642311Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:00:46.1642602Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:00:46.1642884Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
-2025-12-15T14:00:46.1643104Z ##[endgroup]
-2025-12-15T14:00:46.2070326Z NAMESPACE                       NAME                                                           READY   STATUS             RESTARTS          AGE
-2025-12-15T14:00:46.2070871Z cert-manager                    cert-manager-5d74b4d6f7-wjr2h                                  1/1     Running            12 (13d ago)      30d
-2025-12-15T14:00:46.2071299Z cert-manager                    cert-manager-cainjector-54cb99f7b7-2hr5m                       1/1     Running            11 (13d ago)      30d
-2025-12-15T14:00:46.2071741Z cert-manager                    cert-manager-webhook-5546ffdb45-ksbl4                          1/1     Running            14 (13d ago)      30d
-2025-12-15T14:00:46.2072178Z default                         cluster-backend-bdbb97cdb-lwpqj                                1/1     Running            0                 38d
-2025-12-15T14:00:46.2072649Z default                         collector-oasees-master-f1e1b5a9-ab16-45ab-8da9-2b40fbff7eb7   1/1     Running            0                 21d
-2025-12-15T14:00:46.2073249Z default                         collector-santospc-d26c7a1d-b783-4361-bbc6-d54e95c4ba23        1/1     Running            0                 21d
-2025-12-15T14:00:46.2073762Z default                         grafana-5b487c8748-xnjqb                                       1/1     Running            0                 30d
-2025-12-15T14:00:46.2074215Z default                         mlops-data-notifier-4g5r9                                      1/1     Running            0                 21d
-2025-12-15T14:00:46.2074622Z default                         mlops-data-notifier-x5ldt                                      1/1     Running            0                 38d
-2025-12-15T14:00:46.2074977Z default                         mlops-data-notifier-x6m7b                                      1/1     Running            0                 32d
-2025-12-15T14:00:46.2075326Z default                         oasees-agent-5k6qf                                             1/1     Running            0                 20d
-2025-12-15T14:00:46.2075650Z default                         oasees-agent-r6kx2                                             1/1     Running            0                 20d
-2025-12-15T14:00:46.2075973Z default                         oasees-agent-wpbqf                                             1/1     Running            0                 20d
-2025-12-15T14:00:46.2076321Z default                         oasees-device-plugin-6rpcg                                     1/1     Running            0                 38d
-2025-12-15T14:00:46.2076939Z default                         oasees-device-plugin-fzc6s                                     1/1     Running            0                 21d
-2025-12-15T14:00:46.2077307Z default                         oasees-device-plugin-s8rsq                                     1/1     Running            0                 32d
-2025-12-15T14:00:46.2077684Z default                         oasees-ipfs-7fdd99dc5d-cpffn                                   1/1     Running            0                 38d
-2025-12-15T14:00:46.2078064Z default                         oasees-notebook-67f97bd8c4-mqgl9                               1/1     Running            0                 38d
-2025-12-15T14:00:46.2078562Z default                         oasees-portal-6d78d45574-8nqct                                 1/1     Running            0                 9d
-2025-12-15T14:00:46.2078949Z default                         oasees-solidity-ide-7894876967-ckd7c                           1/1     Running            0                 38d
-2025-12-15T14:00:46.2079366Z default                         oasees-telemetry-api-786b7cbb78-db4sb                          1/1     Running            0                 30d
-2025-12-15T14:00:46.2079796Z default                         opensearch-query-app-c67db4cb7-bhmx8                           1/1     Running            0                 5d2h
-2025-12-15T14:00:46.2080268Z default                         otel-collector-collector-6bb5c44666-hblf5                      1/1     Running            0                 30d
-2025-12-15T14:00:46.2080686Z default                         thanos-query-74b95cdbf7-v66bp                                  1/1     Running            0                 30d
-2025-12-15T14:00:46.2081042Z default                         thanos-receive-0                                               1/1     Running            0                 30d
-2025-12-15T14:00:46.2081404Z kube-system                     coredns-64fd4b4794-vt88l                                       1/1     Running            13 (13d ago)      38d
-2025-12-15T14:00:46.2081796Z kube-system                     helm-install-traefik-6nfdh                                     0/1     Completed          1                 38d
-2025-12-15T14:00:46.2082219Z kube-system                     helm-install-traefik-crd-dvf6p                                 0/1     Completed          0                 38d
-2025-12-15T14:00:46.2082639Z kube-system                     local-path-provisioner-774c6665dc-bzm2b                        1/1     Running            0                 38d
-2025-12-15T14:00:46.2083065Z kube-system                     metrics-server-7bfffcd44-tsfst                                 1/1     Running            15 (13d ago)      38d
-2025-12-15T14:00:46.2083489Z kube-system                     nvidia-device-plugin-daemonset-c8ggb                           1/1     Running            0                 31d
-2025-12-15T14:00:46.2083924Z kube-system                     nvidia-device-plugin-daemonset-dnzh4                           1/1     Running            0                 31d
-2025-12-15T14:00:46.2084357Z kube-system                     nvidia-device-plugin-daemonset-qqcxm                           0/1     CrashLoopBackOff   6157 (3m9s ago)   21d
-2025-12-15T14:00:46.2084793Z kube-system                     svclb-traefik-cc871d40-78zcc                                   2/2     Running            0                 32d
-2025-12-15T14:00:46.2085190Z kube-system                     svclb-traefik-cc871d40-ffrzm                                   2/2     Running            0                 38d
-2025-12-15T14:00:46.2085581Z kube-system                     svclb-traefik-cc871d40-p5xxl                                   2/2     Running            0                 21d
-2025-12-15T14:00:46.2085971Z kube-system                     traefik-c98fdf6fb-2xhr4                                        1/1     Running            0                 5d1h
-2025-12-15T14:00:46.2086473Z opentelemetry-operator-system   opentelemetry-operator-controller-manager-5c9cddc94f-pfgq9     2/2     Running            15 (13d ago)      30d
+﻿2025-12-15T14:01:12.9480938Z ##[group]Run kubectl get pods -A
+2025-12-15T14:01:12.9481532Z [36;1mkubectl get pods -A[0m
+2025-12-15T14:01:12.9501547Z shell: /usr/bin/bash -e {0}
+2025-12-15T14:01:12.9502036Z env:
+2025-12-15T14:01:12.9502653Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:01:12.9503648Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
+2025-12-15T14:01:12.9504643Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:01:12.9505555Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:01:12.9506473Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:01:12.9507391Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
+2025-12-15T14:01:12.9508111Z ##[endgroup]
+2025-12-15T14:01:12.9943359Z NAMESPACE                       NAME                                                           READY   STATUS             RESTARTS           AGE
+2025-12-15T14:01:12.9944618Z cert-manager                    cert-manager-5d74b4d6f7-wjr2h                                  1/1     Running            12 (13d ago)       30d
+2025-12-15T14:01:12.9945986Z cert-manager                    cert-manager-cainjector-54cb99f7b7-2hr5m                       1/1     Running            11 (13d ago)       30d
+2025-12-15T14:01:12.9947375Z cert-manager                    cert-manager-webhook-5546ffdb45-ksbl4                          1/1     Running            14 (13d ago)       30d
+2025-12-15T14:01:12.9948621Z default                         cluster-backend-bdbb97cdb-lwpqj                                1/1     Running            0                  38d
+2025-12-15T14:01:12.9949912Z default                         collector-oasees-master-f1e1b5a9-ab16-45ab-8da9-2b40fbff7eb7   1/1     Running            0                  21d
+2025-12-15T14:01:12.9951391Z default                         collector-santospc-d26c7a1d-b783-4361-bbc6-d54e95c4ba23        1/1     Running            0                  21d
+2025-12-15T14:01:12.9952638Z default                         grafana-5b487c8748-xnjqb                                       1/1     Running            0                  30d
+2025-12-15T14:01:12.9953659Z default                         mlops-data-notifier-4g5r9                                      1/1     Running            0                  21d
+2025-12-15T14:01:12.9954704Z default                         mlops-data-notifier-x5ldt                                      1/1     Running            0                  38d
+2025-12-15T14:01:12.9955731Z default                         mlops-data-notifier-x6m7b                                      1/1     Running            0                  32d
+2025-12-15T14:01:12.9956718Z default                         oasees-agent-5k6qf                                             1/1     Running            0                  20d
+2025-12-15T14:01:12.9957661Z default                         oasees-agent-r6kx2                                             1/1     Running            0                  20d
+2025-12-15T14:01:12.9958611Z default                         oasees-agent-wpbqf                                             1/1     Running            0                  20d
+2025-12-15T14:01:12.9959645Z default                         oasees-device-plugin-6rpcg                                     1/1     Running            0                  38d
+2025-12-15T14:01:12.9960999Z default                         oasees-device-plugin-fzc6s                                     1/1     Running            0                  21d
+2025-12-15T14:01:12.9962050Z default                         oasees-device-plugin-s8rsq                                     1/1     Running            0                  32d
+2025-12-15T14:01:12.9963118Z default                         oasees-ipfs-7fdd99dc5d-cpffn                                   1/1     Running            0                  38d
+2025-12-15T14:01:12.9964209Z default                         oasees-notebook-67f97bd8c4-mqgl9                               1/1     Running            0                  38d
+2025-12-15T14:01:12.9965769Z default                         oasees-portal-6d78d45574-8nqct                                 1/1     Running            0                  9d
+2025-12-15T14:01:12.9966910Z default                         oasees-solidity-ide-7894876967-ckd7c                           1/1     Running            0                  38d
+2025-12-15T14:01:12.9968151Z default                         oasees-telemetry-api-786b7cbb78-db4sb                          1/1     Running            0                  30d
+2025-12-15T14:01:12.9969325Z default                         opensearch-query-app-c67db4cb7-bhmx8                           1/1     Running            0                  5d2h
+2025-12-15T14:01:12.9970686Z default                         otel-collector-collector-6bb5c44666-hblf5                      1/1     Running            0                  30d
+2025-12-15T14:01:12.9971855Z default                         thanos-query-74b95cdbf7-v66bp                                  1/1     Running            0                  30d
+2025-12-15T14:01:12.9972871Z default                         thanos-receive-0                                               1/1     Running            0                  30d
+2025-12-15T14:01:12.9973867Z kube-system                     coredns-64fd4b4794-vt88l                                       1/1     Running            13 (13d ago)       38d
+2025-12-15T14:01:12.9974969Z kube-system                     helm-install-traefik-6nfdh                                     0/1     Completed          1                  38d
+2025-12-15T14:01:12.9976119Z kube-system                     helm-install-traefik-crd-dvf6p                                 0/1     Completed          0                  38d
+2025-12-15T14:01:12.9977336Z kube-system                     local-path-provisioner-774c6665dc-bzm2b                        1/1     Running            0                  38d
+2025-12-15T14:01:12.9978555Z kube-system                     metrics-server-7bfffcd44-tsfst                                 1/1     Running            15 (13d ago)       38d
+2025-12-15T14:01:12.9979754Z kube-system                     nvidia-device-plugin-daemonset-c8ggb                           1/1     Running            0                  31d
+2025-12-15T14:01:12.9981027Z kube-system                     nvidia-device-plugin-daemonset-dnzh4                           1/1     Running            0                  31d
+2025-12-15T14:01:12.9982288Z kube-system                     nvidia-device-plugin-daemonset-qqcxm                           0/1     CrashLoopBackOff   6157 (3m35s ago)   21d
+2025-12-15T14:01:12.9983477Z kube-system                     svclb-traefik-cc871d40-78zcc                                   2/2     Running            0                  32d
+2025-12-15T14:01:12.9984575Z kube-system                     svclb-traefik-cc871d40-ffrzm                                   2/2     Running            0                  38d
+2025-12-15T14:01:12.9985690Z kube-system                     svclb-traefik-cc871d40-p5xxl                                   2/2     Running            0                  21d
+2025-12-15T14:01:12.9986773Z kube-system                     traefik-c98fdf6fb-2xhr4                                        1/1     Running            0                  5d1h
+2025-12-15T14:01:12.9988304Z opentelemetry-operator-system   opentelemetry-operator-controller-manager-5c9cddc94f-pfgq9     2/2     Running            15 (13d ago)       30d
