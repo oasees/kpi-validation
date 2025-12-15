@@ -1,0 +1,44 @@
+﻿2025-12-15T13:53:46.5005863Z ##[group]Run START=$(date +%s.%N); kubectl get pods -owide && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"
+2025-12-15T13:53:46.5007469Z [36;1mSTART=$(date +%s.%N); kubectl get pods -owide && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"[0m
+2025-12-15T13:53:46.5026447Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:53:46.5026807Z ##[endgroup]
+2025-12-15T13:53:46.6010639Z NAME                                        READY   STATUS    RESTARTS        AGE     IP             NODE                         NOMINATED NODE   READINESS GATES
+2025-12-15T13:53:46.6012641Z cluster-backend-bdbb97cdb-69x49             1/1     Running   3 (2d22h ago)   3d1h    10.42.0.94     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6014852Z edge-0-pod-684fd564ff-nw7c8                 1/1     Running   0               4s      10.42.16.2     edge-node-29                 <none>           <none>
+2025-12-15T13:53:46.6016640Z edge-1-pod-7b698b59b-mfbb4                  1/1     Running   0               4s      10.42.23.1     edge-node-33                 <none>           <none>
+2025-12-15T13:53:46.6017853Z edge-10-pod-57f5487b9d-vhnt6                1/1     Running   0               3s      10.42.47.1     edge-node-8                  <none>           <none>
+2025-12-15T13:53:46.6018878Z edge-11-pod-f978f97-5mf8l                   1/1     Running   0               3s      10.42.39.2     edge-node-46                 <none>           <none>
+2025-12-15T13:53:46.6019876Z edge-12-pod-86d445974d-qnptz                1/1     Running   0               3s      10.42.32.3     edge-node-40                 <none>           <none>
+2025-12-15T13:53:46.6020950Z edge-13-pod-69f487b9cf-g9h5j                1/1     Running   0               3s      10.42.34.0     edge-node-42                 <none>           <none>
+2025-12-15T13:53:46.6022559Z edge-14-pod-656c6f5594-jldp2                1/1     Running   0               3s      10.42.1.0      edge-node-18                 <none>           <none>
+2025-12-15T13:53:46.6023576Z edge-15-pod-89d8c678f-xnxrw                 1/1     Running   0               3s      10.42.20.1     edge-node-31                 <none>           <none>
+2025-12-15T13:53:46.6024647Z edge-16-pod-557f59d4d-cjdx4                 1/1     Running   0               3s      10.42.21.1     edge-node-32                 <none>           <none>
+2025-12-15T13:53:46.6025620Z edge-17-pod-79c75cdf95-5jtmk                1/1     Running   0               2s      10.42.244.0    edge-node-10                 <none>           <none>
+2025-12-15T13:53:46.6026579Z edge-18-pod-7557b4bcdb-bwrtk                1/1     Running   0               2s      10.42.15.1     edge-node-28                 <none>           <none>
+2025-12-15T13:53:46.6027577Z edge-19-pod-79cd7f4dd5-4kd9x                1/1     Running   0               2s      10.42.242.0    edge-node-0                  <none>           <none>
+2025-12-15T13:53:46.6028610Z edge-2-pod-d54b486fc-4j8sw                  1/1     Running   0               2s      10.42.32.4     edge-node-40                 <none>           <none>
+2025-12-15T13:53:46.6029600Z edge-20-pod-75cbb6c7cc-kcrv4                1/1     Running   0               2s      10.42.245.0    edge-node-11                 <none>           <none>
+2025-12-15T13:53:46.6030648Z edge-21-pod-78965b99db-kb562                1/1     Running   0               1s      10.42.16.3     edge-node-29                 <none>           <none>
+2025-12-15T13:53:46.6031596Z edge-22-pod-86669f6d87-7hv2s                1/1     Running   0               1s      10.42.15.2     edge-node-28                 <none>           <none>
+2025-12-15T13:53:46.6032609Z edge-23-pod-74d8f64b6d-ffx8q                1/1     Running   0               1s      10.42.31.3     edge-node-4                  <none>           <none>
+2025-12-15T13:53:46.6033707Z edge-24-pod-5669c59b65-62nnf                1/1     Running   0               1s      10.42.23.2     edge-node-33                 <none>           <none>
+2025-12-15T13:53:46.6035010Z edge-25-pod-6854c89fc8-v6sj7                1/1     Running   0               1s      10.42.247.0    edge-node-12                 <none>           <none>
+2025-12-15T13:53:46.6035982Z edge-26-pod-7f7b9588cf-72wg2                1/1     Running   0               1s      10.42.10.1     edge-node-24                 <none>           <none>
+2025-12-15T13:53:46.6036971Z edge-27-pod-86b8bb69bd-qpzth                1/1     Running   0               0s      10.42.40.1     edge-node-47                 <none>           <none>
+2025-12-15T13:53:46.6038322Z edge-28-pod-5976f4945c-7j2p7                1/1     Running   0               0s      10.42.45.1     edge-node-6                  <none>           <none>
+2025-12-15T13:53:46.6039482Z edge-29-pod-d77dc46fd-qqh62                 1/1     Running   0               0s      10.42.244.1    edge-node-10                 <none>           <none>
+2025-12-15T13:53:46.6040529Z grafana-5b487c8748-27xwl                    1/1     Running   3 (2d22h ago)   3d1h    10.42.0.89     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6041671Z mlops-data-notifier-k92tp                   1/1     Running   3 (2d22h ago)   3d1h    10.42.0.90     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6042756Z oasees-agent-82hzs                          1/1     Running   3 (2d22h ago)   3d1h    10.160.3.168   oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6043829Z oasees-device-plugin-tjmbw                  1/1     Running   3 (2d22h ago)   3d1h    10.42.0.103    oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6045104Z oasees-ipfs-76cc867776-zflrs                1/1     Running   2 (2d22h ago)   2d23h   10.42.0.101    oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6046474Z oasees-notebook-67f97bd8c4-w6t99            1/1     Running   3 (2d22h ago)   3d1h    10.42.0.98     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6048864Z oasees-portal-5447bdffc6-tsjmj              1/1     Running   1 (2d22h ago)   2d23h   10.42.0.97     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6051411Z oasees-solidity-ide-7894876967-xpmfv        1/1     Running   3 (2d22h ago)   3d1h    10.42.0.87     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6053091Z oasees-telemetry-api-786b7cbb78-k7dxm       1/1     Running   3 (2d22h ago)   3d1h    10.42.0.106    oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6054461Z otel-collector-collector-6bb5c44666-bvfx5   1/1     Running   3 (2d22h ago)   3d1h    10.42.0.88     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6055701Z thanos-query-74b95cdbf7-hhvhs               1/1     Running   3 (2d22h ago)   3d1h    10.42.0.104    oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6056791Z thanos-receive-0                            1/1     Running   3 (2d22h ago)   3d1h    10.42.0.95     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6068260Z 
+2025-12-15T13:53:46.6068655Z API RESPONSE TIME: .097837817 seconds
+2025-12-15T13:53:46.6069175Z 

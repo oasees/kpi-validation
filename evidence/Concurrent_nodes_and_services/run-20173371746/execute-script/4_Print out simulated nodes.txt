@@ -1,0 +1,59 @@
+﻿2025-12-15T13:53:39.3599830Z ##[group]Run START=$(date +%s.%N); kubectl get nodes && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"
+2025-12-15T13:53:39.3601124Z [36;1mSTART=$(date +%s.%N); kubectl get nodes && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"[0m
+2025-12-15T13:53:39.3620909Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:53:39.3621528Z ##[endgroup]
+2025-12-15T13:53:39.4574159Z NAME                         STATUS   ROLES                  AGE    VERSION
+2025-12-15T13:53:39.4575128Z edge-node-0                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4575718Z edge-node-1                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4576302Z edge-node-10                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4576872Z edge-node-11                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4577454Z edge-node-12                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4578280Z edge-node-13                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4578861Z edge-node-14                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4579421Z edge-node-15                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4580032Z edge-node-16                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4580605Z edge-node-17                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4581159Z edge-node-18                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4581740Z edge-node-19                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4582296Z edge-node-2                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4582984Z edge-node-20                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4583608Z edge-node-21                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4584189Z edge-node-22                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4584771Z edge-node-23                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4585330Z edge-node-24                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4585914Z edge-node-25                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4586482Z edge-node-26                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4587087Z edge-node-27                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4587661Z edge-node-28                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4588223Z edge-node-29                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4588823Z edge-node-3                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4589409Z edge-node-30                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4589981Z edge-node-31                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4590563Z edge-node-32                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4591132Z edge-node-33                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4591703Z edge-node-34                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4592264Z edge-node-35                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4592843Z edge-node-36                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4593443Z edge-node-37                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4594099Z edge-node-38                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4595251Z edge-node-39                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4595850Z edge-node-4                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4596544Z edge-node-40                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4597371Z edge-node-41                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4598092Z edge-node-42                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4598672Z edge-node-43                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4599231Z edge-node-44                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4599807Z edge-node-45                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4601233Z edge-node-46                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4601844Z edge-node-47                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4602588Z edge-node-48                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4603185Z edge-node-49                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4603770Z edge-node-5                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4604334Z edge-node-6                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4604909Z edge-node-7                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4605459Z edge-node-8                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4606027Z edge-node-9                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4606695Z oasees-github-tests-runner   Ready    control-plane,master   3d1h   v1.33.6+k3s1
+2025-12-15T13:53:39.4633528Z 
+2025-12-15T13:53:39.4633876Z API RESPONSE TIME: .094742482 seconds
+2025-12-15T13:53:39.4634179Z 

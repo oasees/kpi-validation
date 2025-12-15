@@ -1,0 +1,129 @@
+﻿2025-12-15T13:53:39.4671627Z ##[group]Run START=$(date +%s.%N); kubectl apply -f deployments/ && kubectl wait --for=condition=ready pod --all --timeout=60s && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"
+2025-12-15T13:53:39.4673527Z [36;1mSTART=$(date +%s.%N); kubectl apply -f deployments/ && kubectl wait --for=condition=ready pod --all --timeout=60s && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"[0m
+2025-12-15T13:53:39.4693293Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:53:39.4693660Z ##[endgroup]
+2025-12-15T13:53:42.9256617Z deployment.apps/edge-0-pod created
+2025-12-15T13:53:42.9414682Z service/edge-0-service created
+2025-12-15T13:53:42.9509557Z deployment.apps/edge-1-pod created
+2025-12-15T13:53:42.9832980Z service/edge-1-service created
+2025-12-15T13:53:42.9959738Z deployment.apps/edge-10-pod created
+2025-12-15T13:53:43.0275389Z service/edge-10-service created
+2025-12-15T13:53:43.0394880Z deployment.apps/edge-11-pod created
+2025-12-15T13:53:43.0658607Z service/edge-11-service created
+2025-12-15T13:53:43.0759809Z deployment.apps/edge-12-pod created
+2025-12-15T13:53:43.0903402Z service/edge-12-service created
+2025-12-15T13:53:43.0967422Z deployment.apps/edge-13-pod created
+2025-12-15T13:53:43.1074680Z service/edge-13-service created
+2025-12-15T13:53:43.1151070Z deployment.apps/edge-14-pod created
+2025-12-15T13:53:43.1264659Z service/edge-14-service created
+2025-12-15T13:53:43.1346453Z deployment.apps/edge-15-pod created
+2025-12-15T13:53:43.1496634Z service/edge-15-service created
+2025-12-15T13:53:43.1622054Z deployment.apps/edge-16-pod created
+2025-12-15T13:53:43.1734588Z service/edge-16-service created
+2025-12-15T13:53:43.1808989Z deployment.apps/edge-17-pod created
+2025-12-15T13:53:43.1914368Z service/edge-17-service created
+2025-12-15T13:53:43.1978575Z deployment.apps/edge-18-pod created
+2025-12-15T13:53:43.2083118Z service/edge-18-service created
+2025-12-15T13:53:43.2156320Z deployment.apps/edge-19-pod created
+2025-12-15T13:53:43.2259650Z service/edge-19-service created
+2025-12-15T13:53:43.2334740Z deployment.apps/edge-2-pod created
+2025-12-15T13:53:43.2441595Z service/edge-2-service created
+2025-12-15T13:53:43.2530457Z deployment.apps/edge-20-pod created
+2025-12-15T13:53:43.2633791Z service/edge-20-service created
+2025-12-15T13:53:43.2721807Z deployment.apps/edge-21-pod created
+2025-12-15T13:53:43.2836165Z service/edge-21-service created
+2025-12-15T13:53:43.2899503Z deployment.apps/edge-22-pod created
+2025-12-15T13:53:43.2999790Z service/edge-22-service created
+2025-12-15T13:53:43.3061170Z deployment.apps/edge-23-pod created
+2025-12-15T13:53:43.3166607Z service/edge-23-service created
+2025-12-15T13:53:43.3234845Z deployment.apps/edge-24-pod created
+2025-12-15T13:53:43.3352269Z service/edge-24-service created
+2025-12-15T13:53:43.3420134Z deployment.apps/edge-25-pod created
+2025-12-15T13:53:43.3525080Z service/edge-25-service created
+2025-12-15T13:53:43.3585276Z deployment.apps/edge-26-pod created
+2025-12-15T13:53:43.3690038Z service/edge-26-service created
+2025-12-15T13:53:43.3760626Z deployment.apps/edge-27-pod created
+2025-12-15T13:53:43.3871079Z service/edge-27-service created
+2025-12-15T13:53:43.3963235Z deployment.apps/edge-28-pod created
+2025-12-15T13:53:43.4103201Z service/edge-28-service created
+2025-12-15T13:53:43.4240085Z deployment.apps/edge-29-pod created
+2025-12-15T13:53:43.4370502Z service/edge-29-service created
+2025-12-15T13:53:43.4463116Z deployment.apps/edge-3-pod created
+2025-12-15T13:53:43.4596936Z service/edge-3-service created
+2025-12-15T13:53:43.4666241Z deployment.apps/edge-30-pod created
+2025-12-15T13:53:43.4773957Z service/edge-30-service created
+2025-12-15T13:53:43.4837893Z deployment.apps/edge-31-pod created
+2025-12-15T13:53:43.4951847Z service/edge-31-service created
+2025-12-15T13:53:43.5028172Z deployment.apps/edge-32-pod created
+2025-12-15T13:53:43.5136803Z service/edge-32-service created
+2025-12-15T13:53:43.5210253Z deployment.apps/edge-33-pod created
+2025-12-15T13:53:43.5321534Z service/edge-33-service created
+2025-12-15T13:53:43.5405077Z deployment.apps/edge-34-pod created
+2025-12-15T13:53:43.5533096Z service/edge-34-service created
+2025-12-15T13:53:43.5605192Z deployment.apps/edge-35-pod created
+2025-12-15T13:53:43.5734529Z service/edge-35-service created
+2025-12-15T13:53:43.5794491Z deployment.apps/edge-36-pod created
+2025-12-15T13:53:43.5899905Z service/edge-36-service created
+2025-12-15T13:53:43.6055321Z deployment.apps/edge-37-pod created
+2025-12-15T13:53:43.6316489Z service/edge-37-service created
+2025-12-15T13:53:43.6429224Z deployment.apps/edge-38-pod created
+2025-12-15T13:53:43.6568442Z service/edge-38-service created
+2025-12-15T13:53:43.6644518Z deployment.apps/edge-39-pod created
+2025-12-15T13:53:43.6764700Z service/edge-39-service created
+2025-12-15T13:53:43.6858215Z deployment.apps/edge-4-pod created
+2025-12-15T13:53:43.6971423Z service/edge-4-service created
+2025-12-15T13:53:43.7047711Z deployment.apps/edge-40-pod created
+2025-12-15T13:53:43.7215268Z service/edge-40-service created
+2025-12-15T13:53:43.7293588Z deployment.apps/edge-41-pod created
+2025-12-15T13:53:43.7401005Z service/edge-41-service created
+2025-12-15T13:53:43.7478551Z deployment.apps/edge-42-pod created
+2025-12-15T13:53:43.7584404Z service/edge-42-service created
+2025-12-15T13:53:43.7652518Z deployment.apps/edge-43-pod created
+2025-12-15T13:53:43.7757964Z service/edge-43-service created
+2025-12-15T13:53:43.7817369Z deployment.apps/edge-44-pod created
+2025-12-15T13:53:43.7938645Z service/edge-44-service created
+2025-12-15T13:53:43.7999681Z deployment.apps/edge-45-pod created
+2025-12-15T13:53:43.8102681Z service/edge-45-service created
+2025-12-15T13:53:43.8157158Z deployment.apps/edge-46-pod created
+2025-12-15T13:53:43.8260865Z service/edge-46-service created
+2025-12-15T13:53:43.8319441Z deployment.apps/edge-47-pod created
+2025-12-15T13:53:43.8424339Z service/edge-47-service created
+2025-12-15T13:53:43.8502909Z deployment.apps/edge-48-pod created
+2025-12-15T13:53:43.8609403Z service/edge-48-service created
+2025-12-15T13:53:43.8666918Z deployment.apps/edge-49-pod created
+2025-12-15T13:53:43.8777692Z service/edge-49-service created
+2025-12-15T13:53:43.8838786Z deployment.apps/edge-5-pod created
+2025-12-15T13:53:43.8958229Z service/edge-5-service created
+2025-12-15T13:53:43.9019097Z deployment.apps/edge-6-pod created
+2025-12-15T13:53:43.9126012Z service/edge-6-service created
+2025-12-15T13:53:43.9186062Z deployment.apps/edge-7-pod created
+2025-12-15T13:53:43.9285887Z service/edge-7-service created
+2025-12-15T13:53:43.9348609Z deployment.apps/edge-8-pod created
+2025-12-15T13:53:43.9493357Z service/edge-8-service created
+2025-12-15T13:53:43.9552922Z deployment.apps/edge-9-pod created
+2025-12-15T13:53:43.9670759Z service/edge-9-service created
+2025-12-15T13:53:44.1558574Z pod/cluster-backend-bdbb97cdb-69x49 condition met
+2025-12-15T13:53:44.2569885Z pod/edge-0-pod-684fd564ff-nw7c8 condition met
+2025-12-15T13:53:44.3581719Z pod/edge-1-pod-7b698b59b-mfbb4 condition met
+2025-12-15T13:53:44.4592724Z pod/edge-10-pod-57f5487b9d-vhnt6 condition met
+2025-12-15T13:53:44.5604791Z pod/edge-11-pod-f978f97-5mf8l condition met
+2025-12-15T13:53:44.6616824Z pod/edge-12-pod-86d445974d-qnptz condition met
+2025-12-15T13:53:44.7630487Z pod/edge-13-pod-69f487b9cf-g9h5j condition met
+2025-12-15T13:53:44.8648158Z pod/edge-14-pod-656c6f5594-jldp2 condition met
+2025-12-15T13:53:44.9664992Z pod/edge-15-pod-89d8c678f-xnxrw condition met
+2025-12-15T13:53:45.0684588Z pod/edge-16-pod-557f59d4d-cjdx4 condition met
+2025-12-15T13:53:45.1703758Z pod/grafana-5b487c8748-27xwl condition met
+2025-12-15T13:53:45.2715576Z pod/mlops-data-notifier-k92tp condition met
+2025-12-15T13:53:45.3734727Z pod/oasees-agent-82hzs condition met
+2025-12-15T13:53:45.4753606Z pod/oasees-device-plugin-tjmbw condition met
+2025-12-15T13:53:45.5770080Z pod/oasees-ipfs-76cc867776-zflrs condition met
+2025-12-15T13:53:45.6808175Z pod/oasees-notebook-67f97bd8c4-w6t99 condition met
+2025-12-15T13:53:45.7818312Z pod/oasees-portal-5447bdffc6-tsjmj condition met
+2025-12-15T13:53:45.8837470Z pod/oasees-solidity-ide-7894876967-xpmfv condition met
+2025-12-15T13:53:45.9855607Z pod/oasees-telemetry-api-786b7cbb78-k7dxm condition met
+2025-12-15T13:53:46.0872924Z pod/otel-collector-collector-6bb5c44666-bvfx5 condition met
+2025-12-15T13:53:46.2891675Z pod/thanos-query-74b95cdbf7-hhvhs condition met
+2025-12-15T13:53:46.4903830Z pod/thanos-receive-0 condition met
+2025-12-15T13:53:46.4961983Z 
+2025-12-15T13:53:46.4962491Z API RESPONSE TIME: 7.020076736 seconds
+2025-12-15T13:53:46.4962819Z 

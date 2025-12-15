@@ -1,0 +1,583 @@
+﻿2025-12-15T13:53:24.4763122Z Current runner version: '2.329.0'
+2025-12-15T13:53:24.4773484Z Runner name: 'oasees-github-tests-runner'
+2025-12-15T13:53:24.4774852Z Runner group name: 'Default'
+2025-12-15T13:53:24.4776120Z Machine name: 'oasees-github-tests-runner'
+2025-12-15T13:53:24.4780320Z ##[group]GITHUB_TOKEN Permissions
+2025-12-15T13:53:24.4783552Z Contents: read
+2025-12-15T13:53:24.4784550Z Metadata: read
+2025-12-15T13:53:24.4785404Z Packages: read
+2025-12-15T13:53:24.4786266Z ##[endgroup]
+2025-12-15T13:53:24.4789291Z Secret source: Actions
+2025-12-15T13:53:24.4790498Z Prepare workflow directory
+2025-12-15T13:53:24.5595308Z Prepare all required actions
+2025-12-15T13:53:24.5657931Z Getting action download info
+2025-12-15T13:53:25.2286132Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2025-12-15T13:53:26.5075110Z Complete job name: execute-script
+2025-12-15T13:53:26.6683366Z ##[group]Run actions/checkout@v3
+2025-12-15T13:53:26.6685132Z with:
+2025-12-15T13:53:26.6685985Z   repository: oasees/kpi-validation
+2025-12-15T13:53:26.6687675Z   token: ***
+2025-12-15T13:53:26.6688512Z   ssh-strict: true
+2025-12-15T13:53:26.6689361Z   persist-credentials: true
+2025-12-15T13:53:26.6690259Z   clean: true
+2025-12-15T13:53:26.6691067Z   sparse-checkout-cone-mode: true
+2025-12-15T13:53:26.6692022Z   fetch-depth: 1
+2025-12-15T13:53:26.6692821Z   fetch-tags: false
+2025-12-15T13:53:26.6693600Z   lfs: false
+2025-12-15T13:53:26.6694366Z   submodules: false
+2025-12-15T13:53:26.6695193Z   set-safe-directory: true
+2025-12-15T13:53:26.6696692Z ##[endgroup]
+2025-12-15T13:53:26.8105100Z Syncing repository: oasees/kpi-validation
+2025-12-15T13:53:26.8108270Z ##[group]Getting Git version info
+2025-12-15T13:53:26.8109861Z Working directory is '/home/runner/actions-runner/_work/kpi-validation/kpi-validation'
+2025-12-15T13:53:26.8112034Z [command]/usr/bin/git version
+2025-12-15T13:53:26.8113161Z git version 2.34.1
+2025-12-15T13:53:26.8131270Z ##[endgroup]
+2025-12-15T13:53:26.8152489Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/b80ca687-d873-4ec3-84c1-91703859064d' before making global git config changes
+2025-12-15T13:53:26.8155205Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-15T13:53:26.8157524Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
+2025-12-15T13:53:26.8203544Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-12-15T13:53:26.8224643Z https://github.com/oasees/kpi-validation
+2025-12-15T13:53:26.8248476Z ##[group]Removing previously created refs, to avoid conflicts
+2025-12-15T13:53:26.8252435Z [command]/usr/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
+2025-12-15T13:53:26.8275576Z refs/heads/main
+2025-12-15T13:53:26.8286550Z [command]/usr/bin/git checkout --detach
+2025-12-15T13:53:26.8326498Z HEAD is now at 392ed67 Initial commit.
+2025-12-15T13:53:26.8395855Z [command]/usr/bin/git branch --delete --force main
+2025-12-15T13:53:26.8422977Z Deleted branch main (was 392ed67).
+2025-12-15T13:53:26.8467023Z ##[endgroup]
+2025-12-15T13:53:26.8469222Z [command]/usr/bin/git submodule status
+2025-12-15T13:53:26.8735026Z ##[group]Cleaning the repository
+2025-12-15T13:53:26.8740468Z [command]/usr/bin/git clean -ffdx
+2025-12-15T13:53:26.8776600Z [command]/usr/bin/git reset --hard HEAD
+2025-12-15T13:53:26.8814139Z HEAD is now at 392ed67 Initial commit.
+2025-12-15T13:53:26.8820584Z ##[endgroup]
+2025-12-15T13:53:26.8822332Z ##[group]Disabling automatic garbage collection
+2025-12-15T13:53:26.8826096Z [command]/usr/bin/git config --local gc.auto 0
+2025-12-15T13:53:26.8854490Z ##[endgroup]
+2025-12-15T13:53:26.8855756Z ##[group]Setting up auth
+2025-12-15T13:53:26.8861809Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-15T13:53:26.8891647Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-15T13:53:26.9146986Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-15T13:53:26.9174015Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-15T13:53:26.9428179Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-12-15T13:53:26.9465705Z ##[endgroup]
+2025-12-15T13:53:26.9467054Z ##[group]Fetching the repository
+2025-12-15T13:53:26.9476326Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +392ed679df85a25fe2e443a0a887fc6c8eb9f7a2:refs/remotes/origin/main
+2025-12-15T13:53:27.5350109Z remote: Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)        
+2025-12-15T13:53:27.5422290Z ##[endgroup]
+2025-12-15T13:53:27.5424097Z ##[group]Determining the checkout info
+2025-12-15T13:53:27.5426255Z ##[endgroup]
+2025-12-15T13:53:27.5427952Z ##[group]Checking out the ref
+2025-12-15T13:53:27.5430522Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-12-15T13:53:27.5473906Z Switched to a new branch 'main'
+2025-12-15T13:53:27.5475702Z Branch 'main' set up to track remote branch 'main' from 'origin'.
+2025-12-15T13:53:27.5482311Z ##[endgroup]
+2025-12-15T13:53:27.5517883Z [command]/usr/bin/git log -1 --format='%H'
+2025-12-15T13:53:27.5543362Z '392ed679df85a25fe2e443a0a887fc6c8eb9f7a2'
+2025-12-15T13:53:27.5818841Z ##[group]Run kubectl apply -f nodes/
+2025-12-15T13:53:27.5820808Z [36;1mkubectl apply -f nodes/[0m
+2025-12-15T13:53:27.5823162Z [36;1mkubectl wait --for=condition=ready node --all --timeout=60s[0m
+2025-12-15T13:53:27.5853194Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:53:27.5854707Z ##[endgroup]
+2025-12-15T13:53:30.1474598Z node/edge-node-0 created
+2025-12-15T13:53:30.1572786Z node/edge-node-1 created
+2025-12-15T13:53:30.1667839Z node/edge-node-10 created
+2025-12-15T13:53:30.1756326Z node/edge-node-11 created
+2025-12-15T13:53:30.1927709Z node/edge-node-12 created
+2025-12-15T13:53:30.2312988Z node/edge-node-13 created
+2025-12-15T13:53:30.2535304Z node/edge-node-14 created
+2025-12-15T13:53:30.2879115Z node/edge-node-15 created
+2025-12-15T13:53:30.2994978Z node/edge-node-16 created
+2025-12-15T13:53:30.3119773Z node/edge-node-17 created
+2025-12-15T13:53:30.3258775Z node/edge-node-18 created
+2025-12-15T13:53:30.3510516Z node/edge-node-19 created
+2025-12-15T13:53:30.3678894Z node/edge-node-2 created
+2025-12-15T13:53:30.3976764Z node/edge-node-20 created
+2025-12-15T13:53:30.4123917Z node/edge-node-21 created
+2025-12-15T13:53:30.4304551Z node/edge-node-22 created
+2025-12-15T13:53:30.4487374Z node/edge-node-23 created
+2025-12-15T13:53:30.4604524Z node/edge-node-24 created
+2025-12-15T13:53:30.4798844Z node/edge-node-25 created
+2025-12-15T13:53:30.4867387Z node/edge-node-26 created
+2025-12-15T13:53:30.4969742Z node/edge-node-27 created
+2025-12-15T13:53:30.5117487Z node/edge-node-28 created
+2025-12-15T13:53:30.5370127Z node/edge-node-29 created
+2025-12-15T13:53:30.5450738Z node/edge-node-3 created
+2025-12-15T13:53:30.5660507Z node/edge-node-30 created
+2025-12-15T13:53:30.5971223Z node/edge-node-31 created
+2025-12-15T13:53:30.6226949Z node/edge-node-32 created
+2025-12-15T13:53:30.6396420Z node/edge-node-33 created
+2025-12-15T13:53:30.6583745Z node/edge-node-34 created
+2025-12-15T13:53:30.6777244Z node/edge-node-35 created
+2025-12-15T13:53:30.6905399Z node/edge-node-36 created
+2025-12-15T13:53:30.7048595Z node/edge-node-37 created
+2025-12-15T13:53:30.7177313Z node/edge-node-38 created
+2025-12-15T13:53:30.7409961Z node/edge-node-39 created
+2025-12-15T13:53:30.7619208Z node/edge-node-4 created
+2025-12-15T13:53:30.7771224Z node/edge-node-40 created
+2025-12-15T13:53:30.7894289Z node/edge-node-41 created
+2025-12-15T13:53:30.7998432Z node/edge-node-42 created
+2025-12-15T13:53:30.8141483Z node/edge-node-43 created
+2025-12-15T13:53:30.8283484Z node/edge-node-44 created
+2025-12-15T13:53:30.8464578Z node/edge-node-45 created
+2025-12-15T13:53:30.8665397Z node/edge-node-46 created
+2025-12-15T13:53:30.8785448Z node/edge-node-47 created
+2025-12-15T13:53:30.8951992Z node/edge-node-48 created
+2025-12-15T13:53:30.9038705Z node/edge-node-49 created
+2025-12-15T13:53:30.9208781Z node/edge-node-5 created
+2025-12-15T13:53:30.9355105Z node/edge-node-6 created
+2025-12-15T13:53:30.9442824Z node/edge-node-7 created
+2025-12-15T13:53:30.9547481Z node/edge-node-8 created
+2025-12-15T13:53:30.9780780Z node/edge-node-9 created
+2025-12-15T13:53:31.1801215Z node/edge-node-0 condition met
+2025-12-15T13:53:31.2813232Z node/edge-node-1 condition met
+2025-12-15T13:53:31.3823639Z node/edge-node-10 condition met
+2025-12-15T13:53:31.4840671Z node/edge-node-11 condition met
+2025-12-15T13:53:31.5856731Z node/edge-node-12 condition met
+2025-12-15T13:53:31.6868776Z node/edge-node-13 condition met
+2025-12-15T13:53:31.7882175Z node/edge-node-14 condition met
+2025-12-15T13:53:31.8896865Z node/edge-node-15 condition met
+2025-12-15T13:53:31.9911406Z node/edge-node-16 condition met
+2025-12-15T13:53:32.0925783Z node/edge-node-17 condition met
+2025-12-15T13:53:32.1935678Z node/edge-node-18 condition met
+2025-12-15T13:53:32.2948919Z node/edge-node-19 condition met
+2025-12-15T13:53:32.3964180Z node/edge-node-2 condition met
+2025-12-15T13:53:32.4983250Z node/edge-node-20 condition met
+2025-12-15T13:53:32.6000886Z node/edge-node-21 condition met
+2025-12-15T13:53:32.7012495Z node/edge-node-22 condition met
+2025-12-15T13:53:32.8026635Z node/edge-node-23 condition met
+2025-12-15T13:53:32.9043648Z node/edge-node-24 condition met
+2025-12-15T13:53:33.0056151Z node/edge-node-25 condition met
+2025-12-15T13:53:33.1064834Z node/edge-node-26 condition met
+2025-12-15T13:53:33.3080152Z node/edge-node-27 condition met
+2025-12-15T13:53:33.5096343Z node/edge-node-28 condition met
+2025-12-15T13:53:33.7111807Z node/edge-node-29 condition met
+2025-12-15T13:53:33.9128399Z node/edge-node-3 condition met
+2025-12-15T13:53:34.1140741Z node/edge-node-30 condition met
+2025-12-15T13:53:34.3150010Z node/edge-node-31 condition met
+2025-12-15T13:53:34.5168533Z node/edge-node-32 condition met
+2025-12-15T13:53:34.7186081Z node/edge-node-33 condition met
+2025-12-15T13:53:34.9204257Z node/edge-node-34 condition met
+2025-12-15T13:53:35.1214223Z node/edge-node-35 condition met
+2025-12-15T13:53:35.3230920Z node/edge-node-36 condition met
+2025-12-15T13:53:35.5247678Z node/edge-node-37 condition met
+2025-12-15T13:53:35.7266019Z node/edge-node-38 condition met
+2025-12-15T13:53:35.9282299Z node/edge-node-39 condition met
+2025-12-15T13:53:36.1289633Z node/edge-node-4 condition met
+2025-12-15T13:53:36.3300271Z node/edge-node-40 condition met
+2025-12-15T13:53:36.5315594Z node/edge-node-41 condition met
+2025-12-15T13:53:36.7330977Z node/edge-node-42 condition met
+2025-12-15T13:53:36.9345074Z node/edge-node-43 condition met
+2025-12-15T13:53:37.1358534Z node/edge-node-44 condition met
+2025-12-15T13:53:37.3377559Z node/edge-node-45 condition met
+2025-12-15T13:53:37.5396514Z node/edge-node-46 condition met
+2025-12-15T13:53:37.7413674Z node/edge-node-47 condition met
+2025-12-15T13:53:37.9428443Z node/edge-node-48 condition met
+2025-12-15T13:53:38.1439407Z node/edge-node-49 condition met
+2025-12-15T13:53:38.3456099Z node/edge-node-5 condition met
+2025-12-15T13:53:38.5465335Z node/edge-node-6 condition met
+2025-12-15T13:53:38.7480764Z node/edge-node-7 condition met
+2025-12-15T13:53:38.9494445Z node/edge-node-8 condition met
+2025-12-15T13:53:39.1511452Z node/edge-node-9 condition met
+2025-12-15T13:53:39.3519900Z node/oasees-github-tests-runner condition met
+2025-12-15T13:53:39.3599851Z ##[group]Run START=$(date +%s.%N); kubectl get nodes && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"
+2025-12-15T13:53:39.3601130Z [36;1mSTART=$(date +%s.%N); kubectl get nodes && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"[0m
+2025-12-15T13:53:39.3620918Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:53:39.3621534Z ##[endgroup]
+2025-12-15T13:53:39.4574194Z NAME                         STATUS   ROLES                  AGE    VERSION
+2025-12-15T13:53:39.4575135Z edge-node-0                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4575723Z edge-node-1                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4576306Z edge-node-10                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4576877Z edge-node-11                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4577574Z edge-node-12                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4578285Z edge-node-13                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4578865Z edge-node-14                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4579424Z edge-node-15                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4580035Z edge-node-16                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4580608Z edge-node-17                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4581162Z edge-node-18                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4581743Z edge-node-19                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4582299Z edge-node-2                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4582996Z edge-node-20                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4583630Z edge-node-21                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4584192Z edge-node-22                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4584774Z edge-node-23                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4585333Z edge-node-24                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4585917Z edge-node-25                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4586485Z edge-node-26                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4587090Z edge-node-27                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4587665Z edge-node-28                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4588233Z edge-node-29                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4588826Z edge-node-3                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4589412Z edge-node-30                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4589984Z edge-node-31                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4590566Z edge-node-32                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4591135Z edge-node-33                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4591706Z edge-node-34                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4592267Z edge-node-35                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4592846Z edge-node-36                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4593447Z edge-node-37                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4594635Z edge-node-38                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4595256Z edge-node-39                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4595853Z edge-node-4                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4596547Z edge-node-40                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4597376Z edge-node-41                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4598096Z edge-node-42                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4598675Z edge-node-43                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4599234Z edge-node-44                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4599810Z edge-node-45                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4601260Z edge-node-46                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4601847Z edge-node-47                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4602593Z edge-node-48                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4603188Z edge-node-49                 Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4603773Z edge-node-5                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4604338Z edge-node-6                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4604912Z edge-node-7                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4605462Z edge-node-8                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4606031Z edge-node-9                  Ready    agent                  9s     v1.33.6+k3s1
+2025-12-15T13:53:39.4606725Z oasees-github-tests-runner   Ready    control-plane,master   3d1h   v1.33.6+k3s1
+2025-12-15T13:53:39.4633553Z 
+2025-12-15T13:53:39.4633883Z API RESPONSE TIME: .094742482 seconds
+2025-12-15T13:53:39.4634182Z 
+2025-12-15T13:53:39.4671641Z ##[group]Run START=$(date +%s.%N); kubectl apply -f deployments/ && kubectl wait --for=condition=ready pod --all --timeout=60s && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"
+2025-12-15T13:53:39.4673532Z [36;1mSTART=$(date +%s.%N); kubectl apply -f deployments/ && kubectl wait --for=condition=ready pod --all --timeout=60s && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"[0m
+2025-12-15T13:53:39.4693303Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:53:39.4693664Z ##[endgroup]
+2025-12-15T13:53:42.9256665Z deployment.apps/edge-0-pod created
+2025-12-15T13:53:42.9414720Z service/edge-0-service created
+2025-12-15T13:53:42.9509591Z deployment.apps/edge-1-pod created
+2025-12-15T13:53:42.9833023Z service/edge-1-service created
+2025-12-15T13:53:42.9959775Z deployment.apps/edge-10-pod created
+2025-12-15T13:53:43.0275432Z service/edge-10-service created
+2025-12-15T13:53:43.0395119Z deployment.apps/edge-11-pod created
+2025-12-15T13:53:43.0658647Z service/edge-11-service created
+2025-12-15T13:53:43.0759844Z deployment.apps/edge-12-pod created
+2025-12-15T13:53:43.0903562Z service/edge-12-service created
+2025-12-15T13:53:43.0967458Z deployment.apps/edge-13-pod created
+2025-12-15T13:53:43.1074707Z service/edge-13-service created
+2025-12-15T13:53:43.1151098Z deployment.apps/edge-14-pod created
+2025-12-15T13:53:43.1264697Z service/edge-14-service created
+2025-12-15T13:53:43.1346481Z deployment.apps/edge-15-pod created
+2025-12-15T13:53:43.1496671Z service/edge-15-service created
+2025-12-15T13:53:43.1622090Z deployment.apps/edge-16-pod created
+2025-12-15T13:53:43.1734611Z service/edge-16-service created
+2025-12-15T13:53:43.1809018Z deployment.apps/edge-17-pod created
+2025-12-15T13:53:43.1914395Z service/edge-17-service created
+2025-12-15T13:53:43.1978603Z deployment.apps/edge-18-pod created
+2025-12-15T13:53:43.2083302Z service/edge-18-service created
+2025-12-15T13:53:43.2156348Z deployment.apps/edge-19-pod created
+2025-12-15T13:53:43.2259721Z service/edge-19-service created
+2025-12-15T13:53:43.2334771Z deployment.apps/edge-2-pod created
+2025-12-15T13:53:43.2441624Z service/edge-2-service created
+2025-12-15T13:53:43.2530480Z deployment.apps/edge-20-pod created
+2025-12-15T13:53:43.2633811Z service/edge-20-service created
+2025-12-15T13:53:43.2721829Z deployment.apps/edge-21-pod created
+2025-12-15T13:53:43.2836189Z service/edge-21-service created
+2025-12-15T13:53:43.2899523Z deployment.apps/edge-22-pod created
+2025-12-15T13:53:43.2999827Z service/edge-22-service created
+2025-12-15T13:53:43.3061193Z deployment.apps/edge-23-pod created
+2025-12-15T13:53:43.3166628Z service/edge-23-service created
+2025-12-15T13:53:43.3234863Z deployment.apps/edge-24-pod created
+2025-12-15T13:53:43.3352293Z service/edge-24-service created
+2025-12-15T13:53:43.3420157Z deployment.apps/edge-25-pod created
+2025-12-15T13:53:43.3525104Z service/edge-25-service created
+2025-12-15T13:53:43.3585297Z deployment.apps/edge-26-pod created
+2025-12-15T13:53:43.3690110Z service/edge-26-service created
+2025-12-15T13:53:43.3760650Z deployment.apps/edge-27-pod created
+2025-12-15T13:53:43.3871104Z service/edge-27-service created
+2025-12-15T13:53:43.3963266Z deployment.apps/edge-28-pod created
+2025-12-15T13:53:43.4103246Z service/edge-28-service created
+2025-12-15T13:53:43.4240117Z deployment.apps/edge-29-pod created
+2025-12-15T13:53:43.4370539Z service/edge-29-service created
+2025-12-15T13:53:43.4463152Z deployment.apps/edge-3-pod created
+2025-12-15T13:53:43.4596966Z service/edge-3-service created
+2025-12-15T13:53:43.4666294Z deployment.apps/edge-30-pod created
+2025-12-15T13:53:43.4773991Z service/edge-30-service created
+2025-12-15T13:53:43.4837927Z deployment.apps/edge-31-pod created
+2025-12-15T13:53:43.4951875Z service/edge-31-service created
+2025-12-15T13:53:43.5028192Z deployment.apps/edge-32-pod created
+2025-12-15T13:53:43.5136827Z service/edge-32-service created
+2025-12-15T13:53:43.5210278Z deployment.apps/edge-33-pod created
+2025-12-15T13:53:43.5322068Z service/edge-33-service created
+2025-12-15T13:53:43.5405105Z deployment.apps/edge-34-pod created
+2025-12-15T13:53:43.5533150Z service/edge-34-service created
+2025-12-15T13:53:43.5605219Z deployment.apps/edge-35-pod created
+2025-12-15T13:53:43.5734556Z service/edge-35-service created
+2025-12-15T13:53:43.5794514Z deployment.apps/edge-36-pod created
+2025-12-15T13:53:43.5899934Z service/edge-36-service created
+2025-12-15T13:53:43.6055358Z deployment.apps/edge-37-pod created
+2025-12-15T13:53:43.6316524Z service/edge-37-service created
+2025-12-15T13:53:43.6429271Z deployment.apps/edge-38-pod created
+2025-12-15T13:53:43.6568488Z service/edge-38-service created
+2025-12-15T13:53:43.6644555Z deployment.apps/edge-39-pod created
+2025-12-15T13:53:43.6764737Z service/edge-39-service created
+2025-12-15T13:53:43.6858249Z deployment.apps/edge-4-pod created
+2025-12-15T13:53:43.6971454Z service/edge-4-service created
+2025-12-15T13:53:43.7047741Z deployment.apps/edge-40-pod created
+2025-12-15T13:53:43.7215353Z service/edge-40-service created
+2025-12-15T13:53:43.7293614Z deployment.apps/edge-41-pod created
+2025-12-15T13:53:43.7401028Z service/edge-41-service created
+2025-12-15T13:53:43.7478578Z deployment.apps/edge-42-pod created
+2025-12-15T13:53:43.7584428Z service/edge-42-service created
+2025-12-15T13:53:43.7652546Z deployment.apps/edge-43-pod created
+2025-12-15T13:53:43.7757987Z service/edge-43-service created
+2025-12-15T13:53:43.7817388Z deployment.apps/edge-44-pod created
+2025-12-15T13:53:43.7938665Z service/edge-44-service created
+2025-12-15T13:53:43.7999700Z deployment.apps/edge-45-pod created
+2025-12-15T13:53:43.8102703Z service/edge-45-service created
+2025-12-15T13:53:43.8157177Z deployment.apps/edge-46-pod created
+2025-12-15T13:53:43.8260883Z service/edge-46-service created
+2025-12-15T13:53:43.8319461Z deployment.apps/edge-47-pod created
+2025-12-15T13:53:43.8424358Z service/edge-47-service created
+2025-12-15T13:53:43.8502933Z deployment.apps/edge-48-pod created
+2025-12-15T13:53:43.8609423Z service/edge-48-service created
+2025-12-15T13:53:43.8666974Z deployment.apps/edge-49-pod created
+2025-12-15T13:53:43.8777714Z service/edge-49-service created
+2025-12-15T13:53:43.8838805Z deployment.apps/edge-5-pod created
+2025-12-15T13:53:43.8958249Z service/edge-5-service created
+2025-12-15T13:53:43.9019117Z deployment.apps/edge-6-pod created
+2025-12-15T13:53:43.9126034Z service/edge-6-service created
+2025-12-15T13:53:43.9186082Z deployment.apps/edge-7-pod created
+2025-12-15T13:53:43.9285905Z service/edge-7-service created
+2025-12-15T13:53:43.9348626Z deployment.apps/edge-8-pod created
+2025-12-15T13:53:43.9493384Z service/edge-8-service created
+2025-12-15T13:53:43.9552949Z deployment.apps/edge-9-pod created
+2025-12-15T13:53:43.9670790Z service/edge-9-service created
+2025-12-15T13:53:44.1558615Z pod/cluster-backend-bdbb97cdb-69x49 condition met
+2025-12-15T13:53:44.2569920Z pod/edge-0-pod-684fd564ff-nw7c8 condition met
+2025-12-15T13:53:44.3581753Z pod/edge-1-pod-7b698b59b-mfbb4 condition met
+2025-12-15T13:53:44.4592804Z pod/edge-10-pod-57f5487b9d-vhnt6 condition met
+2025-12-15T13:53:44.5604830Z pod/edge-11-pod-f978f97-5mf8l condition met
+2025-12-15T13:53:44.6616863Z pod/edge-12-pod-86d445974d-qnptz condition met
+2025-12-15T13:53:44.7630522Z pod/edge-13-pod-69f487b9cf-g9h5j condition met
+2025-12-15T13:53:44.8648211Z pod/edge-14-pod-656c6f5594-jldp2 condition met
+2025-12-15T13:53:44.9665031Z pod/edge-15-pod-89d8c678f-xnxrw condition met
+2025-12-15T13:53:45.0684626Z pod/edge-16-pod-557f59d4d-cjdx4 condition met
+2025-12-15T13:53:45.1703799Z pod/grafana-5b487c8748-27xwl condition met
+2025-12-15T13:53:45.2715611Z pod/mlops-data-notifier-k92tp condition met
+2025-12-15T13:53:45.3734762Z pod/oasees-agent-82hzs condition met
+2025-12-15T13:53:45.4753643Z pod/oasees-device-plugin-tjmbw condition met
+2025-12-15T13:53:45.5770120Z pod/oasees-ipfs-76cc867776-zflrs condition met
+2025-12-15T13:53:45.6808216Z pod/oasees-notebook-67f97bd8c4-w6t99 condition met
+2025-12-15T13:53:45.7818344Z pod/oasees-portal-5447bdffc6-tsjmj condition met
+2025-12-15T13:53:45.8838182Z pod/oasees-solidity-ide-7894876967-xpmfv condition met
+2025-12-15T13:53:45.9855642Z pod/oasees-telemetry-api-786b7cbb78-k7dxm condition met
+2025-12-15T13:53:46.0872963Z pod/otel-collector-collector-6bb5c44666-bvfx5 condition met
+2025-12-15T13:53:46.2891706Z pod/thanos-query-74b95cdbf7-hhvhs condition met
+2025-12-15T13:53:46.4903880Z pod/thanos-receive-0 condition met
+2025-12-15T13:53:46.4962011Z 
+2025-12-15T13:53:46.4962511Z API RESPONSE TIME: 7.020076736 seconds
+2025-12-15T13:53:46.4962824Z 
+2025-12-15T13:53:46.5005879Z ##[group]Run START=$(date +%s.%N); kubectl get pods -owide && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"
+2025-12-15T13:53:46.5007480Z [36;1mSTART=$(date +%s.%N); kubectl get pods -owide && printf "\nAPI RESPONSE TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"[0m
+2025-12-15T13:53:46.5026457Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:53:46.5026811Z ##[endgroup]
+2025-12-15T13:53:46.6010683Z NAME                                        READY   STATUS    RESTARTS        AGE     IP             NODE                         NOMINATED NODE   READINESS GATES
+2025-12-15T13:53:46.6012656Z cluster-backend-bdbb97cdb-69x49             1/1     Running   3 (2d22h ago)   3d1h    10.42.0.94     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6014861Z edge-0-pod-684fd564ff-nw7c8                 1/1     Running   0               4s      10.42.16.2     edge-node-29                 <none>           <none>
+2025-12-15T13:53:46.6016809Z edge-1-pod-7b698b59b-mfbb4                  1/1     Running   0               4s      10.42.23.1     edge-node-33                 <none>           <none>
+2025-12-15T13:53:46.6017858Z edge-10-pod-57f5487b9d-vhnt6                1/1     Running   0               3s      10.42.47.1     edge-node-8                  <none>           <none>
+2025-12-15T13:53:46.6018882Z edge-11-pod-f978f97-5mf8l                   1/1     Running   0               3s      10.42.39.2     edge-node-46                 <none>           <none>
+2025-12-15T13:53:46.6019880Z edge-12-pod-86d445974d-qnptz                1/1     Running   0               3s      10.42.32.3     edge-node-40                 <none>           <none>
+2025-12-15T13:53:46.6020954Z edge-13-pod-69f487b9cf-g9h5j                1/1     Running   0               3s      10.42.34.0     edge-node-42                 <none>           <none>
+2025-12-15T13:53:46.6022573Z edge-14-pod-656c6f5594-jldp2                1/1     Running   0               3s      10.42.1.0      edge-node-18                 <none>           <none>
+2025-12-15T13:53:46.6023580Z edge-15-pod-89d8c678f-xnxrw                 1/1     Running   0               3s      10.42.20.1     edge-node-31                 <none>           <none>
+2025-12-15T13:53:46.6024650Z edge-16-pod-557f59d4d-cjdx4                 1/1     Running   0               3s      10.42.21.1     edge-node-32                 <none>           <none>
+2025-12-15T13:53:46.6025623Z edge-17-pod-79c75cdf95-5jtmk                1/1     Running   0               2s      10.42.244.0    edge-node-10                 <none>           <none>
+2025-12-15T13:53:46.6026583Z edge-18-pod-7557b4bcdb-bwrtk                1/1     Running   0               2s      10.42.15.1     edge-node-28                 <none>           <none>
+2025-12-15T13:53:46.6027581Z edge-19-pod-79cd7f4dd5-4kd9x                1/1     Running   0               2s      10.42.242.0    edge-node-0                  <none>           <none>
+2025-12-15T13:53:46.6028620Z edge-2-pod-d54b486fc-4j8sw                  1/1     Running   0               2s      10.42.32.4     edge-node-40                 <none>           <none>
+2025-12-15T13:53:46.6029604Z edge-20-pod-75cbb6c7cc-kcrv4                1/1     Running   0               2s      10.42.245.0    edge-node-11                 <none>           <none>
+2025-12-15T13:53:46.6030653Z edge-21-pod-78965b99db-kb562                1/1     Running   0               1s      10.42.16.3     edge-node-29                 <none>           <none>
+2025-12-15T13:53:46.6031599Z edge-22-pod-86669f6d87-7hv2s                1/1     Running   0               1s      10.42.15.2     edge-node-28                 <none>           <none>
+2025-12-15T13:53:46.6032612Z edge-23-pod-74d8f64b6d-ffx8q                1/1     Running   0               1s      10.42.31.3     edge-node-4                  <none>           <none>
+2025-12-15T13:53:46.6034006Z edge-24-pod-5669c59b65-62nnf                1/1     Running   0               1s      10.42.23.2     edge-node-33                 <none>           <none>
+2025-12-15T13:53:46.6035014Z edge-25-pod-6854c89fc8-v6sj7                1/1     Running   0               1s      10.42.247.0    edge-node-12                 <none>           <none>
+2025-12-15T13:53:46.6035985Z edge-26-pod-7f7b9588cf-72wg2                1/1     Running   0               1s      10.42.10.1     edge-node-24                 <none>           <none>
+2025-12-15T13:53:46.6036975Z edge-27-pod-86b8bb69bd-qpzth                1/1     Running   0               0s      10.42.40.1     edge-node-47                 <none>           <none>
+2025-12-15T13:53:46.6038331Z edge-28-pod-5976f4945c-7j2p7                1/1     Running   0               0s      10.42.45.1     edge-node-6                  <none>           <none>
+2025-12-15T13:53:46.6039488Z edge-29-pod-d77dc46fd-qqh62                 1/1     Running   0               0s      10.42.244.1    edge-node-10                 <none>           <none>
+2025-12-15T13:53:46.6040540Z grafana-5b487c8748-27xwl                    1/1     Running   3 (2d22h ago)   3d1h    10.42.0.89     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6041675Z mlops-data-notifier-k92tp                   1/1     Running   3 (2d22h ago)   3d1h    10.42.0.90     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6042760Z oasees-agent-82hzs                          1/1     Running   3 (2d22h ago)   3d1h    10.160.3.168   oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6043832Z oasees-device-plugin-tjmbw                  1/1     Running   3 (2d22h ago)   3d1h    10.42.0.103    oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6045108Z oasees-ipfs-76cc867776-zflrs                1/1     Running   2 (2d22h ago)   2d23h   10.42.0.101    oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6046479Z oasees-notebook-67f97bd8c4-w6t99            1/1     Running   3 (2d22h ago)   3d1h    10.42.0.98     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6048895Z oasees-portal-5447bdffc6-tsjmj              1/1     Running   1 (2d22h ago)   2d23h   10.42.0.97     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6051427Z oasees-solidity-ide-7894876967-xpmfv        1/1     Running   3 (2d22h ago)   3d1h    10.42.0.87     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6053099Z oasees-telemetry-api-786b7cbb78-k7dxm       1/1     Running   3 (2d22h ago)   3d1h    10.42.0.106    oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6054465Z otel-collector-collector-6bb5c44666-bvfx5   1/1     Running   3 (2d22h ago)   3d1h    10.42.0.88     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6055705Z thanos-query-74b95cdbf7-hhvhs               1/1     Running   3 (2d22h ago)   3d1h    10.42.0.104    oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6056825Z thanos-receive-0                            1/1     Running   3 (2d22h ago)   3d1h    10.42.0.95     oasees-github-tests-runner   <none>           <none>
+2025-12-15T13:53:46.6068272Z 
+2025-12-15T13:53:46.6068664Z API RESPONSE TIME: .097837817 seconds
+2025-12-15T13:53:46.6069181Z 
+2025-12-15T13:53:46.6108420Z ##[group]Run kubectl delete -f nodes/
+2025-12-15T13:53:46.6109001Z [36;1mkubectl delete -f nodes/[0m
+2025-12-15T13:53:46.6109573Z [36;1mkubectl delete -f deployments/[0m
+2025-12-15T13:53:46.6128117Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:53:46.6128521Z ##[endgroup]
+2025-12-15T13:53:46.6875550Z node "edge-node-0" deleted
+2025-12-15T13:53:46.6927522Z node "edge-node-1" deleted
+2025-12-15T13:53:46.7000214Z node "edge-node-10" deleted
+2025-12-15T13:53:46.7061888Z node "edge-node-11" deleted
+2025-12-15T13:53:46.7185834Z node "edge-node-12" deleted
+2025-12-15T13:53:46.7267196Z node "edge-node-13" deleted
+2025-12-15T13:53:46.7390709Z node "edge-node-14" deleted
+2025-12-15T13:53:46.7485156Z node "edge-node-15" deleted
+2025-12-15T13:53:46.7639372Z node "edge-node-16" deleted
+2025-12-15T13:53:46.7708288Z node "edge-node-17" deleted
+2025-12-15T13:53:46.7871335Z node "edge-node-18" deleted
+2025-12-15T13:53:46.7939842Z node "edge-node-19" deleted
+2025-12-15T13:53:46.8029947Z node "edge-node-2" deleted
+2025-12-15T13:53:46.8128381Z node "edge-node-20" deleted
+2025-12-15T13:53:46.8229820Z node "edge-node-21" deleted
+2025-12-15T13:53:46.8439416Z node "edge-node-22" deleted
+2025-12-15T13:53:46.8555472Z node "edge-node-23" deleted
+2025-12-15T13:53:46.8626587Z node "edge-node-24" deleted
+2025-12-15T13:53:46.8715087Z node "edge-node-25" deleted
+2025-12-15T13:53:46.8880948Z node "edge-node-26" deleted
+2025-12-15T13:53:46.9026279Z node "edge-node-27" deleted
+2025-12-15T13:53:46.9257085Z node "edge-node-28" deleted
+2025-12-15T13:53:46.9385701Z node "edge-node-29" deleted
+2025-12-15T13:53:46.9503417Z node "edge-node-3" deleted
+2025-12-15T13:53:46.9629572Z node "edge-node-30" deleted
+2025-12-15T13:53:46.9718188Z node "edge-node-31" deleted
+2025-12-15T13:53:46.9825320Z node "edge-node-32" deleted
+2025-12-15T13:53:46.9978481Z node "edge-node-33" deleted
+2025-12-15T13:53:47.0234416Z node "edge-node-34" deleted
+2025-12-15T13:53:47.0344630Z node "edge-node-35" deleted
+2025-12-15T13:53:47.0479766Z node "edge-node-36" deleted
+2025-12-15T13:53:47.0576122Z node "edge-node-37" deleted
+2025-12-15T13:53:47.0689069Z node "edge-node-38" deleted
+2025-12-15T13:53:47.0770030Z node "edge-node-39" deleted
+2025-12-15T13:53:47.0939030Z node "edge-node-4" deleted
+2025-12-15T13:53:47.1027715Z node "edge-node-40" deleted
+2025-12-15T13:53:47.1152674Z node "edge-node-41" deleted
+2025-12-15T13:53:47.1301450Z node "edge-node-42" deleted
+2025-12-15T13:53:47.1378063Z node "edge-node-43" deleted
+2025-12-15T13:53:47.1517064Z node "edge-node-44" deleted
+2025-12-15T13:53:47.1633244Z node "edge-node-45" deleted
+2025-12-15T13:53:47.1786871Z node "edge-node-46" deleted
+2025-12-15T13:53:47.2014464Z node "edge-node-47" deleted
+2025-12-15T13:53:47.2083718Z node "edge-node-48" deleted
+2025-12-15T13:53:47.2151367Z node "edge-node-49" deleted
+2025-12-15T13:53:47.2254607Z node "edge-node-5" deleted
+2025-12-15T13:53:47.2346561Z node "edge-node-6" deleted
+2025-12-15T13:53:47.2419115Z node "edge-node-7" deleted
+2025-12-15T13:53:47.2503666Z node "edge-node-8" deleted
+2025-12-15T13:53:47.2631747Z node "edge-node-9" deleted
+2025-12-15T13:53:55.3398440Z deployment.apps "edge-0-pod" deleted
+2025-12-15T13:53:55.3616267Z service "edge-0-service" deleted
+2025-12-15T13:53:55.3666997Z deployment.apps "edge-1-pod" deleted
+2025-12-15T13:53:55.3869534Z service "edge-1-service" deleted
+2025-12-15T13:53:55.3922004Z deployment.apps "edge-10-pod" deleted
+2025-12-15T13:53:55.4125871Z service "edge-10-service" deleted
+2025-12-15T13:53:55.4178177Z deployment.apps "edge-11-pod" deleted
+2025-12-15T13:53:55.4384311Z service "edge-11-service" deleted
+2025-12-15T13:53:55.4439246Z deployment.apps "edge-12-pod" deleted
+2025-12-15T13:53:55.4660403Z service "edge-12-service" deleted
+2025-12-15T13:53:55.4711879Z deployment.apps "edge-13-pod" deleted
+2025-12-15T13:53:55.4920557Z service "edge-13-service" deleted
+2025-12-15T13:53:55.4982834Z deployment.apps "edge-14-pod" deleted
+2025-12-15T13:53:55.5190293Z service "edge-14-service" deleted
+2025-12-15T13:53:55.5262673Z deployment.apps "edge-15-pod" deleted
+2025-12-15T13:53:55.5464710Z service "edge-15-service" deleted
+2025-12-15T13:53:55.5533438Z deployment.apps "edge-16-pod" deleted
+2025-12-15T13:53:55.5718934Z service "edge-16-service" deleted
+2025-12-15T13:53:55.5776717Z deployment.apps "edge-17-pod" deleted
+2025-12-15T13:53:55.6032084Z service "edge-17-service" deleted
+2025-12-15T13:53:55.6090178Z deployment.apps "edge-18-pod" deleted
+2025-12-15T13:53:55.6235432Z service "edge-18-service" deleted
+2025-12-15T13:53:55.6285093Z deployment.apps "edge-19-pod" deleted
+2025-12-15T13:53:55.6426152Z service "edge-19-service" deleted
+2025-12-15T13:53:55.6487712Z deployment.apps "edge-2-pod" deleted
+2025-12-15T13:53:55.6634902Z service "edge-2-service" deleted
+2025-12-15T13:53:55.6688942Z deployment.apps "edge-20-pod" deleted
+2025-12-15T13:53:55.6842728Z service "edge-20-service" deleted
+2025-12-15T13:53:55.6892759Z deployment.apps "edge-21-pod" deleted
+2025-12-15T13:53:55.7043785Z service "edge-21-service" deleted
+2025-12-15T13:53:55.7091879Z deployment.apps "edge-22-pod" deleted
+2025-12-15T13:53:55.7244235Z service "edge-22-service" deleted
+2025-12-15T13:53:55.7294392Z deployment.apps "edge-23-pod" deleted
+2025-12-15T13:53:55.7448315Z service "edge-23-service" deleted
+2025-12-15T13:53:55.7500878Z deployment.apps "edge-24-pod" deleted
+2025-12-15T13:53:55.7639576Z service "edge-24-service" deleted
+2025-12-15T13:53:55.7696132Z deployment.apps "edge-25-pod" deleted
+2025-12-15T13:53:55.7844557Z service "edge-25-service" deleted
+2025-12-15T13:53:55.7894131Z deployment.apps "edge-26-pod" deleted
+2025-12-15T13:53:55.8054668Z service "edge-26-service" deleted
+2025-12-15T13:53:55.8105522Z deployment.apps "edge-27-pod" deleted
+2025-12-15T13:53:55.8238930Z service "edge-27-service" deleted
+2025-12-15T13:53:55.8290022Z deployment.apps "edge-28-pod" deleted
+2025-12-15T13:53:55.8422398Z service "edge-28-service" deleted
+2025-12-15T13:53:55.8467234Z deployment.apps "edge-29-pod" deleted
+2025-12-15T13:53:55.8610264Z service "edge-29-service" deleted
+2025-12-15T13:53:55.8658802Z deployment.apps "edge-3-pod" deleted
+2025-12-15T13:53:55.8798094Z service "edge-3-service" deleted
+2025-12-15T13:53:55.8852350Z deployment.apps "edge-30-pod" deleted
+2025-12-15T13:53:55.8996823Z service "edge-30-service" deleted
+2025-12-15T13:53:55.9049148Z deployment.apps "edge-31-pod" deleted
+2025-12-15T13:53:55.9269930Z service "edge-31-service" deleted
+2025-12-15T13:53:55.9323678Z deployment.apps "edge-32-pod" deleted
+2025-12-15T13:53:55.9470593Z service "edge-32-service" deleted
+2025-12-15T13:53:55.9529213Z deployment.apps "edge-33-pod" deleted
+2025-12-15T13:53:55.9671525Z service "edge-33-service" deleted
+2025-12-15T13:53:55.9729148Z deployment.apps "edge-34-pod" deleted
+2025-12-15T13:53:55.9877015Z service "edge-34-service" deleted
+2025-12-15T13:53:55.9938994Z deployment.apps "edge-35-pod" deleted
+2025-12-15T13:53:56.0088523Z service "edge-35-service" deleted
+2025-12-15T13:53:56.0144418Z deployment.apps "edge-36-pod" deleted
+2025-12-15T13:53:56.0297159Z service "edge-36-service" deleted
+2025-12-15T13:53:56.0354045Z deployment.apps "edge-37-pod" deleted
+2025-12-15T13:53:56.0502153Z service "edge-37-service" deleted
+2025-12-15T13:53:56.0555554Z deployment.apps "edge-38-pod" deleted
+2025-12-15T13:53:56.0706673Z service "edge-38-service" deleted
+2025-12-15T13:53:56.0758871Z deployment.apps "edge-39-pod" deleted
+2025-12-15T13:53:56.0905678Z service "edge-39-service" deleted
+2025-12-15T13:53:56.0982641Z deployment.apps "edge-4-pod" deleted
+2025-12-15T13:53:56.1122817Z service "edge-4-service" deleted
+2025-12-15T13:53:56.1182863Z deployment.apps "edge-40-pod" deleted
+2025-12-15T13:53:56.1322891Z service "edge-40-service" deleted
+2025-12-15T13:53:56.1376750Z deployment.apps "edge-41-pod" deleted
+2025-12-15T13:53:56.1527827Z service "edge-41-service" deleted
+2025-12-15T13:53:56.1580183Z deployment.apps "edge-42-pod" deleted
+2025-12-15T13:53:56.1772600Z service "edge-42-service" deleted
+2025-12-15T13:53:56.1830525Z deployment.apps "edge-43-pod" deleted
+2025-12-15T13:53:56.1995269Z service "edge-43-service" deleted
+2025-12-15T13:53:56.2048236Z deployment.apps "edge-44-pod" deleted
+2025-12-15T13:53:56.2195062Z service "edge-44-service" deleted
+2025-12-15T13:53:56.2250147Z deployment.apps "edge-45-pod" deleted
+2025-12-15T13:53:56.2390535Z service "edge-45-service" deleted
+2025-12-15T13:53:56.2449068Z deployment.apps "edge-46-pod" deleted
+2025-12-15T13:53:56.2648867Z service "edge-46-service" deleted
+2025-12-15T13:53:56.2725660Z deployment.apps "edge-47-pod" deleted
+2025-12-15T13:53:56.2900351Z service "edge-47-service" deleted
+2025-12-15T13:53:56.2958371Z deployment.apps "edge-48-pod" deleted
+2025-12-15T13:53:56.3097527Z service "edge-48-service" deleted
+2025-12-15T13:53:56.3151739Z deployment.apps "edge-49-pod" deleted
+2025-12-15T13:53:56.3299010Z service "edge-49-service" deleted
+2025-12-15T13:53:56.3354907Z deployment.apps "edge-5-pod" deleted
+2025-12-15T13:53:56.3509358Z service "edge-5-service" deleted
+2025-12-15T13:53:56.3561243Z deployment.apps "edge-6-pod" deleted
+2025-12-15T13:53:56.3705264Z service "edge-6-service" deleted
+2025-12-15T13:53:56.3758739Z deployment.apps "edge-7-pod" deleted
+2025-12-15T13:53:56.3894580Z service "edge-7-service" deleted
+2025-12-15T13:53:56.3963891Z deployment.apps "edge-8-pod" deleted
+2025-12-15T13:53:56.4132135Z service "edge-8-service" deleted
+2025-12-15T13:53:56.4194492Z deployment.apps "edge-9-pod" deleted
+2025-12-15T13:53:56.4338848Z service "edge-9-service" deleted
+2025-12-15T13:54:14.4554869Z Post job cleanup.
+2025-12-15T13:54:14.5658919Z [command]/usr/bin/git version
+2025-12-15T13:54:14.5705121Z git version 2.34.1
+2025-12-15T13:54:14.5770447Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/13233878-fc95-4e3e-9083-4351f200110e' before making global git config changes
+2025-12-15T13:54:14.5771722Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-15T13:54:14.5775622Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
+2025-12-15T13:54:14.5810452Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-15T13:54:14.5843573Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-15T13:54:14.6105875Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-15T13:54:14.6144163Z http.https://github.com/.extraheader
+2025-12-15T13:54:14.6159077Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-12-15T13:54:14.6191511Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-15T13:54:14.6599905Z Cleaning up orphan processes

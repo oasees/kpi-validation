@@ -1,0 +1,106 @@
+﻿2025-12-15T13:53:27.5818802Z ##[group]Run kubectl apply -f nodes/
+2025-12-15T13:53:27.5820799Z [36;1mkubectl apply -f nodes/[0m
+2025-12-15T13:53:27.5823153Z [36;1mkubectl wait --for=condition=ready node --all --timeout=60s[0m
+2025-12-15T13:53:27.5853163Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:53:27.5854699Z ##[endgroup]
+2025-12-15T13:53:30.1474403Z node/edge-node-0 created
+2025-12-15T13:53:30.1572724Z node/edge-node-1 created
+2025-12-15T13:53:30.1667782Z node/edge-node-10 created
+2025-12-15T13:53:30.1756274Z node/edge-node-11 created
+2025-12-15T13:53:30.1927515Z node/edge-node-12 created
+2025-12-15T13:53:30.2312924Z node/edge-node-13 created
+2025-12-15T13:53:30.2535208Z node/edge-node-14 created
+2025-12-15T13:53:30.2879054Z node/edge-node-15 created
+2025-12-15T13:53:30.2994914Z node/edge-node-16 created
+2025-12-15T13:53:30.3119720Z node/edge-node-17 created
+2025-12-15T13:53:30.3258713Z node/edge-node-18 created
+2025-12-15T13:53:30.3510448Z node/edge-node-19 created
+2025-12-15T13:53:30.3678617Z node/edge-node-2 created
+2025-12-15T13:53:30.3976702Z node/edge-node-20 created
+2025-12-15T13:53:30.4123806Z node/edge-node-21 created
+2025-12-15T13:53:30.4304495Z node/edge-node-22 created
+2025-12-15T13:53:30.4487317Z node/edge-node-23 created
+2025-12-15T13:53:30.4604468Z node/edge-node-24 created
+2025-12-15T13:53:30.4798786Z node/edge-node-25 created
+2025-12-15T13:53:30.4867341Z node/edge-node-26 created
+2025-12-15T13:53:30.4969700Z node/edge-node-27 created
+2025-12-15T13:53:30.5117443Z node/edge-node-28 created
+2025-12-15T13:53:30.5370100Z node/edge-node-29 created
+2025-12-15T13:53:30.5450678Z node/edge-node-3 created
+2025-12-15T13:53:30.5660469Z node/edge-node-30 created
+2025-12-15T13:53:30.5971183Z node/edge-node-31 created
+2025-12-15T13:53:30.6226908Z node/edge-node-32 created
+2025-12-15T13:53:30.6396384Z node/edge-node-33 created
+2025-12-15T13:53:30.6583709Z node/edge-node-34 created
+2025-12-15T13:53:30.6777210Z node/edge-node-35 created
+2025-12-15T13:53:30.6905365Z node/edge-node-36 created
+2025-12-15T13:53:30.7048513Z node/edge-node-37 created
+2025-12-15T13:53:30.7177277Z node/edge-node-38 created
+2025-12-15T13:53:30.7409925Z node/edge-node-39 created
+2025-12-15T13:53:30.7619177Z node/edge-node-4 created
+2025-12-15T13:53:30.7771198Z node/edge-node-40 created
+2025-12-15T13:53:30.7894255Z node/edge-node-41 created
+2025-12-15T13:53:30.7998408Z node/edge-node-42 created
+2025-12-15T13:53:30.8141421Z node/edge-node-43 created
+2025-12-15T13:53:30.8283454Z node/edge-node-44 created
+2025-12-15T13:53:30.8464545Z node/edge-node-45 created
+2025-12-15T13:53:30.8665363Z node/edge-node-46 created
+2025-12-15T13:53:30.8785411Z node/edge-node-47 created
+2025-12-15T13:53:30.8951953Z node/edge-node-48 created
+2025-12-15T13:53:30.9038678Z node/edge-node-49 created
+2025-12-15T13:53:30.9208735Z node/edge-node-5 created
+2025-12-15T13:53:30.9355071Z node/edge-node-6 created
+2025-12-15T13:53:30.9442790Z node/edge-node-7 created
+2025-12-15T13:53:30.9547442Z node/edge-node-8 created
+2025-12-15T13:53:30.9780747Z node/edge-node-9 created
+2025-12-15T13:53:31.1801137Z node/edge-node-0 condition met
+2025-12-15T13:53:31.2813197Z node/edge-node-1 condition met
+2025-12-15T13:53:31.3823600Z node/edge-node-10 condition met
+2025-12-15T13:53:31.4840622Z node/edge-node-11 condition met
+2025-12-15T13:53:31.5856682Z node/edge-node-12 condition met
+2025-12-15T13:53:31.6868738Z node/edge-node-13 condition met
+2025-12-15T13:53:31.7882131Z node/edge-node-14 condition met
+2025-12-15T13:53:31.8896826Z node/edge-node-15 condition met
+2025-12-15T13:53:31.9911364Z node/edge-node-16 condition met
+2025-12-15T13:53:32.0925714Z node/edge-node-17 condition met
+2025-12-15T13:53:32.1935647Z node/edge-node-18 condition met
+2025-12-15T13:53:32.2948881Z node/edge-node-19 condition met
+2025-12-15T13:53:32.3964132Z node/edge-node-2 condition met
+2025-12-15T13:53:32.4983213Z node/edge-node-20 condition met
+2025-12-15T13:53:32.6000794Z node/edge-node-21 condition met
+2025-12-15T13:53:32.7012468Z node/edge-node-22 condition met
+2025-12-15T13:53:32.8026069Z node/edge-node-23 condition met
+2025-12-15T13:53:32.9043611Z node/edge-node-24 condition met
+2025-12-15T13:53:33.0056098Z node/edge-node-25 condition met
+2025-12-15T13:53:33.1064798Z node/edge-node-26 condition met
+2025-12-15T13:53:33.3080110Z node/edge-node-27 condition met
+2025-12-15T13:53:33.5096303Z node/edge-node-28 condition met
+2025-12-15T13:53:33.7111774Z node/edge-node-29 condition met
+2025-12-15T13:53:33.9128354Z node/edge-node-3 condition met
+2025-12-15T13:53:34.1140698Z node/edge-node-30 condition met
+2025-12-15T13:53:34.3149967Z node/edge-node-31 condition met
+2025-12-15T13:53:34.5168495Z node/edge-node-32 condition met
+2025-12-15T13:53:34.7186032Z node/edge-node-33 condition met
+2025-12-15T13:53:34.9204222Z node/edge-node-34 condition met
+2025-12-15T13:53:35.1214184Z node/edge-node-35 condition met
+2025-12-15T13:53:35.3230881Z node/edge-node-36 condition met
+2025-12-15T13:53:35.5247632Z node/edge-node-37 condition met
+2025-12-15T13:53:35.7265984Z node/edge-node-38 condition met
+2025-12-15T13:53:35.9282209Z node/edge-node-39 condition met
+2025-12-15T13:53:36.1289582Z node/edge-node-4 condition met
+2025-12-15T13:53:36.3300219Z node/edge-node-40 condition met
+2025-12-15T13:53:36.5315546Z node/edge-node-41 condition met
+2025-12-15T13:53:36.7330909Z node/edge-node-42 condition met
+2025-12-15T13:53:36.9345029Z node/edge-node-43 condition met
+2025-12-15T13:53:37.1358460Z node/edge-node-44 condition met
+2025-12-15T13:53:37.3377526Z node/edge-node-45 condition met
+2025-12-15T13:53:37.5396482Z node/edge-node-46 condition met
+2025-12-15T13:53:37.7413631Z node/edge-node-47 condition met
+2025-12-15T13:53:37.9428420Z node/edge-node-48 condition met
+2025-12-15T13:53:38.1439364Z node/edge-node-49 condition met
+2025-12-15T13:53:38.3456068Z node/edge-node-5 condition met
+2025-12-15T13:53:38.5465293Z node/edge-node-6 condition met
+2025-12-15T13:53:38.7480738Z node/edge-node-7 condition met
+2025-12-15T13:53:38.9494424Z node/edge-node-8 condition met
+2025-12-15T13:53:39.1511414Z node/edge-node-9 condition met
+2025-12-15T13:53:39.3519801Z node/oasees-github-tests-runner condition met

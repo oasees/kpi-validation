@@ -1,0 +1,15 @@
+﻿2025-12-15T13:53:24.4761930Z Current runner version: '2.329.0'
+2025-12-15T13:53:24.4773453Z Runner name: 'oasees-github-tests-runner'
+2025-12-15T13:53:24.4774841Z Runner group name: 'Default'
+2025-12-15T13:53:24.4776108Z Machine name: 'oasees-github-tests-runner'
+2025-12-15T13:53:24.4780305Z ##[group]GITHUB_TOKEN Permissions
+2025-12-15T13:53:24.4783526Z Contents: read
+2025-12-15T13:53:24.4784543Z Metadata: read
+2025-12-15T13:53:24.4785394Z Packages: read
+2025-12-15T13:53:24.4786258Z ##[endgroup]
+2025-12-15T13:53:24.4789264Z Secret source: Actions
+2025-12-15T13:53:24.4790485Z Prepare workflow directory
+2025-12-15T13:53:24.5595245Z Prepare all required actions
+2025-12-15T13:53:24.5657886Z Getting action download info
+2025-12-15T13:53:25.2286083Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2025-12-15T13:53:26.5075053Z Complete job name: execute-script
