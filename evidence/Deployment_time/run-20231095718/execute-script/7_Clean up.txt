@@ -1,13 +1,13 @@
-﻿2025-12-15T13:55:34.5669183Z ##[group]Run kubectl delete pod example1-2025-12-11-12-02-22 --force
-2025-12-15T13:55:34.5669679Z [36;1mkubectl delete pod example1-2025-12-11-12-02-22 --force[0m
-2025-12-15T13:55:34.5690516Z shell: /usr/bin/bash -e {0}
-2025-12-15T13:55:34.5690683Z env:
-2025-12-15T13:55:34.5690886Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T13:55:34.5691212Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
-2025-12-15T13:55:34.5691517Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T13:55:34.5691805Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T13:55:34.5692071Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T13:55:34.5692349Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
-2025-12-15T13:55:34.5692567Z ##[endgroup]
-2025-12-15T13:55:34.6046117Z Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
-2025-12-15T13:55:34.6085253Z pod "example1-2025-12-11-12-02-22" force deleted
+﻿2025-12-15T13:56:49.5839213Z ##[group]Run kubectl delete pod example1-2025-12-11-12-02-22 --force
+2025-12-15T13:56:49.5839526Z [36;1mkubectl delete pod example1-2025-12-11-12-02-22 --force[0m
+2025-12-15T13:56:49.5855291Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:56:49.5855464Z env:
+2025-12-15T13:56:49.5855665Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:56:49.5855992Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
+2025-12-15T13:56:49.5856322Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:56:49.5856611Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:56:49.5856890Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:56:49.5857169Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
+2025-12-15T13:56:49.5857386Z ##[endgroup]
+2025-12-15T13:56:49.6173406Z Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+2025-12-15T13:56:49.6213352Z pod "example1-2025-12-11-12-02-22" force deleted
