@@ -1,17 +1,17 @@
-﻿2025-12-15T13:58:37.2010929Z ##[group]Run pip install -r requirements.txt
-2025-12-15T13:58:37.2011266Z [36;1mpip install -r requirements.txt[0m
-2025-12-15T13:58:37.2030557Z shell: /usr/bin/bash -e {0}
-2025-12-15T13:58:37.2030776Z env:
-2025-12-15T13:58:37.2031012Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T13:58:37.2031378Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
-2025-12-15T13:58:37.2031718Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T13:58:37.2032043Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T13:58:37.2032349Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T13:58:37.2032662Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
-2025-12-15T13:58:37.2032917Z ##[endgroup]
-2025-12-15T13:58:37.4427519Z Requirement already satisfied: numpy==1.26.4 in /home/runner/.local/lib/python3.10/site-packages (from -r requirements.txt (line 1)) (1.26.4)
-2025-12-15T13:58:37.4429826Z Requirement already satisfied: requests in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from -r requirements.txt (line 2)) (2.32.5)
-2025-12-15T13:58:37.4462245Z Requirement already satisfied: charset_normalizer<4,>=2 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (3.4.4)
-2025-12-15T13:58:37.4465596Z Requirement already satisfied: idna<4,>=2.5 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (3.11)
-2025-12-15T13:58:37.4468856Z Requirement already satisfied: urllib3<3,>=1.21.1 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (2.6.2)
-2025-12-15T13:58:37.4471889Z Requirement already satisfied: certifi>=2017.4.17 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (2025.11.12)
+﻿2025-12-15T13:59:30.0793857Z ##[group]Run pip install -r requirements.txt
+2025-12-15T13:59:30.0794163Z [36;1mpip install -r requirements.txt[0m
+2025-12-15T13:59:30.0860621Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:59:30.0860829Z env:
+2025-12-15T13:59:30.0861032Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:59:30.0861364Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
+2025-12-15T13:59:30.0861671Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:59:30.0861964Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:59:30.0862234Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:59:30.0862513Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
+2025-12-15T13:59:30.0862729Z ##[endgroup]
+2025-12-15T13:59:30.3470894Z Requirement already satisfied: numpy==1.26.4 in /home/runner/.local/lib/python3.10/site-packages (from -r requirements.txt (line 1)) (1.26.4)
+2025-12-15T13:59:30.3472738Z Requirement already satisfied: requests in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from -r requirements.txt (line 2)) (2.32.5)
+2025-12-15T13:59:30.3495397Z Requirement already satisfied: charset_normalizer<4,>=2 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (3.4.4)
+2025-12-15T13:59:30.3498688Z Requirement already satisfied: idna<4,>=2.5 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (3.11)
+2025-12-15T13:59:30.3501922Z Requirement already satisfied: urllib3<3,>=1.21.1 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (2.6.2)
+2025-12-15T13:59:30.3504952Z Requirement already satisfied: certifi>=2017.4.17 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests->-r requirements.txt (line 2)) (2025.11.12)
