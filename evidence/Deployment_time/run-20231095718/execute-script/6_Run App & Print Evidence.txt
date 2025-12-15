@@ -1,82 +1,82 @@
-﻿2025-12-15T14:03:39.1865977Z ##[group]Run START=$(date +%s.%N); ./deploy.sh && printf "\nTOTAL DEPLOYMENT TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"
-2025-12-15T14:03:39.1866472Z [36;1mSTART=$(date +%s.%N); ./deploy.sh && printf "\nTOTAL DEPLOYMENT TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"[0m
-2025-12-15T14:03:39.1882743Z shell: /usr/bin/bash -e {0}
-2025-12-15T14:03:39.1882932Z env:
-2025-12-15T14:03:39.1883181Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:03:39.1883531Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
-2025-12-15T14:03:39.1883879Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:03:39.1884184Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:03:39.1884515Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
-2025-12-15T14:03:39.1884833Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
-2025-12-15T14:03:39.1885225Z   NODE_IP: ***
-2025-12-15T14:03:39.1885391Z   MODEL_PORT: ***
-2025-12-15T14:03:39.1885551Z ##[endgroup]
-2025-12-15T14:03:39.1932260Z Deploying model...
-2025-12-15T14:03:39.4686277Z Deploying Kubernetes resources with the following configuration:
-2025-12-15T14:03:39.4686627Z   Project Name: example1
-2025-12-15T14:03:39.4686804Z   IPFS IP: 10.43.168.200
-2025-12-15T14:03:39.4687013Z   Model: example1_2025-12-11_12-02-22.pkl
-2025-12-15T14:03:39.4687203Z   Pod Name: example1-2025-12-11-12-02-22
-2025-12-15T14:03:39.4687382Z   App Label: example1-2025-12-11-12-02-22pkl
-2025-12-15T14:03:39.4687501Z 
-2025-12-15T14:03:39.4687575Z Generated Kubernetes manifest:
-2025-12-15T14:03:39.4687736Z ================================
-2025-12-15T14:03:39.4687884Z apiVersion: v1
-2025-12-15T14:03:39.4688018Z kind: Pod
-2025-12-15T14:03:39.4688159Z metadata:
-2025-12-15T14:03:39.4688288Z   name: example1-2025-12-11-12-02-22
-2025-12-15T14:03:39.4688443Z   labels:
-2025-12-15T14:03:39.4688585Z     app: example1-2025-12-11-12-02-22pkl
-2025-12-15T14:03:39.4688795Z     tag: model
-2025-12-15T14:03:39.4688917Z spec:
-2025-12-15T14:03:39.4689045Z   restartPolicy: Never
-2025-12-15T14:03:39.4689180Z   containers:
-2025-12-15T14:03:39.4689319Z   - name: model-deploy
-2025-12-15T14:03:39.4689497Z     image: oasees/ml-base-image:latest
-2025-12-15T14:03:39.4689673Z     imagePullPolicy: IfNotPresent
-2025-12-15T14:03:39.4689825Z     env:
-2025-12-15T14:03:39.4689955Z       - name: PROJECT_NAME
-2025-12-15T14:03:39.4690163Z         value: "example1"
-2025-12-15T14:03:39.4690314Z       - name: IPFS_IP
-2025-12-15T14:03:39.4690461Z         value: "10.43.168.200"
-2025-12-15T14:03:39.4690607Z       - name: MODEL
-2025-12-15T14:03:39.4690764Z         value: "example1_2025-12-11_12-02-22.pkl"
-2025-12-15T14:03:39.4690949Z     command: ["/bin/bash", "-c"]
-2025-12-15T14:03:39.4691093Z     args:
-2025-12-15T14:03:39.4691212Z     - |
-2025-12-15T14:03:39.4691484Z       HASH=$(ipfs --api=/ip4/${IPFS_IP}/tcp/5001/http files stat --hash /oasees-ml-ops/projects/ml/${PROJECT_NAME}) &&
-2025-12-15T14:03:39.4691826Z       ipfs --api=/ip4/${IPFS_IP}/tcp/5001/http get ${HASH} -o ${PROJECT_NAME} &&
-2025-12-15T14:03:39.4692041Z       cd $PROJECT_NAME &&
-2025-12-15T14:03:39.4692230Z       python  ${PROJECT_NAME}_deploy.py --model-path $MODEL
-2025-12-15T14:03:39.4692417Z     ports:
-2025-12-15T14:03:39.4692540Z     - containerPort: 5005
-2025-12-15T14:03:39.4692630Z 
-2025-12-15T14:03:39.4692678Z ---
-2025-12-15T14:03:39.4692793Z apiVersion: v1
-2025-12-15T14:03:39.4692913Z kind: Service
-2025-12-15T14:03:39.4693032Z metadata:
-2025-12-15T14:03:39.4693169Z   name: example1-2025-12-11-12-02-22-service
-2025-12-15T14:03:39.4693329Z   labels:
-2025-12-15T14:03:39.4693441Z     tag: model
-2025-12-15T14:03:39.4693556Z spec:
-2025-12-15T14:03:39.4693669Z   type: NodePort
-2025-12-15T14:03:39.4693810Z   selector:
-2025-12-15T14:03:39.4694132Z     app: example1-2025-12-11-12-02-22pkl
-2025-12-15T14:03:39.4694284Z     tag: model
-2025-12-15T14:03:39.4694511Z   ports:
-2025-12-15T14:03:39.4694628Z   - port: 30005
-2025-12-15T14:03:39.4694757Z     targetPort: 5005
-2025-12-15T14:03:39.4694846Z 
-2025-12-15T14:03:39.4694907Z ================================
-2025-12-15T14:03:39.4694997Z 
-2025-12-15T14:03:39.4695090Z Applying Kubernetes configuration...
-2025-12-15T14:03:39.6277035Z ✅ Deployment successful!
-2025-12-15T14:03:40.4072541Z pod/example1-2025-12-11-12-02-22 condition met
-2025-12-15T14:03:40.4089123Z 
-2025-12-15T14:03:40.4089371Z Model Deployed!. Sending for inference...
-2025-12-15T14:03:40.4089537Z 
-2025-12-15T14:03:41.2663768Z Accuracy: 0.9600
-2025-12-15T14:03:41.2664157Z [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
-2025-12-15T14:03:41.2831512Z 
-2025-12-15T14:03:41.2831692Z TOTAL DEPLOYMENT TIME: 2.090218610 seconds
-2025-12-15T14:03:41.2831830Z 
+﻿2025-12-15T14:04:23.4745071Z ##[group]Run START=$(date +%s.%N); ./deploy.sh && printf "\nTOTAL DEPLOYMENT TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"
+2025-12-15T14:04:23.4745573Z [36;1mSTART=$(date +%s.%N); ./deploy.sh && printf "\nTOTAL DEPLOYMENT TIME: $(echo "scale=4; $(date +%s.%N) - $START" | bc) seconds\n\n"[0m
+2025-12-15T14:04:23.4761451Z shell: /usr/bin/bash -e {0}
+2025-12-15T14:04:23.4761608Z env:
+2025-12-15T14:04:23.4761810Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:04:23.4762139Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
+2025-12-15T14:04:23.4762444Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:04:23.4762728Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:04:23.4763005Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T14:04:23.4763291Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
+2025-12-15T14:04:23.4763600Z   NODE_IP: ***
+2025-12-15T14:04:23.4763738Z   MODEL_PORT: ***
+2025-12-15T14:04:23.4763865Z ##[endgroup]
+2025-12-15T14:04:23.4807780Z Deploying model...
+2025-12-15T14:04:23.7677225Z Deploying Kubernetes resources with the following configuration:
+2025-12-15T14:04:23.7677691Z   Project Name: example1
+2025-12-15T14:04:23.7677847Z   IPFS IP: 10.43.168.200
+2025-12-15T14:04:23.7678007Z   Model: example1_2025-12-11_12-02-22.pkl
+2025-12-15T14:04:23.7678198Z   Pod Name: example1-2025-12-11-12-02-22
+2025-12-15T14:04:23.7678385Z   App Label: example1-2025-12-11-12-02-22pkl
+2025-12-15T14:04:23.7678507Z 
+2025-12-15T14:04:23.7678584Z Generated Kubernetes manifest:
+2025-12-15T14:04:23.7678747Z ================================
+2025-12-15T14:04:23.7678898Z apiVersion: v1
+2025-12-15T14:04:23.7679030Z kind: Pod
+2025-12-15T14:04:23.7679169Z metadata:
+2025-12-15T14:04:23.7679300Z   name: example1-2025-12-11-12-02-22
+2025-12-15T14:04:23.7679452Z   labels:
+2025-12-15T14:04:23.7679601Z     app: example1-2025-12-11-12-02-22pkl
+2025-12-15T14:04:23.7679755Z     tag: model
+2025-12-15T14:04:23.7679876Z spec:
+2025-12-15T14:04:23.7680003Z   restartPolicy: Never
+2025-12-15T14:04:23.7680199Z   containers:
+2025-12-15T14:04:23.7680336Z   - name: model-deploy
+2025-12-15T14:04:23.7680512Z     image: oasees/ml-base-image:latest
+2025-12-15T14:04:23.7680686Z     imagePullPolicy: IfNotPresent
+2025-12-15T14:04:23.7680836Z     env:
+2025-12-15T14:04:23.7680966Z       - name: PROJECT_NAME
+2025-12-15T14:04:23.7681124Z         value: "example1"
+2025-12-15T14:04:23.7681315Z       - name: IPFS_IP
+2025-12-15T14:04:23.7681497Z         value: "10.43.168.200"
+2025-12-15T14:04:23.7681671Z       - name: MODEL
+2025-12-15T14:04:23.7681830Z         value: "example1_2025-12-11_12-02-22.pkl"
+2025-12-15T14:04:23.7682012Z     command: ["/bin/bash", "-c"]
+2025-12-15T14:04:23.7682159Z     args:
+2025-12-15T14:04:23.7682276Z     - |
+2025-12-15T14:04:23.7682562Z       HASH=$(ipfs --api=/ip4/${IPFS_IP}/tcp/5001/http files stat --hash /oasees-ml-ops/projects/ml/${PROJECT_NAME}) &&
+2025-12-15T14:04:23.7682916Z       ipfs --api=/ip4/${IPFS_IP}/tcp/5001/http get ${HASH} -o ${PROJECT_NAME} &&
+2025-12-15T14:04:23.7683137Z       cd $PROJECT_NAME &&
+2025-12-15T14:04:23.7683331Z       python  ${PROJECT_NAME}_deploy.py --model-path $MODEL
+2025-12-15T14:04:23.7683522Z     ports:
+2025-12-15T14:04:23.7683650Z     - containerPort: 5005
+2025-12-15T14:04:23.7683743Z 
+2025-12-15T14:04:23.7683793Z ---
+2025-12-15T14:04:23.7683913Z apiVersion: v1
+2025-12-15T14:04:23.7684037Z kind: Service
+2025-12-15T14:04:23.7684162Z metadata:
+2025-12-15T14:04:23.7684303Z   name: example1-2025-12-11-12-02-22-service
+2025-12-15T14:04:23.7684464Z   labels:
+2025-12-15T14:04:23.7684583Z     tag: model
+2025-12-15T14:04:23.7684705Z spec:
+2025-12-15T14:04:23.7684819Z   type: NodePort
+2025-12-15T14:04:23.7684946Z   selector:
+2025-12-15T14:04:23.7685323Z     app: example1-2025-12-11-12-02-22pkl
+2025-12-15T14:04:23.7685478Z     tag: model
+2025-12-15T14:04:23.7685723Z   ports:
+2025-12-15T14:04:23.7685845Z   - port: 30005
+2025-12-15T14:04:23.7685978Z     targetPort: 5005
+2025-12-15T14:04:23.7686068Z 
+2025-12-15T14:04:23.7686133Z ================================
+2025-12-15T14:04:23.7686228Z 
+2025-12-15T14:04:23.7686324Z Applying Kubernetes configuration...
+2025-12-15T14:04:23.9254192Z ✅ Deployment successful!
+2025-12-15T14:04:24.4738232Z pod/example1-2025-12-11-12-02-22 condition met
+2025-12-15T14:04:24.4754682Z 
+2025-12-15T14:04:24.4755129Z Model Deployed!. Sending for inference...
+2025-12-15T14:04:24.4755344Z 
+2025-12-15T14:04:25.9262165Z Accuracy: 0.9600
+2025-12-15T14:04:25.9262574Z [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+2025-12-15T14:04:25.9432312Z 
+2025-12-15T14:04:25.9432644Z TOTAL DEPLOYMENT TIME: 2.462639594 seconds
+2025-12-15T14:04:25.9432881Z 
