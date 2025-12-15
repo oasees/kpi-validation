@@ -1,0 +1,230 @@
+﻿2025-12-15T13:48:56.9111109Z Current runner version: '2.329.0'
+2025-12-15T13:48:56.9121331Z Runner name: 'oasees-github-tests-runner'
+2025-12-15T13:48:56.9122833Z Runner group name: 'Default'
+2025-12-15T13:48:56.9124482Z Machine name: 'oasees-github-tests-runner'
+2025-12-15T13:48:56.9129848Z ##[group]GITHUB_TOKEN Permissions
+2025-12-15T13:48:56.9133283Z Contents: read
+2025-12-15T13:48:56.9134428Z Metadata: read
+2025-12-15T13:48:56.9135373Z Packages: read
+2025-12-15T13:48:56.9136274Z ##[endgroup]
+2025-12-15T13:48:56.9139687Z Secret source: Actions
+2025-12-15T13:48:56.9140771Z Prepare workflow directory
+2025-12-15T13:48:56.9952873Z Prepare all required actions
+2025-12-15T13:48:57.0013038Z Getting action download info
+2025-12-15T13:48:57.6883345Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2025-12-15T13:48:58.7030222Z Download action repository 'actions/setup-python@v4' (SHA:7f4fc3e22c37d6ff65e88745f38bd3157c663f7c)
+2025-12-15T13:49:00.1920610Z Complete job name: execute-script
+2025-12-15T13:49:00.3382658Z ##[group]Run actions/checkout@v3
+2025-12-15T13:49:00.3384627Z with:
+2025-12-15T13:49:00.3385772Z   repository: oasees/kpi-validation
+2025-12-15T13:49:00.3387640Z   token: ***
+2025-12-15T13:49:00.3388735Z   ssh-strict: true
+2025-12-15T13:49:00.3389919Z   persist-credentials: true
+2025-12-15T13:49:00.3391190Z   clean: true
+2025-12-15T13:49:00.3392369Z   sparse-checkout-cone-mode: true
+2025-12-15T13:49:00.3393781Z   fetch-depth: 1
+2025-12-15T13:49:00.3394890Z   fetch-tags: false
+2025-12-15T13:49:00.3396022Z   lfs: false
+2025-12-15T13:49:00.3397091Z   submodules: false
+2025-12-15T13:49:00.3398423Z   set-safe-directory: true
+2025-12-15T13:49:00.3400194Z ##[endgroup]
+2025-12-15T13:49:00.4914675Z Syncing repository: oasees/kpi-validation
+2025-12-15T13:49:00.4921182Z ##[group]Getting Git version info
+2025-12-15T13:49:00.4925575Z Working directory is '/home/runner/actions-runner/_work/kpi-validation/kpi-validation'
+2025-12-15T13:49:00.4931720Z [command]/usr/bin/git version
+2025-12-15T13:49:00.4934592Z git version 2.34.1
+2025-12-15T13:49:00.4965838Z ##[endgroup]
+2025-12-15T13:49:00.4989248Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/82b5865d-4703-4b22-9a14-8eed08d6c96c' before making global git config changes
+2025-12-15T13:49:00.4993592Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-15T13:49:00.4997657Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
+2025-12-15T13:49:00.5035112Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-12-15T13:49:00.5058116Z https://github.com/oasees/kpi-validation
+2025-12-15T13:49:00.5082256Z ##[group]Removing previously created refs, to avoid conflicts
+2025-12-15T13:49:00.5086055Z [command]/usr/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
+2025-12-15T13:49:00.5109378Z refs/heads/main
+2025-12-15T13:49:00.5121214Z [command]/usr/bin/git checkout --detach
+2025-12-15T13:49:00.5162824Z HEAD is now at c8a4570 feat: Add workflow for workflow log retention
+2025-12-15T13:49:00.5208474Z [command]/usr/bin/git branch --delete --force main
+2025-12-15T13:49:00.5239399Z Deleted branch main (was c8a4570).
+2025-12-15T13:49:00.5278999Z ##[endgroup]
+2025-12-15T13:49:00.5280436Z [command]/usr/bin/git submodule status
+2025-12-15T13:49:00.5537194Z ##[group]Cleaning the repository
+2025-12-15T13:49:00.5540502Z [command]/usr/bin/git clean -ffdx
+2025-12-15T13:49:00.5573282Z [command]/usr/bin/git reset --hard HEAD
+2025-12-15T13:49:00.5608659Z HEAD is now at c8a4570 feat: Add workflow for workflow log retention
+2025-12-15T13:49:00.5615262Z ##[endgroup]
+2025-12-15T13:49:00.5617284Z ##[group]Disabling automatic garbage collection
+2025-12-15T13:49:00.5619598Z [command]/usr/bin/git config --local gc.auto 0
+2025-12-15T13:49:00.5646089Z ##[endgroup]
+2025-12-15T13:49:00.5648329Z ##[group]Setting up auth
+2025-12-15T13:49:00.5653594Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-15T13:49:00.5683247Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-15T13:49:00.5934136Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-15T13:49:00.5963715Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-15T13:49:00.6212539Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-12-15T13:49:00.6248526Z ##[endgroup]
+2025-12-15T13:49:00.6250488Z ##[group]Fetching the repository
+2025-12-15T13:49:00.6260116Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +c8a4570d3a17647f7dc73a2a923ec50cd4fc164c:refs/remotes/origin/main
+2025-12-15T13:49:01.2203409Z remote: Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)        
+2025-12-15T13:49:01.2279601Z ##[endgroup]
+2025-12-15T13:49:01.2280326Z ##[group]Determining the checkout info
+2025-12-15T13:49:01.2282604Z ##[endgroup]
+2025-12-15T13:49:01.2283268Z ##[group]Checking out the ref
+2025-12-15T13:49:01.2287684Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-12-15T13:49:01.2332861Z Switched to a new branch 'main'
+2025-12-15T13:49:01.2333784Z Branch 'main' set up to track remote branch 'main' from 'origin'.
+2025-12-15T13:49:01.2339777Z ##[endgroup]
+2025-12-15T13:49:01.2377769Z [command]/usr/bin/git log -1 --format='%H'
+2025-12-15T13:49:01.2403085Z 'c8a4570d3a17647f7dc73a2a923ec50cd4fc164c'
+2025-12-15T13:49:01.2671773Z ##[group]Run actions/setup-python@v4
+2025-12-15T13:49:01.2672301Z with:
+2025-12-15T13:49:01.2672635Z   python-version: 3.10
+2025-12-15T13:49:01.2673038Z   check-latest: false
+2025-12-15T13:49:01.2673633Z   token: ***
+2025-12-15T13:49:01.2674027Z   update-environment: true
+2025-12-15T13:49:01.2674454Z   allow-prereleases: false
+2025-12-15T13:49:01.2674859Z ##[endgroup]
+2025-12-15T13:49:01.5281099Z ##[group]Installed versions
+2025-12-15T13:49:01.5361638Z Successfully set up CPython (3.10.19)
+2025-12-15T13:49:01.5362484Z ##[endgroup]
+2025-12-15T13:49:01.5504041Z ##[group]Run pip install -r requirements.txt
+2025-12-15T13:49:01.5504740Z [36;1mpip install -r requirements.txt[0m
+2025-12-15T13:49:01.5531363Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:49:01.5531812Z env:
+2025-12-15T13:49:01.5532341Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:49:01.5533231Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
+2025-12-15T13:49:01.5534077Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:49:01.5534877Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:49:01.5535652Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:49:01.5536482Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
+2025-12-15T13:49:01.5537105Z ##[endgroup]
+2025-12-15T13:49:02.1021090Z Requirement already satisfied: web3==6.19.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from -r requirements.txt (line 1)) (6.19.0)
+2025-12-15T13:49:02.1167377Z Requirement already satisfied: aiohttp>=3.7.4.post0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from web3==6.19.0->-r requirements.txt (line 1)) (3.13.2)
+2025-12-15T13:49:02.1174728Z Requirement already satisfied: eth-abi>=4.0.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from web3==6.19.0->-r requirements.txt (line 1)) (5.2.0)
+2025-12-15T13:49:02.1183438Z Requirement already satisfied: eth-account<0.13,>=0.8.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from web3==6.19.0->-r requirements.txt (line 1)) (0.11.3)
+2025-12-15T13:49:02.1197033Z Requirement already satisfied: eth-hash>=0.5.1 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from eth-hash[pycryptodome]>=0.5.1->web3==6.19.0->-r requirements.txt (line 1)) (0.7.1)
+2025-12-15T13:49:02.1209547Z Requirement already satisfied: eth-typing!=4.2.0,>=3.0.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from web3==6.19.0->-r requirements.txt (line 1)) (5.2.1)
+2025-12-15T13:49:02.1217595Z Requirement already satisfied: eth-utils>=2.1.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from web3==6.19.0->-r requirements.txt (line 1)) (5.3.1)
+2025-12-15T13:49:02.1226100Z Requirement already satisfied: hexbytes<0.4.0,>=0.1.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from web3==6.19.0->-r requirements.txt (line 1)) (0.3.1)
+2025-12-15T13:49:02.1233882Z Requirement already satisfied: jsonschema>=4.0.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from web3==6.19.0->-r requirements.txt (line 1)) (4.25.1)
+2025-12-15T13:49:02.1242373Z Requirement already satisfied: lru-dict<1.3.0,>=1.1.6 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from web3==6.19.0->-r requirements.txt (line 1)) (1.2.0)
+2025-12-15T13:49:02.1251380Z Requirement already satisfied: protobuf>=4.21.6 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from web3==6.19.0->-r requirements.txt (line 1)) (6.33.2)
+2025-12-15T13:49:02.1259683Z Requirement already satisfied: requests>=2.16.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from web3==6.19.0->-r requirements.txt (line 1)) (2.32.5)
+2025-12-15T13:49:02.1267459Z Requirement already satisfied: typing-extensions>=4.0.1 in /home/runner/.local/lib/python3.10/site-packages (from web3==6.19.0->-r requirements.txt (line 1)) (4.15.0)
+2025-12-15T13:49:02.1275925Z Requirement already satisfied: websockets>=10.0.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from web3==6.19.0->-r requirements.txt (line 1)) (15.0.1)
+2025-12-15T13:49:02.1283907Z Requirement already satisfied: pyunormalize>=15.0.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from web3==6.19.0->-r requirements.txt (line 1)) (17.0.0)
+2025-12-15T13:49:02.1366353Z Requirement already satisfied: bitarray>=2.4.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from eth-account<0.13,>=0.8.0->web3==6.19.0->-r requirements.txt (line 1)) (3.8.0)
+2025-12-15T13:49:02.1377776Z Requirement already satisfied: eth-keyfile>=0.6.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from eth-account<0.13,>=0.8.0->web3==6.19.0->-r requirements.txt (line 1)) (0.9.1)
+2025-12-15T13:49:02.1387827Z Requirement already satisfied: eth-keys>=0.4.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from eth-account<0.13,>=0.8.0->web3==6.19.0->-r requirements.txt (line 1)) (0.7.0)
+2025-12-15T13:49:02.1395231Z Requirement already satisfied: eth-rlp>=0.3.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from eth-account<0.13,>=0.8.0->web3==6.19.0->-r requirements.txt (line 1)) (1.0.1)
+2025-12-15T13:49:02.1408231Z Requirement already satisfied: rlp>=1.0.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from eth-account<0.13,>=0.8.0->web3==6.19.0->-r requirements.txt (line 1)) (4.1.0)
+2025-12-15T13:49:02.1416754Z Requirement already satisfied: ckzg<2,>=0.4.3 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from eth-account<0.13,>=0.8.0->web3==6.19.0->-r requirements.txt (line 1)) (1.0.2)
+2025-12-15T13:49:02.1575852Z Requirement already satisfied: aiohappyeyeballs>=2.5.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from aiohttp>=3.7.4.post0->web3==6.19.0->-r requirements.txt (line 1)) (2.6.1)
+2025-12-15T13:49:02.1584425Z Requirement already satisfied: aiosignal>=1.4.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from aiohttp>=3.7.4.post0->web3==6.19.0->-r requirements.txt (line 1)) (1.4.0)
+2025-12-15T13:49:02.1597084Z Requirement already satisfied: async-timeout<6.0,>=4.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from aiohttp>=3.7.4.post0->web3==6.19.0->-r requirements.txt (line 1)) (5.0.1)
+2025-12-15T13:49:02.1605456Z Requirement already satisfied: attrs>=17.3.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from aiohttp>=3.7.4.post0->web3==6.19.0->-r requirements.txt (line 1)) (25.4.0)
+2025-12-15T13:49:02.1613499Z Requirement already satisfied: frozenlist>=1.1.1 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from aiohttp>=3.7.4.post0->web3==6.19.0->-r requirements.txt (line 1)) (1.8.0)
+2025-12-15T13:49:02.1622181Z Requirement already satisfied: multidict<7.0,>=4.5 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from aiohttp>=3.7.4.post0->web3==6.19.0->-r requirements.txt (line 1)) (6.7.0)
+2025-12-15T13:49:02.1630047Z Requirement already satisfied: propcache>=0.2.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from aiohttp>=3.7.4.post0->web3==6.19.0->-r requirements.txt (line 1)) (0.4.1)
+2025-12-15T13:49:02.1638876Z Requirement already satisfied: yarl<2.0,>=1.17.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from aiohttp>=3.7.4.post0->web3==6.19.0->-r requirements.txt (line 1)) (1.22.0)
+2025-12-15T13:49:02.1715996Z Requirement already satisfied: idna>=2.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from yarl<2.0,>=1.17.0->aiohttp>=3.7.4.post0->web3==6.19.0->-r requirements.txt (line 1)) (3.11)
+2025-12-15T13:49:02.1895680Z Requirement already satisfied: parsimonious<0.11.0,>=0.10.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from eth-abi>=4.0.0->web3==6.19.0->-r requirements.txt (line 1)) (0.10.0)
+2025-12-15T13:49:02.2042753Z Requirement already satisfied: regex>=2022.3.15 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from parsimonious<0.11.0,>=0.10.0->eth-abi>=4.0.0->web3==6.19.0->-r requirements.txt (line 1)) (2025.11.3)
+2025-12-15T13:49:02.2147608Z Requirement already satisfied: pycryptodome<4,>=3.6.6 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from eth-hash[pycryptodome]>=0.5.1->web3==6.19.0->-r requirements.txt (line 1)) (3.23.0)
+2025-12-15T13:49:02.2225128Z Requirement already satisfied: py_ecc>=5.2.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from eth-keyfile>=0.6.0->eth-account<0.13,>=0.8.0->web3==6.19.0->-r requirements.txt (line 1)) (8.0.0)
+2025-12-15T13:49:02.2589698Z Requirement already satisfied: cytoolz>=0.10.1 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from eth-utils>=2.1.0->web3==6.19.0->-r requirements.txt (line 1)) (1.1.0)
+2025-12-15T13:49:02.2599386Z Requirement already satisfied: pydantic<3,>=2.0.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from eth-utils>=2.1.0->web3==6.19.0->-r requirements.txt (line 1)) (2.12.5)
+2025-12-15T13:49:02.2656920Z Requirement already satisfied: annotated-types>=0.6.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from pydantic<3,>=2.0.0->eth-utils>=2.1.0->web3==6.19.0->-r requirements.txt (line 1)) (0.7.0)
+2025-12-15T13:49:02.2665018Z Requirement already satisfied: pydantic-core==2.41.5 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from pydantic<3,>=2.0.0->eth-utils>=2.1.0->web3==6.19.0->-r requirements.txt (line 1)) (2.41.5)
+2025-12-15T13:49:02.2678465Z Requirement already satisfied: typing-inspection>=0.4.2 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from pydantic<3,>=2.0.0->eth-utils>=2.1.0->web3==6.19.0->-r requirements.txt (line 1)) (0.4.2)
+2025-12-15T13:49:02.2741673Z Requirement already satisfied: toolz>=0.8.0 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from cytoolz>=0.10.1->eth-utils>=2.1.0->web3==6.19.0->-r requirements.txt (line 1)) (1.1.0)
+2025-12-15T13:49:02.2848059Z Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from jsonschema>=4.0.0->web3==6.19.0->-r requirements.txt (line 1)) (2025.9.1)
+2025-12-15T13:49:02.2855638Z Requirement already satisfied: referencing>=0.28.4 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from jsonschema>=4.0.0->web3==6.19.0->-r requirements.txt (line 1)) (0.37.0)
+2025-12-15T13:49:02.2863468Z Requirement already satisfied: rpds-py>=0.7.1 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from jsonschema>=4.0.0->web3==6.19.0->-r requirements.txt (line 1)) (0.30.0)
+2025-12-15T13:49:02.3097333Z Requirement already satisfied: charset_normalizer<4,>=2 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests>=2.16.0->web3==6.19.0->-r requirements.txt (line 1)) (3.4.4)
+2025-12-15T13:49:02.3109246Z Requirement already satisfied: urllib3<3,>=1.21.1 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests>=2.16.0->web3==6.19.0->-r requirements.txt (line 1)) (2.6.2)
+2025-12-15T13:49:02.3117286Z Requirement already satisfied: certifi>=2017.4.17 in /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/python3.10/site-packages (from requests>=2.16.0->web3==6.19.0->-r requirements.txt (line 1)) (2025.11.12)
+2025-12-15T13:49:02.5576415Z ##[group]Run echo "- Validating Marketplace Listings ..."
+2025-12-15T13:49:02.5577130Z [36;1mecho "- Validating Marketplace Listings ..."[0m
+2025-12-15T13:49:02.5577585Z [36;1mpython main.py[0m
+2025-12-15T13:49:02.5577993Z [36;1mecho "- Marketplace Listings Validated."[0m
+2025-12-15T13:49:02.5600930Z shell: /usr/bin/bash -e {0}
+2025-12-15T13:49:02.5601602Z env:
+2025-12-15T13:49:02.5602425Z   pythonLocation: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:49:02.5603841Z   PKG_CONFIG_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib/pkgconfig
+2025-12-15T13:49:02.5605249Z   Python_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:49:02.5606585Z   Python2_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:49:02.5608126Z   Python3_ROOT_DIR: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64
+2025-12-15T13:49:02.5609531Z   LD_LIBRARY_PATH: /home/runner/actions-runner/_work/_tool/Python/3.10.19/x64/lib
+2025-12-15T13:49:02.5610625Z   RPC_URL: ***
+2025-12-15T13:49:02.5611011Z   IPFS_API_URL: ***
+2025-12-15T13:49:02.5611454Z ##[endgroup]
+2025-12-15T13:49:02.5663922Z - Validating Marketplace Listings ...
+2025-12-15T13:49:04.5871204Z Connected to blockchain
+2025-12-15T13:49:04.5872354Z ID: 1	 IPFS Hash: Qmf5jdHrd9g4fnSix1w13L3QkbF9fbML2ccnLEDU7jKxMs	Title: PyTorch_Spiking.py
+2025-12-15T13:49:04.5873328Z ID: 2	 IPFS Hash: Qmcksc66k6eJxhqNphUny3Lz4oez8EUToLW7wJc9h4F63n	Title: TensorFlow_Extended.py
+2025-12-15T13:49:04.5874256Z ID: 3	 IPFS Hash: QmPnbr4UEpLXd61HJ1pQAtgAiPFnNFE6csYRxwDvXjPtqd	Title: Decision_Trees.py
+2025-12-15T13:49:04.5875245Z ID: 4	 IPFS Hash: QmdWCEoMnUMJ4nwqZKuDNUuLEA6D4UVPzDryaivqGxcfzZ	Title: Principal_Component_Analysis.py
+2025-12-15T13:49:04.5876871Z ID: 5	 IPFS Hash: Qma5yytQFsQR5g9Vy4PDcW21ToCec6rCtA7Tkv9i9vGDJc	Title: Linear_Regression.py
+2025-12-15T13:49:04.5878025Z ID: 6	 IPFS Hash: QmXP7zCTMPPTetqMAdvn1uBsEjtydVvw5g4kcL7KSpmJtJ	Title: Logistic_Regression.py
+2025-12-15T13:49:04.5878992Z ID: 7	 IPFS Hash: QmaDAcrrx5GQJMnyrFwAyXmFHzRotApSKfoQwStHSrEUdE	Title: K-Means_Clustering.py
+2025-12-15T13:49:04.5880056Z ID: 8	 IPFS Hash: Qma8r3LZu9DmsGM95RBfnagCGWeeCDNmoCeHBcADA64ZMv	Title: Spiking_Neural_Networks.py
+2025-12-15T13:49:04.5881376Z ID: 9	 IPFS Hash: QmVYjm3vEDZh3zgRaBfaM6wKTYDapRUNKb1isjhKdmtCkY	Title: Support_Vector_Machines.py
+2025-12-15T13:49:04.5882502Z ID: 10	 IPFS Hash: QmcSjU6kD5JAyNkieD17FYrQhwuaPR9gbEhfh2L9aaYEGb	Title: Neural_Networks.py
+2025-12-15T13:49:04.5883599Z ID: 11	 IPFS Hash: QmfYPMqKJPpUZ4ioHk8Mx4Pqga5853YSbmP9xbYPcZKf8b	Title: Gradient_Boosting_Machines.py
+2025-12-15T13:49:04.5884750Z ID: 12	 IPFS Hash: QmNY5hg9h8TkUTS8sqvWg2rYV3cNKnVnWfSm3XNDWLTJ7k	Title: Random_Forests.py
+2025-12-15T13:49:04.5885765Z ID: 13	 IPFS Hash: QmfAphMNrofn7nRYtLSN46eM9GxMdJWAqYTdmieURfpggu	Title: K-Nearest_Neighbors.py
+2025-12-15T13:49:04.5886822Z ID: 14	 IPFS Hash: QmZ9xBwg9MnbowjKt6WyvLMuRNvBxfQob5RySxuFVkQBjy	Title: SpykeTorch.py
+2025-12-15T13:49:04.5888010Z ID: 15	 IPFS Hash: Qmbs9LrmfFT9ofCQ8wHsKz4wAhyZBRkDfc37Q9St2rNXA7	Title: Creme.py
+2025-12-15T13:49:04.5889093Z ID: 16	 IPFS Hash: QmWmeoADKVTRG4b9FJWiyo8PttWrDtaHJxDaS65ugdp6cq	Title: Acoustic_Blade_Damage_Classifier.py
+2025-12-15T13:49:04.5890308Z ID: 17	 IPFS Hash: QmPxNVJxViTrDXrUdPkgfCBEk4vSEN6DqmxbDUK12bvfoc	Title: EV_Charging_Sessions_with_Surplus_Label.csv
+2025-12-15T13:49:04.5891614Z ID: 18	 IPFS Hash: QmZWfmCZ5jdX85TRizhmtrvVngue2AZaBx1v6n4DNc5S35	Title: Wood_Sanding_Method_Labeled_Samples.csv
+2025-12-15T13:49:04.5892897Z ID: 19	 IPFS Hash: QmaUE2Cf2jrdQJpbcy6dFmX28jVNkrbFHcQeCFVHaJZfhp	Title: Turbine_Baseline_Acoustic_Profiles.csv
+2025-12-15T13:49:04.5894115Z ID: 20	 IPFS Hash: Qma1RcUeriG27opUQPdaNFtPkBfXJ7M4fAWrsGydKGAxVK	Title: EV_Fleet_Availability_Schedules.csv
+2025-12-15T13:49:04.5895354Z ID: 21	 IPFS Hash: QmYFAR85KKbFLFmUAzES1KwMvzFBXvmyKtRgwsEd7JBFjN	Title: Tower_Environmental_Conditions_Log.csv
+2025-12-15T13:49:04.5896978Z ID: 22	 IPFS Hash: QmVG3kPP1MWYaPuHxMm2rTsBjHaCLQfHfGm7mxHfjUpvZW	Title: Microgrid_Day-Ahead_Surplus_Forecasts.csv
+2025-12-15T13:49:04.5898265Z ID: 23	 IPFS Hash: QmXvJW1mqQ4GkCHdp8bAaLwMo23tS6H3xxXgWPJmKD8kXr	Title: Tower_Rust_Image_Patches_Dataset.csv
+2025-12-15T13:49:04.5899568Z ID: 24	 IPFS Hash: Qmc368ty95ET8KHB8YKmfQ4aVdsfZ97EXvcJuer8R4AKa6	Title: EV_Charging_Sessions_with_Surplus_Label.csv
+2025-12-15T13:49:04.5900823Z ID: 25	 IPFS Hash: QmWFYCcAQ3KBePjthF1cMKm8QRG4skPqsGNXkHSS5nwZ1s	Title: Tower_Rust_Thickness_Measurements.csv
+2025-12-15T13:49:04.5901953Z ID: 26	 IPFS Hash: QmYxWamgpKV7J7ZoUHiBpxKowdm17EBPsCf11oKtdeCf6R	Title: Tower_Inspection_Flight_Logs.csv
+2025-12-15T13:49:04.5903378Z ID: 27	 IPFS Hash: QmZuiLiXe8537UMv48vU3o19cSRQknQsjAFPBs2Pje8ksQ	Title: Tower_Rust_Segmentation_Masks_Index.csv
+2025-12-15T13:49:04.5929837Z ID: 28	 IPFS Hash: QmbV2DULvdxtoESmHCV6DFRTQv62fLhtcYT1cgobZ9Eo2V	Title: Seismic_Station_Metadata_Catalog.csv
+2025-12-15T13:49:04.5931477Z ID: 29	 IPFS Hash: QmdRrSeCiwUsExL2EyzUF7GfR7abg8TxaBZoU6FHyfvYxq	Title: Tower_Rust_Visual_Inspection_Annotations.csv
+2025-12-15T13:49:04.5932701Z ID: 30	 IPFS Hash: QmP78ttJJp6FNsGQ6SFJDfP6fzV4NfGGgpdT7vXqnZgyEK	Title: Household_PV_and_Load_Time_Series.csv
+2025-12-15T13:49:04.5933871Z ID: 31	 IPFS Hash: QmZRDRTy4URzDJMcGNFafe7oCPYkbMx5k7cvwdWH4Mz77B	Title: Wood_Species_and_Grain_Characteristics.csv
+2025-12-15T13:49:04.5934986Z ID: 32	 IPFS Hash: QmVEn9gVkxu7wuZEWZwmfJ6a1k2GWQ97xyNWd7V2Ws2ko2	Title: Wood_Sanding_Quality_Ratings.csv
+2025-12-15T13:49:04.5936076Z ID: 33	 IPFS Hash: QmdvhZ9icx4Zx6yeVsVDxwuzZq1t7wScthx8T8Rq94KLh7	Title: Tower_Structural_Component_Inventory.csv
+2025-12-15T13:49:04.5937200Z ID: 34	 IPFS Hash: QmW3uRDjpR4gVvb3K8ZbNzLXKfWRWmg7pgxw4jEzsPaCW2	Title: Regional_Seismic_Waveform_Snippets.csv
+2025-12-15T13:49:04.5938464Z ID: 35	 IPFS Hash: QmW4qnqiZihkAts3hLNebsfdjWeqZj9tT2ZiQ8SMxhf59y	Title: Wood_Surface_Roughness_Profiles.csv
+2025-12-15T13:49:04.5940011Z ID: 36	 IPFS Hash: QmajnExPGV7DDP7idjmkcCp61LoXVxRXE8YNpkwDki6DEq	Title: Turbine_Fault_Condition_Audio_Index.csv
+2025-12-15T13:49:04.5941216Z ID: 37	 IPFS Hash: QmUhebg6QaVy8xvCL5nwYLC7hfq7oA2mxpbPY1xAQqAQrk	Title: Seismic_Event_Catalog_Summary.csv
+2025-12-15T13:49:04.5942321Z ID: 38	 IPFS Hash: QmWRXQziqSUxdfaE7A2DS1TTcpDy8agRXeN1s97W3A5d2R	Title: Turbine_SCADA_Operational_Summary.csv
+2025-12-15T13:49:04.5943448Z ID: 39	 IPFS Hash: QmbNxT3vd7daGgpZAZqMJnQ7k9mCA6uq8q9EcSEMibBcY2	Title: Gearbox_Fault_Acoustic_Anomaly_Detector.py
+2025-12-15T13:49:04.5944563Z ID: 40	 IPFS Hash: QmQ5miW7EMtMyQozJ7yLz8UPt1mF7mR67myHojwo5u2pXv	Title: Real-Time_Seismic_Event_Detection.py
+2025-12-15T13:49:04.5945645Z ID: 41	 IPFS Hash: QmSe8YX9Zezcrn55BiJMgkfQqz4v9jGMjDBfTcMXqc8y2G	Title: Wearable_Health_Anomaly_Detection.py
+2025-12-15T13:49:04.5946771Z ID: 42	 IPFS Hash: QmNu1uhbtuCXwC6axPaK2yykbMnaN347D2dKVyNuyoPFbo	Title: Turbine_Bearing_Health_Monitoring_via_Audio.py
+2025-12-15T13:49:04.5947908Z ID: 43	 IPFS Hash: Qmb2LovG228GfFCHXdAz3gjPuFWCnpvJV3WM5jRCShSPTQ	Title: Pipeline_Leak_Risk_Prediction.py
+2025-12-15T13:49:04.5949015Z ID: 44	 IPFS Hash: QmSb2pUGDLcc9UMDdhFnFL6WpR7yvixfAaztSbAMXyzLP1	Title: Powerline_Defect_Detection_from_Drones.py
+2025-12-15T13:49:04.5950105Z ID: 45	 IPFS Hash: QmezF8Nj43XuHDHDcXnPTTTMZDkAN6wAQpESNrTAtB7Veg	Title: Bridge_Crack_Segmentation.py
+2025-12-15T13:49:04.5951218Z ID: 46	 IPFS Hash: QmXhKc7z14xvdqMsXs5isYFxjBgnvGV4G7MWkXz7fHy7zP	Title: Medical_Imaging_Triage_CNN.py
+2025-12-15T13:49:04.5952410Z ID: 47	 IPFS Hash: QmVAEG69gATQPPD88Ky5876v25F6BEWMpEGaLe2qaat1B3	Title: Earthquake_Early_Warning_Fusion_Model.py
+2025-12-15T13:49:04.5953595Z ID: 48	 IPFS Hash: QmYEVYjM3YE7RuugPf9wP16FMYBJLBh7A7vZvxLqMfXYb2	Title: Aftershock_Probability_Forecasting.py
+2025-12-15T13:49:04.5954762Z ID: 49	 IPFS Hash: QmczwTuVDXr9VeRRmy8nBxU6KvMcoB3sTNZ23EmpDziLVT	Title: Day-Ahead_EV_Charging_Surplus_Forecast.py
+2025-12-15T13:49:04.5955936Z ID: 50	 IPFS Hash: QmWYhwXCbGWQTvv63A9qg4WwKiudjFPQW2MME3D4yhivsh	Title: ICU_Deterioration_Risk_Scoring.py
+2025-12-15T13:49:04.5957230Z ID: 51	 IPFS Hash: QmRcpKQ9jbsPavA1YvTcTZainydSVr1rCTQy5AuJaPFNMH	Title: Real-Time_EV_Charging_Load_Balancer.py
+2025-12-15T13:49:04.5958553Z ID: 52	 IPFS Hash: QmTosZs9rmzKHSLBJZGZhU5xnFJkD1ZtEmnGWaYZPioX6h	Title: Microgrid_Flexibility_Estimator_for_EVs.py
+2025-12-15T13:49:04.7672918Z - Marketplace Listings Validated.
+2025-12-15T13:49:04.7767481Z Post job cleanup.
+2025-12-15T13:49:05.0116454Z Post job cleanup.
+2025-12-15T13:49:05.1140038Z [command]/usr/bin/git version
+2025-12-15T13:49:05.1185783Z git version 2.34.1
+2025-12-15T13:49:05.1248159Z Temporarily overriding HOME='/home/runner/actions-runner/_work/_temp/9c2df2a6-c3c0-4a7e-b7d3-3f674d2fadfe' before making global git config changes
+2025-12-15T13:49:05.1249807Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-15T13:49:05.1254051Z [command]/usr/bin/git config --global --add safe.directory /home/runner/actions-runner/_work/kpi-validation/kpi-validation
+2025-12-15T13:49:05.1291252Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-15T13:49:05.1322838Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-15T13:49:05.1598410Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-15T13:49:05.1623568Z http.https://github.com/.extraheader
+2025-12-15T13:49:05.1637697Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-12-15T13:49:05.1671610Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-15T13:49:05.2076620Z Cleaning up orphan processes
