@@ -1,0 +1,161 @@
+{
+  "voting": [
+    {
+      "voters": 10,
+      "avgGas": 72440,
+      "minGas": 69658,
+      "maxGas": 97483,
+      "totalGas": 724405,
+      "blocks": 20
+    },
+    {
+      "voters": 50,
+      "avgGas": 70214,
+      "minGas": 69658,
+      "maxGas": 97483,
+      "totalGas": 3510725,
+      "blocks": 100
+    },
+    {
+      "voters": 100,
+      "avgGas": 69936,
+      "minGas": 69658,
+      "maxGas": 97483,
+      "totalGas": 6993625,
+      "blocks": 200
+    },
+    {
+      "voters": 500,
+      "avgGas": 69713,
+      "minGas": 69658,
+      "maxGas": 97483,
+      "totalGas": 34856825,
+      "blocks": 1000
+    },
+    {
+      "voters": 1000,
+      "avgGas": 69685,
+      "minGas": 69658,
+      "maxGas": 97483,
+      "totalGas": 69685825,
+      "blocks": 2000
+    }
+  ],
+  "execution": [
+    {
+      "operation": "store",
+      "queueGas": 125868,
+      "executeGas": 133188,
+      "totalGas": 259056,
+      "blockUtilization": "0.44%",
+      "fitsInBlock": "✓"
+    },
+    {
+      "operation": "batchStore (5 calls)",
+      "queueGas": "N/A",
+      "executeGas": 155171,
+      "totalGas": 155171,
+      "blockUtilization": "0.52%",
+      "fitsInBlock": "✓"
+    }
+  ],
+  "queries": [
+    {
+      "test": "state()",
+      "proposalCount": 100,
+      "avgGas": 32281,
+      "minGas": 32259,
+      "maxGas": 32283
+    },
+    {
+      "test": "proposalVotes()",
+      "proposalCount": 10,
+      "avgGas": 28370,
+      "minGas": 28360,
+      "maxGas": 28372
+    }
+  ],
+  "storage": [
+    {
+      "checkpoints": 100,
+      "gas": 40490
+    },
+    {
+      "checkpoints": 200,
+      "gas": 40477
+    },
+    {
+      "checkpoints": 300,
+      "gas": 40490
+    },
+    {
+      "checkpoints": 400,
+      "gas": 40490
+    },
+    {
+      "checkpoints": 500,
+      "gas": 40477
+    },
+    {
+      "checkpoints": 600,
+      "gas": 40490
+    },
+    {
+      "checkpoints": 700,
+      "gas": 40490
+    },
+    {
+      "checkpoints": 800,
+      "gas": 40490
+    },
+    {
+      "checkpoints": 900,
+      "gas": 40477
+    }
+  ],
+  "blockUtilization": [
+    {
+      "test": "500 voters",
+      "blocksUsed": 2,
+      "avgVotesPerBlock": 250,
+      "estimatedTime": "24s (0m 24s)"
+    }
+  ],
+  "throughput": [
+    {
+      "daoSize": 100,
+      "votesPerBlock": 307,
+      "blocksNeeded": 1,
+      "timeEstimate": "0m 12s",
+      "gasPerVote": 97483
+    },
+    {
+      "daoSize": 500,
+      "votesPerBlock": 307,
+      "blocksNeeded": 2,
+      "timeEstimate": "0m 24s",
+      "gasPerVote": 97483
+    },
+    {
+      "daoSize": 1000,
+      "votesPerBlock": 307,
+      "blocksNeeded": 4,
+      "timeEstimate": "0m 48s",
+      "gasPerVote": 97483
+    },
+    {
+      "daoSize": 5000,
+      "votesPerBlock": 307,
+      "blocksNeeded": 17,
+      "timeEstimate": "3m 24s",
+      "gasPerVote": 97483
+    },
+    {
+      "daoSize": 10000,
+      "votesPerBlock": 307,
+      "blocksNeeded": 33,
+      "timeEstimate": "6m 36s",
+      "gasPerVote": 97483
+    }
+  ]
+}
